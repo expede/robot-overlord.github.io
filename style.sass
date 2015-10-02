@@ -1,0 +1,58 @@
+$color-main:        #222832
+$color-accent-low:  #66D8D5
+$color-accent-high: #EC7077
+$color-contrast:    #FFF
+
+@font-face
+    font-family: "Computer"
+    src: url(./Computerfont.ttf) format("truetype")
+
+body
+    font: 16px
+    color: $color-main
+
+h1
+    font-size: 5em
+    line-height: 1em
+
+h1, code
+    font-family: Computer, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+    margin: 0
+
+h2, #hire-us
+    font-size: 2em
+    font-family: "Rock Salt", cursive
+
+h1, h2, h3, h4, h5, h6
+    text-align: center
+    margin: 0
+
+p
+    margin: 0
+    line-height: 1.5
+    font-family: "Lato", sans-serif
+
+aside
+    position: fixed
+    top: 0
+    z-index:  10
+    background-color: $color-main
+    width: 100%
+
+a
+    text-decoration: none
+    color: $color-contrast
+
+// Sections
+#logotype, #who-we-are, #contact
+    background-color: $color-main
+    color: #FFF
+
+body
+    margin-top: 3em
+
+
+#hire-us
+    font-size: 1em
+    padding: 0.5em
+    float: right
