@@ -47,7 +47,8 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  margin: 0; }
+  margin: 0;
+  font-weight: 400; }
 
 p {
   line-height: 1.5; }
@@ -84,6 +85,20 @@ aside {
   font-size: 1.5em;
   vertical-align: -42%; }
 
+.raise {
+  font-size: 0.75em;
+  vertical-align: 50%; }
+
+#logo-mini {
+  font-size: 1em;
+  color: #FFF;
+  float: left;
+  font-family: "Computer", sans-serif;
+  font-size: 2em;
+  background-color: #222832;
+  margin: 0.25em;
+  padding: 0.25em; }
+
 #hire-us {
   font-size: 1em;
   padding: 0.5em;
@@ -94,7 +109,8 @@ aside {
   font-size: 3em; }
 
 .blink {
-  animation: blink 2s step-start infinite; }
+  animation: blink 2s step-start infinite;
+  font-weight: 900; }
   .blink:after {
     content: "_"; }
 
