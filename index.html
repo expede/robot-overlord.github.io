@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt|Roboto+Slab:300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="normalize.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="style.css"     media="screen">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="style/style.css"     media="screen">
 
     <title>Robot Overlord</title>
   </head>
@@ -14,118 +15,93 @@
   <body>
     <aside>
       <div id="logo-mini">R<span class="raise">O</span></div>
-      <div id="hire-us"><a href="mailto:beep@robotoverlord.io">Hire us</a></div>
+      <div id="hire-us" class="human"><a href="mailto:beep@robotoverlord.io">Hire us</a></div>
     </aside>
 
-    <section id="logotype" class="scanlines">
-      <h1><span class="capital drop">R</span>obot Overlord<span class="blink" /></h1>
-      <h2>Computing with <em>humanity</em></h2>
-    </section>
-
-    <section id="what-we-do">
-      <header>
-        <h1><span class="scantext"></span>We Solve Problems. Period.</h1>
+    <article>
+      <header id="logotype" class="scanlines">
+        <h1><span class="capital drop">R</span>obot Overlord<span class="blink" /></h1>
+        <h2 class="human">Computing with <em>humanity</em></h2>
       </header>
 
-      <section id="data-science">
-        <h1><span class="scantext"></span>Crunching Data</h1>
-        <p>A picture is worth a thousand words; let us help you paint by numbers. By finding patterns in your data, third-party data (such as Twitter), and public records, we are able to generate up-to-date graphics, alerts, and tables to help you make the best decisions in response to an ever-changing world. Custom data software provides the most up-to-date, deep information available — automated and tailored to your needs<span class="blink" /></p>
+      <section id="what-we-do">
+        <header>
+          <h1><span class="scantext"></span>We are humans (and machines) that solve real-world problems by crafting and curating leading-edge software</h1>
+        </header>
+        <p>Simple, multifaceted, and powerful solutions get us out of bed in the morning. Simply put, we emphasise the elegance in all that we do. This isn’t an academic exercise: pragmatic and elegant software is the James Bond of technology; like a surgical strike in a bespoke suit.</p>
+        <p>The users of your software appreciate elegance, too, and it’s much more than a fresh coat of paint. A great UI gets out of the way, so that you can share more photos, keep in touch more directly, and be more productive. At the end of the day, there are meaningful problems that need solving. Software should feel like part of the solution!</p>
+        <p>We use the right tools for the job, no matter the tech fad du jour. Does the project require Ruby, Python, JavaScript, Clojure, or something more industrial like Rust, Haskell or Elixir? Not only do we have you covered, we can help you pick the stack that best suits your needs, and that will stay current for years to come.</p>
+        <p>Do you already have existing code? Think of us as a personal trainer for your technology. We’re happy to dive in, improve code flexibility, system resiliency, add new features, and update everything to the latest-and-greatest!</p>
       </section>
 
-      <section id="ux">
-        <h1><span class="scantext"></span>Crafting Experiences</h1>
-        <p>Delightful. Simple. Seamless. Software should be a joy to use, easy to learn, and maximize the ease of accomplishing tasks. Humans shouldn’t have to think about how to do something; that’s why we have machines in the first place. Your users value a well-designed experience, and so do we<span class="blink" /></p>
-      </section>
+      <section id="who-we-are" class="scanlines">
+        <header>
+          <h1>Meet <em>Robot Overlord</em></h1>
+        </header>
 
-      <section id="fp">
-        <h1><span class="scantext"></span>Programming Functionally</h1>
-        <p>Consistent, battle tested, and crazy parallel. Functional programming allows us to write industrial-strength software that scales with your business, provides insights in real-time, and churns through big data like a champ. We believe that functional programming is the way of the future. Let’s help you move at the speed of data<span class="blink"></p>
-      </section>
+        <section id="jenn">
+          <h1><span class="human">Jennifer Cooper</span>.map do |alt|</h1>
+          <p>Jenn studied english literature and computer science, and continues to enjoy a breadth of topics from the very mathy to the more fluffy. She honed her skills in management, product development, and strategy through her work as a software engineer, director of engineering, and CTO. Jenn organizes the technology community forum Code & Coffee with Brooklyn.</p>
+          <p>Jenn is mom to two sassy little girls, aged 3 and 5. She lives on an acre of land and has neighbourhood bears that regularly poo on her lawn. Kindness and empathy have never steered her wrong. She believes deeply in diverse teams, and tries to build them in all segments of her life.</p>
 
-      <section id="clarity">
-        <h1><span class="scantext"></span>Maintaining Clarity</h1>
-        <p>We’d love to hear from you after a project wraps, but you shouldn’t have to depend on us forever.  We take pride in providing clear, well documented code, and seamless handoffs from our team to yours! Well written code is straightforward to onboard, flexible enough to adapt to new features, and makes your developers happy and productive. It’s win-win!<span class="blink" /></p>
-      </section>
-    </section>
-
-    <section id="who-we-are" class="scanlines">
-      <header>
-        <h1>Meet <em>Robot Overlord</em></h1>
-      </header>
-
-      <section id="jenn">
-        <h1><span class="staff">Jennifer Cooper</span>.map do |alt|</h1>
-        <p>Jenn studied english literature and computer science, and continues to enjoy a breadth of topics from the very mathy to the more fluffy. She honed her skills in management, product development, and strategy through her work as a software engineer, director of engineering, and CTO. Jenn organizes the technology community forum Code & Coffee with Brooklyn.</p>
-        <p>Jenn is mom to two sassy little girls, aged 3 and 5. She lives on an acre of land and has neighbourhood bears that regularly poo on her lawn. Kindness and empathy have never steered her wrong. She believes deeply in diverse teams, and tries to build them in all segments of her life.</p>
-
-        <section>
-          <h2>Specializations</h2>
-          <ul>
-            <li>Ruby, Python, HTML, CSS, JS</li>
-            <li>React</li>
-            <li>Clojure</li>
-            <li>Data Science, Machine Learning</li>
-            <li>Test Driven & Behaviour Driven Development</li>
-            <li>Software Archetecture</li>
-          </ul>
+          <section>
+            <h2>Specializations</h2>
+            <ul>
+              <li>Ruby, Python, HTML, CSS, JS</li>
+              <li>React</li>
+              <li>Clojure</li>
+              <li>Data Science, Machine Learning</li>
+              <li>Test Driven & Behaviour Driven Development</li>
+              <li>Software Archetecture</li>
+            </ul>
+          </section>
+          <h1>end</h1>
         </section>
-        <h1>end</h1>
-      </section>
 
-      <section id="brooke">
-        <h1>fmap (<span class="staff">Brooklyn Zelenka</span> :: fn) [</h1>
-        <p>Brooke is the local coffee snob, which is actually saying something! She got her start in technology because of her background music theory, which is surprisingly similar to coding.</p>
-        <p>Brooke also runs the technology community forum <a>Code & Coffee</a>, and founded <a>Vancouver Functional Programmers</a>, and the <a>Vancouver Erlang & Elixir</a> user group. Her favourite language is Haskell, largely due to the how clean the language is. She cares deeply about best practices, flexible code, and maintainability. We’re told that she was just born that nerdy.</p>
+        <section id="brooke">
+          <h1>fmap (<span class="human">Brooklyn Zelenka</span> :: fn) [</h1>
+          <p>Brooke is the local coffee snob, which is actually saying something! She got her start in technology because of her background music theory, which is surprisingly similar to coding.</p>
+          <p>Brooke also runs the technology community forum <a>Code & Coffee</a>, and founded <a>Vancouver Functional Programmers</a>, and the <a>Vancouver Erlang & Elixir</a> user group. Her favourite language is Haskell, largely due to the how clean the language is. She cares deeply about best practices, flexible code, and maintainability. We’re told that she was just born that nerdy.</p>
 
-        <section>
-          <h2>Specializations</h2>
-          <ul>
-            <li>HTML, CSS, JS</li>
-            <li>Haskell, Clojure, Elixir, Ruby</li>
-            <li>React, Om, Backbone</li>
-            <li>Unit, prop, and integration testing, plus automation</li>
-            <li>Code archetecture</li>
-            <li>Clean code & best practices</li>
-            <li>Machine Learning</li>
-          </ul>
+          <section>
+            <h2>Specializations</h2>
+            <ul>
+              <li>HTML, CSS, JS</li>
+              <li>Haskell, Clojure, Elixir, Ruby</li>
+              <li>React, Om, Backbone</li>
+              <li>Unit, prop, and integration testing, plus automation</li>
+              <li>Code archetecture</li>
+              <li>Clean code & best practices</li>
+              <li>Machine Learning</li>
+            </ul>
+          </section>
+          <h1>]</h1>
         </section>
-        <h1>]</h1>
-      </section>
 
-      <section id="rach">
-        <h1>_.invoke(<span class="staff">Rach Teo</span>, shift => {</h1>
-        <p>Rach discovered the joys of technology one summer holiday via a series of increasingly ridiculous Geocities websites, followed by an introduction to robotics in the form of Lego Mindstorms. In spite of various brief sideways forays into Biology, Psychology, and English Literature, Rach wound up specialising in UX and Digital Media with a side interest in Human Computer Interaction.</p>
-        <p>Rach is a solar-powered city girl and thrives on controlled chaos. She is passionate about design and promiscuous about languages. </p>
+        <section id="rach">
+          <h1>_.invoke(<span class="human">Rach Teo</span>, shift => {</h1>
+          <p>Rach discovered the joys of technology one summer holiday via a series of increasingly ridiculous Geocities websites, followed by an introduction to robotics in the form of Lego Mindstorms. In spite of various brief sideways forays into Biology, Psychology, and English Literature, Rach wound up specialising in UX and Digital Media with a side interest in Human Computer Interaction.</p>
+          <p>Rach is a solar-powered city girl and thrives on controlled chaos. She is passionate about design and promiscuous about languages. </p>
 
-        <section>
-          <h2>Specializations</h2>
-          <ul>
-            <li>Digital media</li>
-            <li>User Experience Design</li>
-            <li>Human-Computer Interaction</li>
-            <li>Social Media Strategy</li>
-            <li>Jack of all trades</li>
-          </ul>
+          <section>
+            <h2>Specializations</h2>
+            <ul>
+              <li>Digital media</li>
+              <li>User Experience Design</li>
+              <li>Human-Computer Interaction</li>
+              <li>Social Media Strategy</li>
+              <li>Jack of all trades</li>
+            </ul>
+          </section>
+          <h1>})</h1>
         </section>
-        <h1>})</h1>
       </section>
-    </section>
 
-    <section id="tooling">
-      <header>
-        <h1><span class="scantext"></span>Elegant Tools for a More Civilized Age</h1>
-      </header>
-
-      <p>Simple, multifaceted, and powerful solutions get us out of bed in the morning. Simply put, we emphasise the elegance in all that we do. This isn’t an academic exercise: pragmatic and elegant software is the James Bond of technology; like a surgical strike in a bespoke suit.</p>
-      <p>The users of your software appreciate elegance, too, and it’s much more than a fresh coat of paint. A great UI gets out of the way, so that you can share more photos, keep in touch more directly, and be more productive. At the end of the day, there are meaningful problems that need solving. Software should feel like part of the solution!</p>
-      <p>We use the right tools for the job, no matter the tech fad du jour. Does the project require Ruby, Python, JavaScript, Clojure, or something more industrial like Rust, Haskell or Elixir? Not only do we have you covered, we can help you pick the stack that best suits your needs, and that will stay current for years to come.</p>
-      <p>Do you already have existing code? Think of us as a personal trainer for your technology. We’re happy to dive in, improve code flexibility, system resiliency, add new features, and update everything to the latest-and-greatest!</p>
-    </section>
-
-    <section id="contact" class="scanlines">
-      <h1>Want to know more? Drop us a line!</h1>
-      <p><a href="mailto:beep@robotoverlord.io">beep@robotoverlord.io</a></p>
-      <p><a href="http://www.twitter.com/@hailrobo">@hailrobo</a></p>
-    </section>
+      <section id="contact">
+        <h1>Want to know more? Drop us a line!</h1>
+        <p><a href="mailto:beep@robotoverlord.io">beep@robotoverlord.io</a></p>
+        <p><a href="http://www.twitter.com/@hailrobo">@hailrobo</a></p>
+      </section>
+    </article>
   </body>
 </html>
