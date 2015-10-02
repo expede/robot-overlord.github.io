@@ -1,52 +1,101 @@
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @font-face {
   font-family: "Computer";
   src: url(./Computerfont.ttf) format("truetype"); }
+::selection {
+  background-color: #66D8D5; }
+
 body {
   font: 16px;
-  color: #222832; }
+  color: #222832;
+  font-family: "Roboto Slab", slab, sans-serif; }
+
+li {
+  list-style-type: circle; }
+
+section {
+  padding: 1em; }
 
 h1 {
   font-size: 5em;
-  line-height: 1em; }
+  line-height: 1em;
+  font-weight: 400; }
 
 h1, code {
   font-family: Computer, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   margin: 0; }
 
-h2, #hire-us {
-  font-size: 2em;
-  font-family: "Rock Salt", cursive; }
+h2, #hire-us, .staff {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.5em;
+  color: #66D8D5; }
+
+.staff {
+  font-size: 0.5em;
+  color: #EC7077;
+  margin: 0.5em; }
+
+code {
+  font-size: 0.5em;
+  text-align: left; }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin: 0; }
 
 p {
-  margin: 0;
-  line-height: 1.5;
-  font-family: "Lato", sans-serif; }
+  line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  font-family: "Rock Salt", cursive;
+  color: #66D8D5; }
+  a:hover, a:focus {
+    color: #EC7077; }
 
 aside {
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: #222832;
-  width: 100%; }
-
-a {
-  text-decoration: none;
-  color: #FFF; }
+  width: 100%;
+  height: 3em; }
 
 #logotype, #who-we-are, #contact {
   background-color: #222832;
   color: #FFF; }
 
-body {
-  margin-top: 3em; }
+#logotype {
+  position: relative;
+  min-height: 50vh;
+  padding-top: 20%;
+  font-size: 1.3em; }
+  #logotype h2 {
+    margin-top: -2em; }
+  #logotype em {
+    color: #EC7077; }
+
+.drop {
+  font-size: 1.5em;
+  vertical-align: -42%; }
 
 #hire-us {
   font-size: 1em;
   padding: 0.5em;
   float: right; }
+
+#who-we-are section h1 {
+  text-align: left;
+  font-size: 3em; }
+
+.blink {
+  animation: blink 2s step-start infinite; }
+  .blink:after {
+    content: "_"; }
 
 /*# sourceMappingURL=style.css.map */
