@@ -36,6 +36,7 @@ h1
   font-size: 5em
   line-height: 1em
   font-weight: 400
+  position: relative
 
 h1, code
   font-family: Computer, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
@@ -79,11 +80,9 @@ aside
 
 // Sections
 #logotype, #who-we-are, #contact
-  background-color: $color-main
   color: $color-contrast
 
 #logotype
-  position: relative
   min-height: 50vh
   padding-top: 20%
   font-size: 1.3em
@@ -94,21 +93,12 @@ aside
   em
     color: $color-accent-high
 
-.drop
-  font-size: 1.5em
-  vertical-align: -42%
-
-.raise
-  font-size: 0.75em
-  vertical-align: 50%
-
 #logo-mini
   font-size: 1em
-  color: $color-contrast
+  color: $color-accent-low
   float: left
   font-family: "Computer", sans-serif
   font-size: 2em
-  background-color: $color-main
   margin: 0.25em
   padding: 0.25em
 
@@ -121,6 +111,27 @@ aside
   section h1
     text-align: left
     font-size: 3em
+
+.drop
+  font-size: 1.5em
+  vertical-align: -42%
+
+.raise
+  font-size: 0.75em
+  vertical-align: 50%
+
+.scanlines
+  background-color: $color-main
+  background-image: linear-gradient(transparent 75%, rgba(darken($color-main, 5%), 0.5) 50%)
+  background-size: 5px 5px
+
+.scantext
+  background: linear-gradient(transparent 75%, rgba($color-contrast, 0.1))
+  background-size: 5px 5px
+  position: absolute
+  display: block
+  width: 100%
+  height: 100%
 
 .blink
   animation: blink 2s step-start infinite
