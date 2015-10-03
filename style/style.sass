@@ -90,7 +90,9 @@ article
   color: $color-contrast
 
 #who-we-are
-  padding: 2em
+  padding: 1em
+  +media($laptop-plus)
+    padding: 2em
 
 #logotype
   min-height: 75vh
@@ -125,6 +127,8 @@ article
     padding: 2em
 
   .item
+    padding: 1em
+
     header
       color: $color-accent-high
     &:nth-child(even)
@@ -144,6 +148,8 @@ article
     .item
       +span-columns(4 of 8)
       +omega(2n)
+
+      padding: 0
 
       &:nth-child(even)
         header
@@ -177,8 +183,9 @@ article
   text-align: center
   padding: 2em
 
-  > section
-    +span-columns(6 of 12)
+  +media($tablet-plus)
+    > section
+      +span-columns(6 of 12)
 
 .human
   margin: 0.5em

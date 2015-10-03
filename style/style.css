@@ -76,7 +76,10 @@ article {
   color: #FFF; }
 
 #who-we-are {
-  padding: 2em; }
+  padding: 1em; }
+  @media screen and (min-width: 768px) {
+    #who-we-are {
+      padding: 2em; } }
 
 #logotype {
   min-height: 75vh;
@@ -105,10 +108,12 @@ article {
   padding-bottom: 2em; }
   #what-we-do > header {
     padding: 2em; }
-  #what-we-do .item header {
-    color: #EC7077; }
-  #what-we-do .item:nth-child(even) header {
-    color: #66D8D5; }
+  #what-we-do .item {
+    padding: 1em; }
+    #what-we-do .item header {
+      color: #EC7077; }
+    #what-we-do .item:nth-child(even) header {
+      color: #66D8D5; }
   @media screen and (min-width: 768px) {
     #what-we-do > header {
       float: left;
@@ -131,7 +136,8 @@ article {
       float: left;
       display: block;
       margin-right: 3.22581%;
-      width: 48.3871%; }
+      width: 48.3871%;
+      padding: 0; }
       #what-we-do .item:last-child {
         margin-right: 0; }
       #what-we-do .item:nth-child(2n) {
@@ -169,13 +175,14 @@ article {
     clear: both;
     content: "";
     display: table; }
-  #contact > section {
-    float: left;
-    display: block;
-    margin-right: 2.12766%;
-    width: 48.93617%; }
-    #contact > section:last-child {
-      margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    #contact > section {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      #contact > section:last-child {
+        margin-right: 0; } }
 
 .human {
   margin: 0.5em;
