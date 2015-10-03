@@ -84,16 +84,16 @@ article
   > section,
   > header
     +clearfix
-    padding: 1em
 
 #logotype,
 #who-we-are
   color: $color-contrast
 
 #logotype
-  min-height:  75vh
-  display: flex
-  align-items: center
+  min-height: 75vh
+
+  display:         flex
+  align-items:     center
   justify-content: center
 
   h1
@@ -150,7 +150,6 @@ article
     z-index: 50
     overflow: hidden
 
-
 #logo-mini
   margin: 5px
   float:  left
@@ -165,6 +164,14 @@ article
 
   margin-right: 5px
 
+#contact
+  +fill-parent
+  +outer-container
+  text-align: center
+
+  > section
+    +span-columns(6 of 12)
+
 .human
   margin: 0.5em
 
@@ -173,7 +180,25 @@ article
   color:       $color-accent-high
 
 .staff
+  +fill-parent
+  +clearfix
+
   margin-top: 2em
+
+  > header,
+  > footer
+    +fill-parent
+    +clearfix
+
+    text-align: left
+
+  +media($laptop-plus)
+    .detail
+      +clearfix
+
+      > section
+        +span-columns(6)
+        +omega(2n)
 
 .drop
   +media($tablet-plus)

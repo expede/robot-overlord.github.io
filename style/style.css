@@ -65,14 +65,11 @@ aside {
 article {
   max-width: 100%;
   overflow: hidden; }
-  article > section,
-  article > header {
-    padding: 1em; }
-    article > section::after,
-    article > header::after {
-      clear: both;
-      content: "";
-      display: table; }
+  article > section::after,
+  article > header::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 #logotype,
 #who-we-are {
@@ -155,6 +152,24 @@ article {
   float: right;
   margin-right: 5px; }
 
+#contact {
+  width: 100%;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  #contact::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #contact > section {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    #contact > section:last-child {
+      margin-right: 0; }
+
 .human {
   margin: 0.5em;
   font-family: "Rock Salt";
@@ -162,7 +177,37 @@ article {
   color: #EC7077; }
 
 .staff {
+  width: 100%;
   margin-top: 2em; }
+  .staff::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .staff > header,
+  .staff > footer {
+    width: 100%;
+    text-align: left; }
+    .staff > header::after,
+    .staff > footer::after {
+      clear: both;
+      content: "";
+      display: table; }
+  @media screen and (min-width: 768px) {
+    .staff .detail::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .staff .detail > section {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      .staff .detail > section:last-child {
+        margin-right: 0; }
+      .staff .detail > section:nth-child(2n) {
+        margin-right: 0; }
+      .staff .detail > section:nth-child(2n+1) {
+        clear: left; } }
 
 @media screen and (min-width: 480px) {
   .drop {
