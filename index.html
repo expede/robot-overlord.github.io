@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt|Roboto+Slab:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="style/normalize.css" media="screen">
     <link rel="stylesheet" type="text/css" href="style/style.css"     media="screen">
 
@@ -20,8 +22,10 @@
 
     <article>
       <header id="logotype" class="scan lines">
-        <h1><span class="capital drop">R</span>obot Overlord<span class="blink" /></h1>
-        <h2>Computing with <em>humanity</em></h2>
+        <div> <!-- Make flexbox happy -->
+          <h1><span class="capital drop">R</span>obot Overlord<span class="blink" /></h1>
+          <h2>Computing with <em>humanity</em></h2>
+        </div>
       </header>
 
       <section id="what-we-do">
@@ -29,10 +33,56 @@
           <h1><span class="scan text"></span>We are humans (and machines) that create and curate real-world solutions via leading-edge technologies</h1>
         </header>
 
-        <p>Simple, multifaceted, and powerful solutions get us out of bed in the morning. Simply put, we emphasise the elegance in all that we do. This isn’t an academic exercise: pragmatic and elegant software is the James Bond of technology; like a surgical strike in a bespoke suit.</p>
-        <p>The users of your software appreciate elegance, too, and it’s much more than a fresh coat of paint. A great UI gets out of the way, so that you can share more photos, keep in touch more directly, and be more productive. At the end of the day, there are meaningful problems that need solving. Software should feel like part of the solution!</p>
-        <p>We use the right tools for the job, no matter the tech fad du jour. Does the project require Ruby, Python, JavaScript, Clojure, or something more industrial like Rust, Haskell or Elixir? Not only do we have you covered, we can help you pick the stack that best suits your needs, and that will stay current for years to come.</p>
-        <p>Do you already have existing code? Think of us as a personal trainer for your technology. We’re happy to dive in, improve code flexibility, system resiliency, add new features, and update everything to the latest-and-greatest!</p>
+
+        <section>
+          <section class="item">
+            <header>
+              <span class="fa-stack fa-lg fa-4x">
+                <span class="scan text"></span>
+                <span class="fa fa-square fa-stack-2x"></span>
+                <span class="fa fa-paper-plane-o fa-stack-1x fa-inverse"></span>
+              </span>
+            </header>
+
+            <p>Simple, multifaceted, and powerful solutions get us out of bed in the morning. Simply put, we emphasise the elegance in all that we do. This isn’t an academic exercise: pragmatic and elegant software is the James Bond of technology; like a surgical strike in a bespoke suit.</p>
+          </section>
+
+          <section class="item">
+            <header>
+              <span class="fa-stack fa-lg fa-4x">
+                <span class="scan text"></span>
+                <span class="fa fa-square fa-stack-2x"></span>
+                <span class="fa fa-hand-peace-o fa-stack-1x fa-inverse"></span>
+              </span>
+            </header>
+
+            <p>The users of your software appreciate elegance, too, and it’s much more than a fresh coat of paint. A great UI gets out of the way, so that you can share more photos, keep in touch more directly, and be more productive. At the end of the day, there are meaningful problems that need solving. Software should feel like part of the solution!</p>
+          </section>
+
+          <section class="item">
+            <header>
+              <span class="fa-stack fa-lg fa-4x">
+                <span class="scan text"></span>
+                <span class="fa fa-square fa-stack-2x"></span>
+                <span class="fa fa-wrench fa-stack-1x fa-inverse"></span>
+              </span>
+            </header>
+
+            <p>We use the right tools for the job, no matter the tech fad du jour. Does the project require Ruby, Python, JavaScript, Clojure, or something more industrial like Rust, Haskell or Elixir? Not only do we have you covered, we can help you pick the stack that best suits your needs, and that will stay current for years to come.</p>
+          </section>
+
+          <section class="item">
+            <header>
+              <span class="fa-stack fa-lg fa-4x">
+                <span class="scan text"></span>
+                <span class="fa fa-square fa-stack-2x"></span>
+                <span class="fa fa-code fa-stack-1x fa-inverse"></span>
+              </span>
+            </header>
+
+            <p>Do you already have existing code? Think of us as a personal trainer for your technology. We’re happy to dive in, improve code flexibility, system resiliency, add new features, and update everything to the latest-and-greatest!</p>
+          </section>
+        </section>
       </section>
 
       <section id="who-we-are" class="scan lines">
