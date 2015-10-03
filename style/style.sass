@@ -89,6 +89,9 @@ article
 #who-we-are
   color: $color-contrast
 
+#who-we-are
+  padding: 2em
+
 #logotype
   min-height: 75vh
 
@@ -115,8 +118,11 @@ article
   height: 100%
   display: block
 
+  padding-top:    2em
+  padding-bottom: 2em
+
   > header
-    margin-bottom: 2em
+    padding: 2em
 
   .item
     header
@@ -126,6 +132,15 @@ article
         color: $color-accent-low
 
   +media($laptop-plus)
+    > header
+      +span-columns(4)
+      min-height: 100%
+      text-align: left
+
+    .detail
+      +span-columns(8)
+      padding: 2em
+
     .item
       +span-columns(4 of 8)
       +omega(2n)
@@ -137,14 +152,6 @@ article
       &:nth-child(3n-2)
         header
           color: $color-accent-low
-
-    > header
-      +span-columns(4)
-      min-height: 100%
-      text-align: left
-
-    > section
-      +span-columns(8)
 
   .scan
     z-index: 50
@@ -168,6 +175,7 @@ article
   +fill-parent
   +outer-container
   text-align: center
+  padding: 2em
 
   > section
     +span-columns(6 of 12)
