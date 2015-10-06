@@ -209,17 +209,21 @@ article {
       clear: both;
       content: "";
       display: table; }
-    .staff .detail > section {
+    .staff .about {
       float: left;
       display: block;
       margin-right: 2.12766%;
-      width: 48.93617%; }
-      .staff .detail > section:last-child {
+      width: 65.95745%; }
+      .staff .about:last-child {
         margin-right: 0; }
-      .staff .detail > section:nth-child(2n) {
-        margin-right: 0; }
-      .staff .detail > section:nth-child(2n+1) {
-        clear: left; } }
+    .staff .specializations {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 31.91489%;
+      margin-right: 0; }
+      .staff .specializations:last-child {
+        margin-right: 0; } }
 
 @media screen and (min-width: 480px) {
   .drop {
