@@ -246,8 +246,19 @@ article {
   background: linear-gradient(transparent 75%, rgba(255, 255, 255, 0.1) 50%) 5px 5px;
   background-size: 5px 5px; }
 
+.fadeable {
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out; }
+
+.invisible {
+  opacity: 0; }
+
+.visible {
+  opacity: 1; }
+
 .blink {
-  animation: blink 2s step-start infinite;
+  animation: blink 0.75s step-start infinite;
   font-weight: 900; }
   .blink:after {
     content: "_"; }
