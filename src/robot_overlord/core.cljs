@@ -14,7 +14,7 @@
   (om/refresh! owner))
 
 (defn make-visible!
-  "Set visibiloty state of some element to true"
+  "Set visibility state of some element to true"
   [cursor visibility-key]
   (om/update! cursor visibility-key true))
 
@@ -22,7 +22,7 @@
   "Correct duration to make whole sequence last the specified number of milliseconds"
   [duration count f]
   (let [delay (Math/floor (/ duration count))]
-    (js/setTimeout f (/ duration count))))
+    (js/setTimeout f delay)))
 
 (defn zip-step!
   "Move the text zipper one iteration forward"
