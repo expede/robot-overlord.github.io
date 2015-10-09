@@ -9,13 +9,23 @@ $color-contrast:    #FFF
 
 $aside-height: 3em
 
-@keyframes blink
++keyframes(blink)
   0%
     opacity: 0
   67%
     opacity: 1
   100%
     opacity: 0
+
++keyframes(fadeInUp)
+  0%
+    +transform(translateY(3em) rotateX(30deg))
+    +transform-origin(center top)
+    +transform-style(preserve-3d)
+    opacity: 0
+  100%
+    +transform(translateY(0) rotateX(0deg))
+    opacity: 1
 
 @font-face
   font-family: "Computer"
@@ -94,6 +104,14 @@ article
   +media($laptop-plus)
     padding: 2em
 
+  > header
+    min-height: 10em
+
+    display:         flex
+    align-items:     center
+    justify-content: center
+
+
 #logotype
   min-height: 75vh
 
@@ -121,7 +139,16 @@ article
   display: block
 
   > header
-    padding: 2em
+    padding:    2em
+
+    min-height: 50em
+    +media($tablet-plus)
+      min-height: 22em
+
+    +media($laptop-plus)
+      +span-columns(4)
+      min-height: 100%
+      text-align: left
 
   .item
     padding: 1em
@@ -132,17 +159,7 @@ article
       header
         color: $color-accent-low
 
-  +media($laptop-plus)
-    > header
-      +span-columns(4)
-      min-height: 100%
-      text-align: left
-
-    .detail
-      +span-columns(8)
-      padding: 2em
-
-    .item
+    +media($laptop-plus)
       +span-columns(4 of 8)
       +omega(2n)
 
@@ -155,6 +172,10 @@ article
       &:nth-child(3n-2)
         header
           color: $color-accent-low
+  .detail
+    +media($laptop-plus)
+      +span-columns(8)
+      padding: 2em
 
   .scan
     z-index: 50
@@ -180,8 +201,17 @@ article
   text-align: center
   padding: 2em
 
-  +media($tablet-plus)
-    > section
+  > header
+    min-height: 20em
+    +media($tablet-plus)
+      min-height: 10em
+
+    display:         flex
+    align-items:     center
+    justify-content: center
+
+  > section
+    +media($tablet-plus)
       +span-columns(6 of 12)
 
 .human
@@ -240,9 +270,34 @@ article
     background: linear-gradient(transparent 75%, rgba(white, 0.1) 50%) 5px 5px
     background-size: 5px 5px
 
+.fadeable
+  +transition(all 2s ease-in-out)
+
+.invisible
+  opacity: 0
+
+.visible
+  opacity: 1
+
 .blink
-  animation: blink 2s step-start infinite
+  animation: blink 0.75s step-start infinite
   font-weight: 900
 
   &:after
     content: "_"
+
+.animated
+  animation-duration: 1s
+  animation-fill-mode: both
+  animation-timing-function: ease-out
+
+  animation-delay: 3000ms
+  &:nth-child(2)
+    animation-delay: 3333ms
+  &:nth-child(3)
+    animation-delay: 3666ms
+  &:nth-child(4)
+    animation-delay: 4000ms
+
+.fadeInUp
+  animation-name: fadeInUp

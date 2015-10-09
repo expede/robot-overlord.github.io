@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,18 +26,16 @@
     <article>
       <header id="logotype" class="scan lines">
         <div> <!-- Make flexbox happy -->
-          <h1><span class="capital drop">R</span>obot Overlord<span class="blink" /></h1>
-          <h2>Computing with <em>humanity</em></h2>
+          <div id="logotype-app"></div>
         </div>
       </header>
 
       <section id="what-we-do">
-        <header>
-          <h1><span class="scan text"></span>We are humans (and machines) that use leading-edge technologies to create and curate solutions to real-world problems<span class="blink" /></h1>
+        <header id="what-we-do-app">
         </header>
 
         <section class="detail">
-          <section class="item">
+          <section class="item animated fadeInUp">
             <header>
               <span class="fa-stack fa-lg fa-4x">
                 <span class="scan text"></span>
@@ -49,7 +47,7 @@
             <p>Simple, multifaceted, and powerful solutions get us out of bed in the morning. Simply put, we emphasise the elegance in all that we do. This isn’t an academic exercise: pragmatic and elegant software is the James Bond of technology; like a surgical strike in a bespoke suit.</p>
           </section>
 
-          <section class="item">
+          <section class="item animated fadeInUp">
             <header>
               <span class="fa-stack fa-lg fa-4x">
                 <span class="scan text"></span>
@@ -61,7 +59,7 @@
             <p>The users of your software appreciate elegance, too, and it’s much more than a fresh coat of paint. A great UI gets out of the way, so that you can share more photos, keep in touch more directly, and be more productive. At the end of the day, there are meaningful problems that need solving. Software should feel like part of the solution!</p>
           </section>
 
-          <section class="item">
+          <section class="item animated fadeInUp ">
             <header>
               <span class="fa-stack fa-lg fa-4x">
                 <span class="scan text"></span>
@@ -73,7 +71,7 @@
             <p>We use the right tools for the job, no matter the tech fad du jour. Does the project require Ruby, Python, JavaScript, Clojure, or something more industrial like Rust, Haskell or Elixir? Not only do we have you covered, we can help you pick the stack that best suits your needs, and that will stay current for years to come.</p>
           </section>
 
-          <section class="item">
+          <section class="item animated fadeInUp">
             <header>
               <span class="fa-stack fa-lg fa-4x">
                 <span class="scan text"></span>
@@ -88,9 +86,7 @@
       </section>
 
       <section id="who-we-are" class="scan lines">
-        <header>
-          <h1>Meet Our Minions<span class="blink" /></h1>
-        </header>
+        <header id="who-we-are-app"></header>
 
         <section id="jenn" class="staff">
           <header>
@@ -203,7 +199,7 @@
 
       <section id="contact">
         <header>
-          <h1>Want to know more? Drop us a line!<span class="blink" /></h1>
+          <div id="contact-app"></div>
         </header>
 
         <section class="email">
@@ -223,5 +219,7 @@
         </section>
       </section>
     </article>
+
+    <script src="js/compiled/robot_overlord.js" type="text/javascript"></script>
   </body>
 </html>
