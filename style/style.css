@@ -1,0 +1,357 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0; }
+  67% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 0; }
+  67% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  67% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(3em) rotateX(30deg);
+    -webkit-transform-origin: center top;
+    -webkit-transform-style: preserve-3d;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+    opacity: 1; } }
+@-moz-keyframes fadeInUp {
+  0% {
+    -moz-transform: translateY(3em) rotateX(30deg);
+    -moz-transform-origin: center top;
+    -moz-transform-style: preserve-3d;
+    opacity: 0; }
+  100% {
+    -moz-transform: translateY(0) rotateX(0deg);
+    opacity: 1; } }
+@keyframes fadeInUp {
+  0% {
+    -webkit-transform: translateY(3em) rotateX(30deg);
+    -moz-transform: translateY(3em) rotateX(30deg);
+    -ms-transform: translateY(3em) rotateX(30deg);
+    -o-transform: translateY(3em) rotateX(30deg);
+    transform: translateY(3em) rotateX(30deg);
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    -o-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+    -moz-transform: translateY(0) rotateX(0deg);
+    -ms-transform: translateY(0) rotateX(0deg);
+    -o-transform: translateY(0) rotateX(0deg);
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1; } }
+@font-face {
+  font-family: "Computer";
+  src: url(../media/Computerfont.ttf) format("truetype"); }
+::selection {
+  background-color: #66D8D5; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", slab, sans-serif;
+  font-size: 16px;
+  color: #222832; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1em;
+  font-weight: 400; }
+
+h1 {
+  font-family: Computer, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  position: relative;
+  font-size: 3em; }
+
+h2 {
+  font-family: "Rock Salt", cursive;
+  color: #66D8D5;
+  font-size: 1em; }
+
+p {
+  line-height: 1.5;
+  font-weight: 300; }
+
+a {
+  text-decoration: none;
+  color: #EC7077; }
+  a:hover, a:focus {
+    color: #66D8D5; }
+
+li {
+  list-style-type: circle; }
+
+header {
+  text-align: center; }
+
+aside {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 3em; }
+
+article {
+  max-width: 100%;
+  overflow: hidden; }
+  article > section::after,
+  article > header::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#logotype,
+#who-we-are {
+  color: #FFF; }
+
+#who-we-are {
+  padding: 1em; }
+  @media screen and (min-width: 768px) {
+    #who-we-are {
+      padding: 2em; } }
+  #who-we-are > header {
+    min-height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+#logotype {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #logotype h1 {
+    font-size: 4em; }
+    @media screen and (min-width: 480px) {
+      #logotype h1 {
+        font-size: 5em; } }
+  #logotype h2 {
+    font-size: 1em; }
+    @media screen and (min-width: 480px) {
+      #logotype h2 {
+        font-size: 1.5em;
+        margin-top: -1.5em; } }
+  #logotype em {
+    color: #EC7077; }
+
+#what-we-do {
+  width: 100%;
+  height: 100%;
+  display: block; }
+  #what-we-do > header {
+    padding: 2em;
+    min-height: 50em; }
+    @media screen and (min-width: 480px) {
+      #what-we-do > header {
+        min-height: 22em; } }
+    @media screen and (min-width: 768px) {
+      #what-we-do > header {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 31.91489%;
+        min-height: 100%;
+        text-align: left; }
+        #what-we-do > header:last-child {
+          margin-right: 0; } }
+  #what-we-do .item {
+    padding: 1em; }
+    #what-we-do .item header {
+      color: #EC7077; }
+    #what-we-do .item:nth-child(even) header {
+      color: #66D8D5; }
+    @media screen and (min-width: 768px) {
+      #what-we-do .item {
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 48.3871%;
+        padding: 0; }
+        #what-we-do .item:last-child {
+          margin-right: 0; }
+        #what-we-do .item:nth-child(2n) {
+          margin-right: 0; }
+        #what-we-do .item:nth-child(2n+1) {
+          clear: left; }
+        #what-we-do .item:nth-child(even) header {
+          color: #EC7077; }
+        #what-we-do .item:nth-child(3n-2) header {
+          color: #66D8D5; } }
+  @media screen and (min-width: 768px) {
+    #what-we-do .detail {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 65.95745%;
+      padding: 2em; }
+      #what-we-do .detail:last-child {
+        margin-right: 0; } }
+  #what-we-do .scan {
+    z-index: 50;
+    overflow: hidden; }
+
+#logo-mini {
+  margin: 5px;
+  float: left;
+  font-family: "Computer", sans-serif;
+  font-size: 2em;
+  color: #66D8D5; }
+
+#hire-us {
+  font-size: 1em;
+  float: right;
+  margin-right: 5px; }
+
+#contact {
+  width: 100%;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 2em; }
+  #contact::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #contact > header {
+    min-height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media screen and (min-width: 480px) {
+      #contact > header {
+        min-height: 10em; } }
+  @media screen and (min-width: 480px) {
+    #contact > section {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      #contact > section:last-child {
+        margin-right: 0; } }
+
+.human {
+  margin: 0.5em;
+  font-family: "Rock Salt";
+  font-size: 0.5em;
+  color: #66D8D5; }
+
+.staff {
+  width: 100%;
+  margin-top: 2em; }
+  .staff::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .staff > header,
+  .staff > footer {
+    width: 100%;
+    text-align: left; }
+    .staff > header::after,
+    .staff > footer::after {
+      clear: both;
+      content: "";
+      display: table; }
+  @media screen and (min-width: 768px) {
+    .staff .detail::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .staff .about {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 65.95745%; }
+      .staff .about:last-child {
+        margin-right: 0; }
+    .staff .specializations {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 31.91489%;
+      margin-right: 0; }
+      .staff .specializations:last-child {
+        margin-right: 0; } }
+
+@media screen and (min-width: 480px) {
+  .drop {
+    font-size: 1.5em;
+    vertical-align: -42%; } }
+
+.raise {
+  font-size: 0.75em;
+  vertical-align: 50%; }
+
+.scan.lines {
+  background-color: #222832;
+  background-image: linear-gradient(transparent 75%, rgba(24, 28, 35, 0.5) 50%);
+  background-size: 5px 5px; }
+.scan.text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background: linear-gradient(transparent 75%, rgba(255, 255, 255, 0.1) 50%) 5px 5px;
+  background-size: 5px 5px; }
+
+.fadeable {
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out; }
+
+.invisible {
+  opacity: 0; }
+
+.visible {
+  opacity: 1; }
+
+.blink {
+  animation: blink 0.75s step-start infinite;
+  font-weight: 900; }
+  .blink:after {
+    content: "_"; }
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: 3000ms; }
+  .animated:nth-child(2) {
+    animation-delay: 3333ms; }
+  .animated:nth-child(3) {
+    animation-delay: 3666ms; }
+  .animated:nth-child(4) {
+    animation-delay: 4000ms; }
+
+.fadeInUp {
+  animation-name: fadeInUp; }
+
+/*# sourceMappingURL=style.css.map */
