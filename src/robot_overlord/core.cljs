@@ -56,10 +56,11 @@
 ;; =====
 ;; STATE
 ;; =====
-(defonce app-state (atom {:logotype   (string->printable "Robot Overlord")
-                          :contact    (string->printable "Want to know more? Drop us a line!")
-                          :who-we-are (string->printable "Meet Our Minions")
-                          :what-we-do (string->printable "Robot Overlord is a holistic tech product & consultancy firm, focusing on leading-edge technologies, data science, and AI, to create joyful experiences")}))
+(defonce app-state
+  (atom {:logotype   (string->printable "Robot Overlord")
+         :contact    (string->printable "Want to know more? Drop us a line!")
+         :who-we-are (string->printable "Meet Our Minions")
+         :what-we-do (string->printable "Robot Overlord is a holistic tech product & consultancy firm, focusing on leading-edge technologies, data science, and AI, to create joyful experiences")}))
 
 ;; =======
 ;; DISPLAY
