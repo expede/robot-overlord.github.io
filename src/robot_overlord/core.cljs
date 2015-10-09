@@ -38,7 +38,7 @@
   (js/setTimeout #(om/update! cursor key true)
                  delay))
 
-(defn run!
+(defn state->state!
   "Run the state"
   [cursor printable current target init-delay duration] ;; NOTE: can access these properties with the cursor alone
   (cond
@@ -98,7 +98,7 @@
 
        om/IDidUpdate
        (did-update [_ _ _]
-         (run! logotype printable text remain 1500 1500))
+         (state->state! logotype printable text remain 1500 1500))
 
        om/IRender
        (render [_]
@@ -120,7 +120,7 @@
 
        om/IDidUpdate
        (did-update [_ _ _]
-         (run! what-we-do printable text remain 2000 1500))
+         (state->state! what-we-do printable text remain 2000 1500))
 
        om/IRender
        (render [_] (scan-title (:text what-we-do))))))
@@ -136,7 +136,7 @@
 
        om/IDidUpdate
        (did-update [_ _ _]
-         (run! who-we-are printable text remain 2000 1500))
+         (state->state! who-we-are printable text remain 2000 1500))
 
        om/IRender
        (render [_] (dom/h1 nil (oldschool (:text who-we-are)))))))
@@ -152,7 +152,7 @@
 
        om/IDidUpdate
        (did-update [_ _ _]
-         (run! contact printable text remain 2000 1000))
+         (state->state! contact printable text remain 2000 1000))
 
        om/IRender
        (render [_] (scan-title (:text contact))))))
