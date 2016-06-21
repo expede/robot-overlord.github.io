@@ -20,5 +20,5 @@ body {
 
 .overlordNavBar > li {
     display: inline-block !important;
-    color: #ccffaa;
+    color: rgb(34, 40, 50);
 }
