@@ -3,7 +3,7 @@ var _robot_overlord$robot_overlord$Stylesheets$cssFiles = _rtfeldman$elm_css$Css
 		[
 			{
 			ctor: '_Tuple2',
-			_0: 'styles.css',
+			_0: 'style.css',
 			_1: _rtfeldman$elm_css$Css_File$compile(_robot_overlord$robot_overlord$View_Style$css)
 		}
 		]));

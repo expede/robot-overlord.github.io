@@ -9,13 +9,13 @@ import View.Style exposing (css)
 port files : CssFileStructure -> Cmd msg
 
 cssFiles : CssFileStructure
-cssFiles = toFileStructure [ ( "styles.css", compile css ) ]
+cssFiles = toFileStructure [ ( "style.css", compile css ) ]
 
 main : Program Never
 main =
   Html.program
     { init          = ((), files cssFiles)
-    , view          = \_   -> (div [] [])
+    , view          = \_   -> div [] []
     , update        = \_ _ -> ((), Cmd.none)
     , subscriptions = \_   -> Sub.none
     }
