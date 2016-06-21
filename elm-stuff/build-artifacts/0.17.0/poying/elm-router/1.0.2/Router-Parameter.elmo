@@ -1,0 +1,42 @@
+var _poying$elm_router$Router_Parameter$float = function (paramName) {
+	return function (_p0) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			0.0,
+			_elm_lang$core$Result$toMaybe(
+				_elm_lang$core$String$toFloat(
+					A2(
+						_elm_lang$core$Maybe$withDefault,
+						'',
+						A2(_elm_lang$core$Dict$get, paramName, _p0)))));
+	};
+};
+var _poying$elm_router$Router_Parameter$string = function (paramName) {
+	return function (_p1) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			'',
+			A2(_elm_lang$core$Dict$get, paramName, _p1));
+	};
+};
+var _poying$elm_router$Router_Parameter$int = function (paramName) {
+	return function (_p2) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			_elm_lang$core$Result$toMaybe(
+				_elm_lang$core$String$toInt(
+					A2(
+						_elm_lang$core$Maybe$withDefault,
+						'',
+						A2(_elm_lang$core$Dict$get, paramName, _p2)))));
+	};
+};
+var _poying$elm_router$Router_Parameter_ops = _poying$elm_router$Router_Parameter_ops || {};
+_poying$elm_router$Router_Parameter_ops['/:'] = F3(
+	function (decoderA, decoderB, params) {
+		return A2(
+			decoderA,
+			params,
+			decoderB(params));
+	});

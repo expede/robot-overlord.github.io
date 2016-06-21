@@ -1,0 +1,4 @@
+var _Fresheyeball$lambdaconf_2016_elm_workshop$Msg$NoOp = {ctor: 'NoOp'};
+var _Fresheyeball$lambdaconf_2016_elm_workshop$Msg$Add = function (a) {
+	return {ctor: 'Add', _0: a};
+};

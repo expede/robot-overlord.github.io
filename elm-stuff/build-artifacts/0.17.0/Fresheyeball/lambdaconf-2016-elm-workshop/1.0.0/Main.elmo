@@ -1,0 +1,4 @@
+var _Fresheyeball$lambdaconf_2016_elm_workshop$Main$main = {
+	main: _elm_lang$html$Html_App$beginnerProgram(
+		{model: _Fresheyeball$lambdaconf_2016_elm_workshop$Model$init, update: _Fresheyeball$lambdaconf_2016_elm_workshop$Update$update, view: _Fresheyeball$lambdaconf_2016_elm_workshop$View$view})
+};

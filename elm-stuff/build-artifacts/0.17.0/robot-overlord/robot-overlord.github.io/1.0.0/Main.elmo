@@ -1,0 +1,4 @@
+var _robot_overlord$robot_overlord.github.io$Main$main = {
+	main: _elm_lang$html$Html_App$beginnerProgram(
+		{model: _robot_overlord$robot_overlord.github.io$Model$init, update: _robot_overlord$robot_overlord.github.io$Update$update, view: _robot_overlord$robot_overlord.github.io$View$view})
+};

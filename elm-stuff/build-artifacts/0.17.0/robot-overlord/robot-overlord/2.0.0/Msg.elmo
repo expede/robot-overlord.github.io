@@ -1,0 +1,4 @@
+var _robot_overlord$robot_overlord$Msg$NoOp = {ctor: 'NoOp'};
+var _robot_overlord$robot_overlord$Msg$Add = function (a) {
+	return {ctor: 'Add', _0: a};
+};

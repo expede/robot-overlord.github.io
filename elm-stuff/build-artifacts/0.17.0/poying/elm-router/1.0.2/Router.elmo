@@ -1,0 +1,154 @@
+var _poying$elm_router$Router$removeTailSlash = A3(
+	_elm_lang$core$Regex$replace,
+	_elm_lang$core$Regex$All,
+	_elm_lang$core$Regex$regex('/+$'),
+	function (_p0) {
+		return '';
+	});
+var _poying$elm_router$Router$path2names = function (path) {
+	return A2(
+		_elm_lang$core$List$filterMap,
+		function (_p1) {
+			var _p2 = _p1;
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				_elm_lang$core$Maybe$Nothing,
+				_elm_lang$core$List$head(_p2.submatches));
+		},
+		A3(
+			_elm_lang$core$Regex$find,
+			_elm_lang$core$Regex$All,
+			_elm_lang$core$Regex$regex('/:([^/]+)'),
+			path));
+};
+var _poying$elm_router$Router$path2re = F2(
+	function (path, result) {
+		var re = A4(
+			_elm_lang$core$Regex$replace,
+			_elm_lang$core$Regex$All,
+			_elm_lang$core$Regex$regex('/:[^/]+'),
+			function (_p3) {
+				return '/([^/]+)';
+			},
+			_poying$elm_router$Router$removeTailSlash(path));
+		var getSuffixRe = _elm_lang$core$Regex$regex(
+			A2(_elm_lang$core$Basics_ops['++'], '^', re));
+		var matchPathRe = function () {
+			var _p4 = result;
+			if (_p4.ctor === 'Page') {
+				return _elm_lang$core$Regex$regex(
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'^',
+						A2(_elm_lang$core$Basics_ops['++'], re, '$')));
+			} else {
+				return getSuffixRe;
+			}
+		}();
+		return {ctor: '_Tuple2', _0: matchPathRe, _1: getSuffixRe};
+	});
+var _poying$elm_router$Router$compile = F2(
+	function (path, result) {
+		return {
+			ctor: '_Tuple2',
+			_0: _poying$elm_router$Router$path2names(path),
+			_1: A2(_poying$elm_router$Router$path2re, path, result)
+		};
+	});
+var _poying$elm_router$Router$matchRouter = F3(
+	function (params, router, urlPath) {
+		return _elm_lang$core$List$head(
+			A2(
+				_elm_lang$core$List$filterMap,
+				A2(_poying$elm_router$Router$matchRoute, params, urlPath),
+				router));
+	});
+var _poying$elm_router$Router$matchRoute = F3(
+	function (params, urlPath, _p5) {
+		var _p6 = _p5;
+		var suffix = A4(
+			_elm_lang$core$Regex$replace,
+			_elm_lang$core$Regex$All,
+			_p6._0._1._1,
+			function (_p7) {
+				return '';
+			},
+			urlPath);
+		var match = _elm_lang$core$List$head(
+			A3(_elm_lang$core$Regex$find, _elm_lang$core$Regex$All, _p6._0._1._0, urlPath));
+		var values = function () {
+			var _p8 = match;
+			if (_p8.ctor === 'Just') {
+				return A2(_elm_lang$core$List$filterMap, _elm_lang$core$Basics$identity, _p8._0.submatches);
+			} else {
+				return _elm_lang$core$Native_List.fromArray(
+					[]);
+			}
+		}();
+		var newParams = A2(
+			_elm_lang$core$Dict$union,
+			params,
+			_elm_lang$core$Dict$fromList(
+				A3(
+					_elm_lang$core$List$map2,
+					F2(
+						function (v0, v1) {
+							return {ctor: '_Tuple2', _0: v0, _1: v1};
+						}),
+					_p6._0._0,
+					values)));
+		var _p9 = _p6._1;
+		if (_p9.ctor === 'Page') {
+			return (!_elm_lang$core$Native_Utils.eq(match, _elm_lang$core$Maybe$Nothing)) ? _elm_lang$core$Maybe$Just(
+				_p9._0(newParams)) : _elm_lang$core$Maybe$Nothing;
+		} else {
+			return (!_elm_lang$core$Native_Utils.eq(suffix, urlPath)) ? A3(_poying$elm_router$Router$matchRouter, newParams, _p9._0, suffix) : _elm_lang$core$Maybe$Nothing;
+		}
+	});
+var _poying$elm_router$Router$match = F3(
+	function (router, notFound, urlPath) {
+		var _p10 = A3(
+			_poying$elm_router$Router$matchRouter,
+			_elm_lang$core$Dict$empty,
+			router,
+			_poying$elm_router$Router$removeTailSlash(urlPath));
+		if (_p10.ctor === 'Just') {
+			return _p10._0;
+		} else {
+			return notFound;
+		}
+	});
+var _poying$elm_router$Router$route = F2(
+	function (urlPath, result) {
+		return {
+			ctor: '_Tuple2',
+			_0: A2(_poying$elm_router$Router$compile, urlPath, result),
+			_1: result
+		};
+	});
+var _poying$elm_router$Router$NestRouter = function (a) {
+	return {ctor: 'NestRouter', _0: a};
+};
+var _poying$elm_router$Router$nest = _poying$elm_router$Router$NestRouter;
+var _poying$elm_router$Router_ops = _poying$elm_router$Router_ops || {};
+_poying$elm_router$Router_ops[':=>'] = function (urlPath) {
+	return function (_p11) {
+		return A2(
+			_poying$elm_router$Router$route,
+			urlPath,
+			_poying$elm_router$Router$nest(_p11));
+	};
+};
+var _poying$elm_router$Router$Page = function (a) {
+	return {ctor: 'Page', _0: a};
+};
+var _poying$elm_router$Router$page = _poying$elm_router$Router$Page;
+var _poying$elm_router$Router_ops = _poying$elm_router$Router_ops || {};
+_poying$elm_router$Router_ops[':~>'] = function (urlPath) {
+	return function (_p12) {
+		return A2(
+			_poying$elm_router$Router$route,
+			urlPath,
+			_poying$elm_router$Router$page(_p12));
+	};
+};

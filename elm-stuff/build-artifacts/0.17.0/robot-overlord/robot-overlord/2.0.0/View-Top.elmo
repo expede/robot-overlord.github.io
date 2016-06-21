@@ -1,0 +1,25 @@
+var _robot_overlord$robot_overlord$View_Top$top = A2(
+	_elm_lang$html$Html$section,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_elm_lang$html$Html_Attributes$class('logo')
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_lang$html$Html$h1,
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text('Robot Overlord Software Inc.')
+				])),
+			A2(
+			_elm_lang$html$Html$h2,
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text('Computing with humanity')
+				]))
+		]));
