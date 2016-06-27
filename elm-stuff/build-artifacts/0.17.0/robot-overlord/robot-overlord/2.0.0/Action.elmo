@@ -1,0 +1,6 @@
+var _robot_overlord$robot_overlord$Action$SetQuery = function (a) {
+	return {ctor: 'SetQuery', _0: a};
+};
+var _robot_overlord$robot_overlord$Action$NavigateTo = function (a) {
+	return {ctor: 'NavigateTo', _0: a};
+};

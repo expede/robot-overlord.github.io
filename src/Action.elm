@@ -1,7 +1,7 @@
-module Msg exposing (Msg(..))
+module Action exposing (Action(..))
 
 import Hop.Types exposing (Query)
 
-type Msg
+type Action
   = NavigateTo String
   | SetQuery   Query

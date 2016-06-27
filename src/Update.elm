@@ -5,10 +5,10 @@ import Hop exposing (makeUrl, makeUrlFromLocation, matchUrl, setQuery)
 import Hop.Types exposing (Query, Location)
 
 import Model exposing (Model)
-import Msg exposing (Msg(..))
+import Action exposing (Action(..))
 import Router exposing (routerConfig, Route(..))
 
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Action -> Model -> (Model, Cmd Action)
 update msg model =
   case (Debug.log "msg" msg) of
      NavigateTo path ->
@@ -26,7 +26,7 @@ update msg model =
 urlParser : Navigation.Parser (Route, Hop.Types.Location)
 urlParser = Navigation.makeParser (.href >> matchUrl routerConfig)
 
-urlUpdate : (Route, Location) -> Model -> (Model, Cmd Msg)
+urlUpdate : (Route, Location) -> Model -> (Model, Cmd Action)
 urlUpdate (route, location) model =
   ( { model | route    = route
             , location = location

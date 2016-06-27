@@ -9,58 +9,23 @@ var _robot_overlord$robot_overlord$View$currentQuery = function (model) {
 				_elm_lang$html$Html$text(query)
 			]));
 };
-var _robot_overlord$robot_overlord$View$pageView = function (model) {
-	var _p0 = model.route;
-	switch (_p0.ctor) {
-		case 'TopRoute':
-			return A2(
-				_elm_lang$html$Html$div,
+var _robot_overlord$robot_overlord$View$showTop = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				A2(
+				_elm_lang$html$Html$h2,
 				_elm_lang$core$Native_List.fromArray(
 					[]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						A2(
-						_elm_lang$html$Html$h2,
-						_elm_lang$core$Native_List.fromArray(
-							[]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('top')
-							]))
-					]));
-		case 'BodyRoute':
-			return A2(
-				_elm_lang$html$Html$div,
-				_elm_lang$core$Native_List.fromArray(
-					[]),
-				_elm_lang$core$Native_List.fromArray(
-					[
-						A2(
-						_elm_lang$html$Html$h2,
-						_elm_lang$core$Native_List.fromArray(
-							[]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('body')
-							]))
-					]));
-		default:
-			return A2(
-				_elm_lang$html$Html$div,
-				_elm_lang$core$Native_List.fromArray(
-					[]),
-				_elm_lang$core$Native_List.fromArray(
-					[
-						A2(
-						_elm_lang$html$Html$h2,
-						_elm_lang$core$Native_List.fromArray(
-							[]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('Not Found')
-							]))
-					]));
-	}
+						_elm_lang$html$Html$text('showTop')
+					])),
+				_robot_overlord$robot_overlord$View$currentQuery(model)
+			]));
 };
 var _robot_overlord$robot_overlord$View$showBody = function (model) {
 	return A2(
@@ -80,23 +45,23 @@ var _robot_overlord$robot_overlord$View$showBody = function (model) {
 				_robot_overlord$robot_overlord$View$currentQuery(model)
 			]));
 };
-var _robot_overlord$robot_overlord$View$showTop = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		_elm_lang$core$Native_List.fromArray(
-			[]),
-		_elm_lang$core$Native_List.fromArray(
-			[
-				A2(
+var _robot_overlord$robot_overlord$View$pageView = function (model) {
+	var _p0 = model.route;
+	switch (_p0.ctor) {
+		case 'TopRoute':
+			return _robot_overlord$robot_overlord$View$showTop(model);
+		case 'BodyRoute':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		default:
+			return A2(
 				_elm_lang$html$Html$h2,
 				_elm_lang$core$Native_List.fromArray(
 					[]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_elm_lang$html$Html$text('showTop')
-					])),
-				_robot_overlord$robot_overlord$View$currentQuery(model)
-			]));
+						_elm_lang$html$Html$text('Not Found')
+					]));
+	}
 };
 var _robot_overlord$robot_overlord$View$view = function (model) {
 	return A2(

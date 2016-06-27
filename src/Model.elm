@@ -2,7 +2,7 @@ module Model exposing (Model, init)
 
 import Hop.Types exposing (Query, Location)
 
-import Msg exposing (Msg(..))
+import Action exposing (Action(..))
 import Router exposing (Route)
 
 type alias Model =
@@ -10,7 +10,7 @@ type alias Model =
   , route    : Route
   }
 
-init : (Route, Location) -> (Model, Cmd Msg)
+init : (Route, Location) -> (Model, Cmd Action)
 init (route, location) =
   ( Model location route
   , Cmd.none
