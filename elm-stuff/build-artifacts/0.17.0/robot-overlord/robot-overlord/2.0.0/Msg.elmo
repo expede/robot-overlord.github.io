@@ -1,4 +1,6 @@
-var _robot_overlord$robot_overlord$Msg$NoOp = {ctor: 'NoOp'};
-var _robot_overlord$robot_overlord$Msg$Add = function (a) {
-	return {ctor: 'Add', _0: a};
+var _robot_overlord$robot_overlord$Msg$SetQuery = function (a) {
+	return {ctor: 'SetQuery', _0: a};
+};
+var _robot_overlord$robot_overlord$Msg$NavigateTo = function (a) {
+	return {ctor: 'NavigateTo', _0: a};
 };

@@ -1,20 +1,36 @@
+var _robot_overlord$robot_overlord$Update$urlUpdate = F2(
+	function (_p0, model) {
+		var _p1 = _p0;
+		return {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Native_Utils.update(
+				model,
+				{route: _p1._0, location: _p1._1}),
+			_1: _elm_lang$core$Platform_Cmd$none
+		};
+	});
+var _robot_overlord$robot_overlord$Update$urlParser = _elm_lang$navigation$Navigation$makeParser(
+	function (_p2) {
+		return A2(
+			_sporto$hop$Hop$matchUrl,
+			_robot_overlord$robot_overlord$Router$routerConfig,
+			function (_) {
+				return _.href;
+			}(_p2));
+	});
 var _robot_overlord$robot_overlord$Update$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		return model;
-	});
-var _robot_overlord$robot_overlord$Update$mapWhen = F3(
-	function (f, pet, _p1) {
-		var _p2 = _p1;
-		var _p4 = _p2._1;
-		var _p3 = _p2._0;
-		return _elm_lang$core$Native_Utils.eq(_p3, pet) ? {
-			ctor: '_Tuple2',
-			_0: _p3,
-			_1: A3(
-				_elm_lang$core$Basics$clamp,
-				1,
-				25,
-				f(_p4))
-		} : {ctor: '_Tuple2', _0: _p3, _1: _p4};
+		var _p3 = A2(_elm_lang$core$Debug$log, 'msg', msg);
+		if (_p3.ctor === 'NavigateTo') {
+			var command = _elm_lang$navigation$Navigation$newUrl(
+				A2(_sporto$hop$Hop$makeUrl, _robot_overlord$robot_overlord$Router$routerConfig, _p3._0));
+			return {ctor: '_Tuple2', _0: model, _1: command};
+		} else {
+			var command = _elm_lang$navigation$Navigation$newUrl(
+				A2(
+					_sporto$hop$Hop$makeUrlFromLocation,
+					_robot_overlord$robot_overlord$Router$routerConfig,
+					A2(_sporto$hop$Hop$setQuery, _p3._0, model.location)));
+			return {ctor: '_Tuple2', _0: model, _1: command};
+		}
 	});
