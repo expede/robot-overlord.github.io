@@ -3,10 +3,10 @@ module View.Style.Container exposing (containers)
 import Css exposing (..)
 import Css.Elements exposing (body, li)
 
+import View.Style.Class exposing (Class(..))
 import View.Style.Color exposing (..)
 
-type CssIds     = Page
-type CssClasses = NavBar
+type CssId = Page
 
 containers : List Snippet
 containers = [base, idPage, classNavBar]

@@ -1,24 +1,14 @@
-module Router exposing (routerConfig, matchers, Route(..))
+module Router exposing (routerConfig)
 
--- import Hop exposing (makeUrl, makeUrlFromLocation, matchUrl, setQuery)
-import Hop.Types exposing (Config, Query, Location, PathMatcher, Router)
-import Hop.Matchers exposing (..)
+import Hop.Types exposing (Config)
 
-type Route
-  = TopRoute
-  | BodyRoute
-  | NotFoundRoute
+import Router.Route exposing (Route(NotFound))
+import Router.Match exposing (matchers)
 
 routerConfig : Config Route
 routerConfig =
   { hash     = True
   , basePath = ""
   , matchers = matchers
-  , notFound = NotFoundRoute
+  , notFound = NotFound
   }
-
-matchers : List (PathMatcher Route)
-matchers =
-  [ match1 TopRoute  ""
-  , match1 BodyRoute "/body"
-  ]

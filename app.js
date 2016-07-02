@@ -8713,107 +8713,6 @@ var _elm_lang$html$Html_Attributes$classList = function (list) {
 };
 var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
 
-var _elm_lang$html$Html_Events$keyCode = A2(_elm_lang$core$Json_Decode_ops[':='], 'keyCode', _elm_lang$core$Json_Decode$int);
-var _elm_lang$html$Html_Events$targetChecked = A2(
-	_elm_lang$core$Json_Decode$at,
-	_elm_lang$core$Native_List.fromArray(
-		['target', 'checked']),
-	_elm_lang$core$Json_Decode$bool);
-var _elm_lang$html$Html_Events$targetValue = A2(
-	_elm_lang$core$Json_Decode$at,
-	_elm_lang$core$Native_List.fromArray(
-		['target', 'value']),
-	_elm_lang$core$Json_Decode$string);
-var _elm_lang$html$Html_Events$defaultOptions = _elm_lang$virtual_dom$VirtualDom$defaultOptions;
-var _elm_lang$html$Html_Events$onWithOptions = _elm_lang$virtual_dom$VirtualDom$onWithOptions;
-var _elm_lang$html$Html_Events$on = _elm_lang$virtual_dom$VirtualDom$on;
-var _elm_lang$html$Html_Events$onFocus = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'focus',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onBlur = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'blur',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onSubmitOptions = _elm_lang$core$Native_Utils.update(
-	_elm_lang$html$Html_Events$defaultOptions,
-	{preventDefault: true});
-var _elm_lang$html$Html_Events$onSubmit = function (msg) {
-	return A3(
-		_elm_lang$html$Html_Events$onWithOptions,
-		'submit',
-		_elm_lang$html$Html_Events$onSubmitOptions,
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onCheck = function (tagger) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'change',
-		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetChecked));
-};
-var _elm_lang$html$Html_Events$onInput = function (tagger) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'input',
-		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetValue));
-};
-var _elm_lang$html$Html_Events$onMouseOut = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mouseout',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onMouseOver = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mouseover',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onMouseLeave = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mouseleave',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onMouseEnter = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mouseenter',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onMouseUp = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mouseup',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onMouseDown = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'mousedown',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onDoubleClick = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'dblclick',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$onClick = function (msg) {
-	return A2(
-		_elm_lang$html$Html_Events$on,
-		'click',
-		_elm_lang$core$Json_Decode$succeed(msg));
-};
-var _elm_lang$html$Html_Events$Options = F2(
-	function (a, b) {
-		return {stopPropagation: a, preventDefault: b};
-	});
-
 var _elm_lang$navigation$Native_Navigation = function() {
 
 function go(n)
@@ -9541,227 +9440,36 @@ var _sporto$hop$Hop_Types$Router = function (a) {
 	return {run: a};
 };
 
-var _robot_overlord$robot_overlord$Action$SetQuery = function (a) {
-	return {ctor: 'SetQuery', _0: a};
+var _robot_overlord$robot_overlord$Router_Route$resolve = function (route) {
+	var _p0 = route;
+	switch (_p0.ctor) {
+		case 'Home':
+			return '/code';
+		case 'NotFound':
+			return '/404';
+		case 'Code':
+			return '/code';
+		case 'Design':
+			return '/design';
+		case 'About':
+			return '/about';
+		case 'Contact':
+			return '/contact';
+		default:
+			return '/portfolio';
+	}
 };
-var _robot_overlord$robot_overlord$Action$NavigateTo = function (a) {
+var _robot_overlord$robot_overlord$Router_Route$Portfolio = {ctor: 'Portfolio'};
+var _robot_overlord$robot_overlord$Router_Route$Contact = {ctor: 'Contact'};
+var _robot_overlord$robot_overlord$Router_Route$About = {ctor: 'About'};
+var _robot_overlord$robot_overlord$Router_Route$Design = {ctor: 'Design'};
+var _robot_overlord$robot_overlord$Router_Route$Code = {ctor: 'Code'};
+var _robot_overlord$robot_overlord$Router_Route$NotFound = {ctor: 'NotFound'};
+var _robot_overlord$robot_overlord$Router_Route$Home = {ctor: 'Home'};
+
+var _robot_overlord$robot_overlord$Signal$NavigateTo = function (a) {
 	return {ctor: 'NavigateTo', _0: a};
 };
-
-var _robot_overlord$robot_overlord$Components_Button$view = F2(
-	function (msg, label) {
-		return A2(
-			_elm_lang$html$Html$button,
-			_elm_lang$core$Native_List.fromArray(
-				[
-					_elm_lang$html$Html_Attributes$type$('button'),
-					_elm_lang$html$Html_Attributes$class('btn btn-primary'),
-					_elm_lang$html$Html_Events$onClick(msg)
-				]),
-			_elm_lang$core$Native_List.fromArray(
-				[
-					_elm_lang$html$Html$text(label)
-				]));
-	});
-
-var _robot_overlord$robot_overlord$Components_Css$link = function (href) {
-	return A3(
-		_elm_lang$html$Html$node,
-		'link',
-		_elm_lang$core$Native_List.fromArray(
-			[
-				_elm_lang$html$Html_Attributes$rel('stylesheet'),
-				_elm_lang$html$Html_Attributes$href(href)
-			]),
-		_elm_lang$core$Native_List.fromArray(
-			[]));
-};
-
-var _robot_overlord$robot_overlord$Components_IconButton$view = F2(
-	function (x, msg) {
-		return A2(
-			_elm_lang$html$Html$button,
-			_elm_lang$core$Native_List.fromArray(
-				[
-					_elm_lang$html$Html_Attributes$type$('button'),
-					_elm_lang$html$Html_Attributes$class('btn btn-default btn-sm'),
-					_elm_lang$html$Html_Events$onClick(msg)
-				]),
-			_elm_lang$core$Native_List.fromArray(
-				[
-					A2(
-					_elm_lang$html$Html$i,
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_elm_lang$html$Html_Attributes$class(
-							A2(_elm_lang$core$Basics_ops['++'], 'fa fa-', x))
-						]),
-					_elm_lang$core$Native_List.fromArray(
-						[]))
-				]));
-	});
-
-var _sporto$hop$Hop_Matchers$str = _Bogdanp$elm_combine$Combine$regex('[^/]+');
-var _sporto$hop$Hop_Matchers$int = _Bogdanp$elm_combine$Combine_Num$int;
-var _sporto$hop$Hop_Matchers$parserWithBeginningAndEnd = function (parser) {
-	return A2(_Bogdanp$elm_combine$Combine_Infix_ops['<*'], parser, _Bogdanp$elm_combine$Combine$end);
-};
-var _sporto$hop$Hop_Matchers$match1 = F2(
-	function (constructor, segment1) {
-		var constructor$ = function (_p0) {
-			var _p1 = _p0;
-			return constructor;
-		};
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor$,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				_Bogdanp$elm_combine$Combine$skip(
-					_Bogdanp$elm_combine$Combine$string(segment1))));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1])
-		};
-	});
-var _sporto$hop$Hop_Matchers$match2 = F3(
-	function (constructor, segment1, parser1) {
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				A2(
-					_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
-					_Bogdanp$elm_combine$Combine$string(segment1),
-					parser1)));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1])
-		};
-	});
-var _sporto$hop$Hop_Matchers$match3 = F4(
-	function (constructor, segment1, parser1, segment2) {
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				A2(
-					_Bogdanp$elm_combine$Combine_Infix_ops['<*'],
-					A2(
-						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
-						_Bogdanp$elm_combine$Combine$string(segment1),
-						parser1),
-					_Bogdanp$elm_combine$Combine$string(segment2))));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1, segment2])
-		};
-	});
-var _sporto$hop$Hop_Matchers$match4 = F5(
-	function (constructor, segment1, parser1, segment2, parser2) {
-		var constructor$ = function (_p2) {
-			var _p3 = _p2;
-			return A2(constructor, _p3._0, _p3._1);
-		};
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor$,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				A2(
-					_Bogdanp$elm_combine$Combine$andThen,
-					A2(
-						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
-						_Bogdanp$elm_combine$Combine$string(segment1),
-						parser1),
-					function (r) {
-						return A2(
-							_Bogdanp$elm_combine$Combine$map,
-							function (x) {
-								return {ctor: '_Tuple2', _0: r, _1: x};
-							},
-							A2(
-								_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
-								_Bogdanp$elm_combine$Combine$string(segment2),
-								parser2));
-					})));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1, segment2])
-		};
-	});
-var _sporto$hop$Hop_Matchers$nested1 = F3(
-	function (constructor, segment1, children) {
-		var childrenParsers = A2(
-			_elm_lang$core$List$map,
-			function (_) {
-				return _.parser;
-			},
-			children);
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				A2(
-					_Bogdanp$elm_combine$Combine$andThen,
-					_Bogdanp$elm_combine$Combine$string(segment1),
-					function (x) {
-						return _Bogdanp$elm_combine$Combine$choice(childrenParsers);
-					})));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1])
-		};
-	});
-var _sporto$hop$Hop_Matchers$nested2 = F4(
-	function (constructor, segment1, parser1, children) {
-		var constructor$ = function (_p4) {
-			var _p5 = _p4;
-			return A2(constructor, _p5._0, _p5._1);
-		};
-		var childrenParsers = A2(
-			_elm_lang$core$List$map,
-			function (_) {
-				return _.parser;
-			},
-			children);
-		var parser = A2(
-			_Bogdanp$elm_combine$Combine$map,
-			constructor$,
-			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
-				A2(
-					_Bogdanp$elm_combine$Combine$andThen,
-					A2(
-						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
-						_Bogdanp$elm_combine$Combine$string(segment1),
-						parser1),
-					function (r) {
-						return A2(
-							_Bogdanp$elm_combine$Combine$map,
-							function (x) {
-								return {ctor: '_Tuple2', _0: r, _1: x};
-							},
-							_Bogdanp$elm_combine$Combine$choice(childrenParsers));
-					})));
-		return {
-			parser: parser,
-			segments: _elm_lang$core$Native_List.fromArray(
-				[segment1])
-		};
-	});
-
-var _robot_overlord$robot_overlord$Router$NotFoundRoute = {ctor: 'NotFoundRoute'};
-var _robot_overlord$robot_overlord$Router$BodyRoute = {ctor: 'BodyRoute'};
-var _robot_overlord$robot_overlord$Router$TopRoute = {ctor: 'TopRoute'};
-var _robot_overlord$robot_overlord$Router$matchers = _elm_lang$core$Native_List.fromArray(
-	[
-		A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router$TopRoute, ''),
-		A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router$BodyRoute, '/body')
-	]);
-var _robot_overlord$robot_overlord$Router$routerConfig = {hash: true, basePath: '', matchers: _robot_overlord$robot_overlord$Router$matchers, notFound: _robot_overlord$robot_overlord$Router$NotFoundRoute};
 
 var _robot_overlord$robot_overlord$Model$Model = F2(
 	function (a, b) {
@@ -9826,9 +9534,17 @@ var _robot_overlord$robot_overlord$View$showBody = function (model) {
 var _robot_overlord$robot_overlord$View$pageView = function (model) {
 	var _p0 = model.route;
 	switch (_p0.ctor) {
-		case 'TopRoute':
+		case 'Home':
 			return _robot_overlord$robot_overlord$View$showTop(model);
-		case 'BodyRoute':
+		case 'Code':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Design':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'About':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Contact':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Portfolio':
 			return _robot_overlord$robot_overlord$View$showBody(model);
 		default:
 			return A2(
@@ -9851,8 +9567,6 @@ var _robot_overlord$robot_overlord$View$view = function (model) {
 				_robot_overlord$robot_overlord$View$pageView(model)
 			]));
 };
-var _robot_overlord$robot_overlord$View$fontAwesome = _robot_overlord$robot_overlord$Components_Css$link('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-var _robot_overlord$robot_overlord$View$bootstrap = _robot_overlord$robot_overlord$Components_Css$link('https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css');
 
 var _sporto$hop$Hop_Location$queryKVtoTuple = function (kv) {
 	var splitted = A2(_elm_lang$core$String$split, '=', kv);
@@ -10152,6 +9866,170 @@ var _sporto$hop$Hop$matchUrl = F2(
 		};
 	});
 
+var _sporto$hop$Hop_Matchers$str = _Bogdanp$elm_combine$Combine$regex('[^/]+');
+var _sporto$hop$Hop_Matchers$int = _Bogdanp$elm_combine$Combine_Num$int;
+var _sporto$hop$Hop_Matchers$parserWithBeginningAndEnd = function (parser) {
+	return A2(_Bogdanp$elm_combine$Combine_Infix_ops['<*'], parser, _Bogdanp$elm_combine$Combine$end);
+};
+var _sporto$hop$Hop_Matchers$match1 = F2(
+	function (constructor, segment1) {
+		var constructor$ = function (_p0) {
+			var _p1 = _p0;
+			return constructor;
+		};
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor$,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				_Bogdanp$elm_combine$Combine$skip(
+					_Bogdanp$elm_combine$Combine$string(segment1))));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1])
+		};
+	});
+var _sporto$hop$Hop_Matchers$match2 = F3(
+	function (constructor, segment1, parser1) {
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				A2(
+					_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
+					_Bogdanp$elm_combine$Combine$string(segment1),
+					parser1)));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1])
+		};
+	});
+var _sporto$hop$Hop_Matchers$match3 = F4(
+	function (constructor, segment1, parser1, segment2) {
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				A2(
+					_Bogdanp$elm_combine$Combine_Infix_ops['<*'],
+					A2(
+						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
+						_Bogdanp$elm_combine$Combine$string(segment1),
+						parser1),
+					_Bogdanp$elm_combine$Combine$string(segment2))));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1, segment2])
+		};
+	});
+var _sporto$hop$Hop_Matchers$match4 = F5(
+	function (constructor, segment1, parser1, segment2, parser2) {
+		var constructor$ = function (_p2) {
+			var _p3 = _p2;
+			return A2(constructor, _p3._0, _p3._1);
+		};
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor$,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				A2(
+					_Bogdanp$elm_combine$Combine$andThen,
+					A2(
+						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
+						_Bogdanp$elm_combine$Combine$string(segment1),
+						parser1),
+					function (r) {
+						return A2(
+							_Bogdanp$elm_combine$Combine$map,
+							function (x) {
+								return {ctor: '_Tuple2', _0: r, _1: x};
+							},
+							A2(
+								_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
+								_Bogdanp$elm_combine$Combine$string(segment2),
+								parser2));
+					})));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1, segment2])
+		};
+	});
+var _sporto$hop$Hop_Matchers$nested1 = F3(
+	function (constructor, segment1, children) {
+		var childrenParsers = A2(
+			_elm_lang$core$List$map,
+			function (_) {
+				return _.parser;
+			},
+			children);
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				A2(
+					_Bogdanp$elm_combine$Combine$andThen,
+					_Bogdanp$elm_combine$Combine$string(segment1),
+					function (x) {
+						return _Bogdanp$elm_combine$Combine$choice(childrenParsers);
+					})));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1])
+		};
+	});
+var _sporto$hop$Hop_Matchers$nested2 = F4(
+	function (constructor, segment1, parser1, children) {
+		var constructor$ = function (_p4) {
+			var _p5 = _p4;
+			return A2(constructor, _p5._0, _p5._1);
+		};
+		var childrenParsers = A2(
+			_elm_lang$core$List$map,
+			function (_) {
+				return _.parser;
+			},
+			children);
+		var parser = A2(
+			_Bogdanp$elm_combine$Combine$map,
+			constructor$,
+			_sporto$hop$Hop_Matchers$parserWithBeginningAndEnd(
+				A2(
+					_Bogdanp$elm_combine$Combine$andThen,
+					A2(
+						_Bogdanp$elm_combine$Combine_Infix_ops['*>'],
+						_Bogdanp$elm_combine$Combine$string(segment1),
+						parser1),
+					function (r) {
+						return A2(
+							_Bogdanp$elm_combine$Combine$map,
+							function (x) {
+								return {ctor: '_Tuple2', _0: r, _1: x};
+							},
+							_Bogdanp$elm_combine$Combine$choice(childrenParsers));
+					})));
+		return {
+			parser: parser,
+			segments: _elm_lang$core$Native_List.fromArray(
+				[segment1])
+		};
+	});
+
+var _robot_overlord$robot_overlord$Router_Match$notFoundMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$NotFound, '/404');
+var _robot_overlord$robot_overlord$Router_Match$portfolioMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Portfolio, '/portfolio');
+var _robot_overlord$robot_overlord$Router_Match$contactMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Contact, '/contact');
+var _robot_overlord$robot_overlord$Router_Match$aboutMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$About, '/about');
+var _robot_overlord$robot_overlord$Router_Match$designMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Design, '/design');
+var _robot_overlord$robot_overlord$Router_Match$codeMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Code, '/code');
+var _robot_overlord$robot_overlord$Router_Match$homeMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Home, '');
+var _robot_overlord$robot_overlord$Router_Match$matchers = _elm_lang$core$Native_List.fromArray(
+	[_robot_overlord$robot_overlord$Router_Match$homeMatcher, _robot_overlord$robot_overlord$Router_Match$codeMatcher, _robot_overlord$robot_overlord$Router_Match$designMatcher, _robot_overlord$robot_overlord$Router_Match$aboutMatcher, _robot_overlord$robot_overlord$Router_Match$contactMatcher, _robot_overlord$robot_overlord$Router_Match$portfolioMatcher]);
+
+var _robot_overlord$robot_overlord$Router$routerConfig = {hash: true, basePath: '', matchers: _robot_overlord$robot_overlord$Router_Match$matchers, notFound: _robot_overlord$robot_overlord$Router_Route$NotFound};
+
 var _robot_overlord$robot_overlord$Update$urlUpdate = F2(
 	function (_p0, model) {
 		var _p1 = _p0;
@@ -10175,18 +10053,12 @@ var _robot_overlord$robot_overlord$Update$urlParser = _elm_lang$navigation$Navig
 var _robot_overlord$robot_overlord$Update$update = F2(
 	function (msg, model) {
 		var _p3 = A2(_elm_lang$core$Debug$log, 'msg', msg);
-		if (_p3.ctor === 'NavigateTo') {
-			var command = _elm_lang$navigation$Navigation$newUrl(
-				A2(_sporto$hop$Hop$makeUrl, _robot_overlord$robot_overlord$Router$routerConfig, _p3._0));
-			return {ctor: '_Tuple2', _0: model, _1: command};
-		} else {
-			var command = _elm_lang$navigation$Navigation$newUrl(
-				A2(
-					_sporto$hop$Hop$makeUrlFromLocation,
-					_robot_overlord$robot_overlord$Router$routerConfig,
-					A2(_sporto$hop$Hop$setQuery, _p3._0, model.location)));
-			return {ctor: '_Tuple2', _0: model, _1: command};
-		}
+		var command = _elm_lang$navigation$Navigation$newUrl(
+			A2(
+				_sporto$hop$Hop$makeUrl,
+				_robot_overlord$robot_overlord$Router$routerConfig,
+				_robot_overlord$robot_overlord$Router_Route$resolve(_p3._0)));
+		return {ctor: '_Tuple2', _0: model, _1: command};
 	});
 
 var _robot_overlord$robot_overlord$Main$main = {

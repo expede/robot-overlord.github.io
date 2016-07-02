@@ -48,9 +48,17 @@ var _robot_overlord$robot_overlord$View$showBody = function (model) {
 var _robot_overlord$robot_overlord$View$pageView = function (model) {
 	var _p0 = model.route;
 	switch (_p0.ctor) {
-		case 'TopRoute':
+		case 'Home':
 			return _robot_overlord$robot_overlord$View$showTop(model);
-		case 'BodyRoute':
+		case 'Code':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Design':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'About':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Contact':
+			return _robot_overlord$robot_overlord$View$showBody(model);
+		case 'Portfolio':
 			return _robot_overlord$robot_overlord$View$showBody(model);
 		default:
 			return A2(
@@ -73,5 +81,3 @@ var _robot_overlord$robot_overlord$View$view = function (model) {
 				_robot_overlord$robot_overlord$View$pageView(model)
 			]));
 };
-var _robot_overlord$robot_overlord$View$fontAwesome = _robot_overlord$robot_overlord$Components_Css$link('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-var _robot_overlord$robot_overlord$View$bootstrap = _robot_overlord$robot_overlord$Components_Css$link('https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css');

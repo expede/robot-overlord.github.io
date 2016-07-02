@@ -1,9 +1,1 @@
-var _robot_overlord$robot_overlord$Router$NotFoundRoute = {ctor: 'NotFoundRoute'};
-var _robot_overlord$robot_overlord$Router$BodyRoute = {ctor: 'BodyRoute'};
-var _robot_overlord$robot_overlord$Router$TopRoute = {ctor: 'TopRoute'};
-var _robot_overlord$robot_overlord$Router$matchers = _elm_lang$core$Native_List.fromArray(
-	[
-		A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router$TopRoute, ''),
-		A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router$BodyRoute, '/body')
-	]);
-var _robot_overlord$robot_overlord$Router$routerConfig = {hash: true, basePath: '', matchers: _robot_overlord$robot_overlord$Router$matchers, notFound: _robot_overlord$robot_overlord$Router$NotFoundRoute};
+var _robot_overlord$robot_overlord$Router$routerConfig = {hash: true, basePath: '', matchers: _robot_overlord$robot_overlord$Router_Match$matchers, notFound: _robot_overlord$robot_overlord$Router_Route$NotFound};
