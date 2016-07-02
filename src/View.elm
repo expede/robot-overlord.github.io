@@ -1,41 +1,22 @@
-module View exposing (view, currentQuery)
+module View exposing (view)
 
-import Html exposing (..) -- (Html, body, section, h1, h2, p, text)
-import Html.Attributes exposing (class)
+import Html exposing (Html, body, section, h1, h2, p, text)
 
-import Signal exposing (Signal(..))
-
-import Router.Route exposing (Route(..))
 import Model exposing (Model)
-
--- bootstrap : Html Signal
--- bootstrap =
---   Css.link "https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"
-
--- fontAwesome : Html Signal
--- fontAwesome =
---   Css.link "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+import Router.Route exposing (Route(..))
+import Signal exposing (Signal(..))
 
 view : Model -> Html Signal
 view model =
   section [] [ pageView model ]
 
-currentQuery : Model -> Html signal
-currentQuery model =
-  let query = toString model.location.path
-    in span [] [text query]
-
 showTop : Model -> Html Signal
 showTop  model =
-  div [] [ h2 [] [text "showTop"]
-         , currentQuery model
-         ]
+  section [] [ h2 [] [ text "showTop" ] ]
 
 showBody : Model -> Html Signal
 showBody model =
-  div [] [ h2 [] [text "showBody"]
-         , currentQuery model
-         ]
+  section [] [ h2 [] [ text "showBody" ] ]
 
 pageView : Model -> Html Signal
 pageView model =

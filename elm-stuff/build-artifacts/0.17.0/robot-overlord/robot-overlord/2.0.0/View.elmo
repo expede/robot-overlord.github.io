@@ -1,35 +1,6 @@
-var _robot_overlord$robot_overlord$View$currentQuery = function (model) {
-	var query = _elm_lang$core$Basics$toString(model.location.path);
-	return A2(
-		_elm_lang$html$Html$span,
-		_elm_lang$core$Native_List.fromArray(
-			[]),
-		_elm_lang$core$Native_List.fromArray(
-			[
-				_elm_lang$html$Html$text(query)
-			]));
-};
-var _robot_overlord$robot_overlord$View$showTop = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		_elm_lang$core$Native_List.fromArray(
-			[]),
-		_elm_lang$core$Native_List.fromArray(
-			[
-				A2(
-				_elm_lang$html$Html$h2,
-				_elm_lang$core$Native_List.fromArray(
-					[]),
-				_elm_lang$core$Native_List.fromArray(
-					[
-						_elm_lang$html$Html$text('showTop')
-					])),
-				_robot_overlord$robot_overlord$View$currentQuery(model)
-			]));
-};
 var _robot_overlord$robot_overlord$View$showBody = function (model) {
 	return A2(
-		_elm_lang$html$Html$div,
+		_elm_lang$html$Html$section,
 		_elm_lang$core$Native_List.fromArray(
 			[]),
 		_elm_lang$core$Native_List.fromArray(
@@ -41,8 +12,24 @@ var _robot_overlord$robot_overlord$View$showBody = function (model) {
 				_elm_lang$core$Native_List.fromArray(
 					[
 						_elm_lang$html$Html$text('showBody')
-					])),
-				_robot_overlord$robot_overlord$View$currentQuery(model)
+					]))
+			]));
+};
+var _robot_overlord$robot_overlord$View$showTop = function (model) {
+	return A2(
+		_elm_lang$html$Html$section,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[
+				A2(
+				_elm_lang$html$Html$h2,
+				_elm_lang$core$Native_List.fromArray(
+					[]),
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html$text('showTop')
+					]))
 			]));
 };
 var _robot_overlord$robot_overlord$View$pageView = function (model) {

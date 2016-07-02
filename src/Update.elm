@@ -17,14 +17,6 @@ update msg model =
        let command = Navigation.newUrl <| makeUrl routerConfig <| resolve route
          in (model, command)
 
-     -- SetQuery query ->
-     --   let command =
-     --     model.location
-     --       |> setQuery query
-     --       |> makeUrlFromLocation routerConfig
-     --       |> Navigation.newUrl
-     --     in (model, command)
-
 urlParser : Navigation.Parser (Route, Hop.Types.Location)
 urlParser = Navigation.makeParser (.href >> matchUrl routerConfig)
 
