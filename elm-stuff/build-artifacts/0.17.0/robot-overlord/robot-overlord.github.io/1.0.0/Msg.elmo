@@ -1,4 +1,0 @@
-var _robot_overlord$robot_overlord.github.io$Msg$NoOp = {ctor: 'NoOp'};
-var _robot_overlord$robot_overlord.github.io$Msg$Add = function (a) {
-	return {ctor: 'Add', _0: a};
-};

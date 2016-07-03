@@ -2,6 +2,7 @@ module Router.Route exposing (Route(..), resolve)
 
 type Route
   = Home
+  | Navigation
   | NotFound
 
   -- Technical
@@ -13,15 +14,24 @@ type Route
   | Contact
   | Portfolio
 
+  ------------
+  -- Future --
+  ------------
+  -- | Experimental
+  -- | OpenSource
+  -- | Community
+
+
 resolve : Route -> String
 resolve route =
   case route of
-    Home      -> "/code"
-    NotFound  -> "/404"
+    Home       -> "/code"
+    Navigation -> "/navigation"
+    NotFound   -> "/404"
 
-    Code      -> "/code"
-    Design    -> "/design"
+    Code       -> "/code"
+    Design     -> "/design"
 
-    About     -> "/about"
-    Contact   -> "/contact"
-    Portfolio -> "/portfolio"
+    About      -> "/about"
+    Contact    -> "/contact"
+    Portfolio  -> "/portfolio"

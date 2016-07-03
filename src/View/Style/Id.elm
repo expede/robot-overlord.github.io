@@ -1,3 +1,10 @@
-module View.Style.Id exposing (Id(..))
+module View.Style.Id exposing (Id(..), id)
 
-type Id = NavBar
+import View.Style.Namespace
+
+type Id
+  = NavBar
+  | GlobalHeader
+  | GobalFooter
+
+id = View.Style.Namespace.id

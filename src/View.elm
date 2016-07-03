@@ -1,30 +1,21 @@
 module View exposing (view)
 
-import Html exposing (Html, body, section, h1, h2, p, text)
+import Html exposing (Html)
 
 import Model exposing (Model)
 import Router.Route exposing (Route(..))
 import Signal exposing (Signal(..))
 
+import View.Component.Head exposing (head)
+import View.Component.Foot exposing (foot)
+
+import View.Page exposing (page)
+import View.Style.Class exposing (Class(..), class)
+
 view : Model -> Html Signal
 view model =
-  section [] [ pageView model ]
-
-showTop : Model -> Html Signal
-showTop  model =
-  section [] [ h2 [] [ text "showTop" ] ]
-
-showBody : Model -> Html Signal
-showBody model =
-  section [] [ h2 [] [ text "showBody" ] ]
-
-pageView : Model -> Html Signal
-pageView model =
-  case model.route of
-    Home      -> showTop  model
-    Code      -> showBody model
-    Design    -> showBody model
-    About     -> showBody model
-    Contact   -> showBody model
-    Portfolio -> showBody model
-    NotFound  -> h2 [] [text "Not Found"]
+  section [class [FillPage]]
+    [ head
+    , page model.route
+    , foot
+    ]

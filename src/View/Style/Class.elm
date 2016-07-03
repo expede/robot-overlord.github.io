@@ -1,3 +1,8 @@
-module View.Style.Class exposing (Class(..))
+module View.Style.Class exposing (Class(..), class, classList)
 
-type Class = NavBar -- Placeholder: do not use!
+import View.Style.Namespace exposing (class, classList)
+
+type Class
+  = Logo
+  | FillPage
+  | FillViewport

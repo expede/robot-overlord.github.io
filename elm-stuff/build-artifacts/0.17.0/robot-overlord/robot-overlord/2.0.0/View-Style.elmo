@@ -1,9 +1,5 @@
 var _robot_overlord$robot_overlord$View_Style$salt = 'overlord';
-var _robot_overlord$robot_overlord$View_Style$_p0 = _rtfeldman$elm_css_helpers$Html_CssHelpers$withNamespace(_robot_overlord$robot_overlord$View_Style$salt);
-var _robot_overlord$robot_overlord$View_Style$id = _robot_overlord$robot_overlord$View_Style$_p0.id;
-var _robot_overlord$robot_overlord$View_Style$class = _robot_overlord$robot_overlord$View_Style$_p0.$class;
-var _robot_overlord$robot_overlord$View_Style$classList = _robot_overlord$robot_overlord$View_Style$_p0.classList;
-var _robot_overlord$robot_overlord$View_Style$css = function (_p1) {
+var _robot_overlord$robot_overlord$View_Style$css = function (_p0) {
 	return _rtfeldman$elm_css$Css$stylesheet(
-		A2(_rtfeldman$elm_css$Css_Namespace$namespace, _robot_overlord$robot_overlord$View_Style$salt, _p1));
+		A2(_rtfeldman$elm_css$Css_Namespace$namespace, _robot_overlord$robot_overlord$View_Style$salt, _p0));
 }(_robot_overlord$robot_overlord$View_Style_Container$containers);

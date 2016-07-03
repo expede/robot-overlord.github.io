@@ -8,6 +8,9 @@ import Router.Route exposing (Route(..))
 homeMatcher : PathMatcher Route
 homeMatcher = match1 Home ""
 
+navigationMatcher : PathMatcher Route
+navigationMatcher = match1 Navigation ""
+
 codeMatcher : PathMatcher Route
 codeMatcher = match1 Code "/code"
 
@@ -29,6 +32,7 @@ notFoundMatcher = match1 NotFound "/404"
 matchers : List (PathMatcher Route)
 matchers =
   [ homeMatcher
+  , navigationMatcher
 
   , codeMatcher
   , designMatcher
