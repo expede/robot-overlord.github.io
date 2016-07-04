@@ -1,19 +1,22 @@
 module View.Page.Home exposing (homePage)
 
-import Html exposing (Html, section)
+import Html exposing
+  ( Html
+  , section, header
+  , h1, p
+  , text
+  )
 
+import View.Asset exposing (logo)
 import View.Style.Class exposing (Class(..), class)
 
 homePage : Html a
 homePage =
   section [ class [ FillPage ] ]
     [ header [ class [ FillViewport ] ]
-      [ h1 [ class [ Logo ] ]
-          [ text "Robot"
-          , img [] logoPath -- perhaps switch to Html.svg
-          , text "Overlord"
-          ]
-      ]
+        [ h1 [ class [ Logo ] ]
+            [ text "Robot", logo, text "Overlord"]
+        ]
     , section []
         [ h1 [] [ text "We Ship High Quality Products" ]
         , p []

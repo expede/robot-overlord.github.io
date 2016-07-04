@@ -9,11 +9,7 @@ import View.Style.Color as Color
 import View.Style.Size as Size
 
 head : Html a
-head =
-  header [id [GlobalHeader]]
-    [ text "Menu "
-    , hamburger
-    ]
+head = header [ id [ GlobalHeader ] ] [ text "Menu ", hamburger ]
 
 hamburger : Html a
 hamburger = FontAwesome.bars Color.base Size.base

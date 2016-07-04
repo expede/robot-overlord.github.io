@@ -7,9 +7,10 @@ import Html exposing
   , text
   )
 
+import Signal exposing (Signal(..))
 import View.Style.Class exposing (Class(..), class)
 
-codePage : Html
+codePage : Html Signal
 codePage =
   section [ class [ FillPage ] ]
     [ header [ class [ FillViewport ] ]

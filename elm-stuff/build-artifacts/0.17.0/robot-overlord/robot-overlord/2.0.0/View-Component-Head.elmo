@@ -1,0 +1,14 @@
+var _robot_overlord$robot_overlord$View_Component_Head$hamburger = A2(_jystic$elm_font_awesome$FontAwesome$bars, _robot_overlord$robot_overlord$View_Style_Color$base, _robot_overlord$robot_overlord$View_Style_Size$base);
+var _robot_overlord$robot_overlord$View_Component_Head$head = A2(
+	_elm_lang$html$Html$header,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_robot_overlord$robot_overlord$View_Style_Id$id(
+			_elm_lang$core$Native_List.fromArray(
+				[_robot_overlord$robot_overlord$View_Style_Id$GlobalHeader]))
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_elm_lang$html$Html$text('Menu '),
+			_robot_overlord$robot_overlord$View_Component_Head$hamburger
+		]));

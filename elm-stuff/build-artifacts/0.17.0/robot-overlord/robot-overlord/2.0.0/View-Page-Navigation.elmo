@@ -1,0 +1,47 @@
+var _robot_overlord$robot_overlord$View_Page_Navigation$link = F2(
+	function (route, string) {
+		return A2(
+			_elm_lang$html$Html$li,
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Attributes$href('javascript://'),
+							_elm_lang$html$Html_Events$onClick(
+							_robot_overlord$robot_overlord$Signal$NavigateTo(route))
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text(string)
+						]))
+				]));
+	});
+var _robot_overlord$robot_overlord$View_Page_Navigation$siteNav = A2(
+	_elm_lang$html$Html$nav,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_robot_overlord$robot_overlord$View_Style_Class$class(
+			_elm_lang$core$Native_List.fromArray(
+				[_robot_overlord$robot_overlord$View_Style_Id$NavBar]))
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_lang$html$Html$ul,
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$Home, 'Home'),
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$Code, 'Code'),
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$Design, 'Design'),
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$About, 'About'),
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$Contact, 'Contact'),
+					A2(_robot_overlord$robot_overlord$View_Page_Navigation$link, _robot_overlord$robot_overlord$Router_Route$Portfolio, 'Portfolio')
+				]))
+		]));
+var _robot_overlord$robot_overlord$View_Page_Navigation$navigationPage = _robot_overlord$robot_overlord$View_Page_Navigation$siteNav;

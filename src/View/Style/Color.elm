@@ -1,6 +1,6 @@
 module View.Style.Color exposing (base, neutral, highlight, accent)
 
-import Css exposing (Color, rgb)
+import Color exposing (Color, rgb)
 
 neutral : Color
 neutral = white

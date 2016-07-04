@@ -3,14 +3,15 @@ module View.Page.Design exposing (designPage)
 import Html exposing
   ( Html
   , section, header
-  , h1, h2, p
-  , br
-  , text
+  , h1, h2, p, blockquote
+  , text, br
   )
+
+import Signal exposing (Signal(..))
 
 import View.Style.Class exposing (Class(..), class)
 
-designPage : Html
+designPage : Html Signal
 designPage =
   section [ class [ FillPage ] ]
     [ header [ class [ FillViewport ] ]

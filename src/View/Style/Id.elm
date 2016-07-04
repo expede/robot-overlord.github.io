@@ -1,10 +1,13 @@
 module View.Style.Id exposing (Id(..), id)
 
-import View.Style.Namespace
+import Html exposing (Attribute)
+
+import View.Style.Namespace as NS
 
 type Id
   = NavBar
   | GlobalHeader
-  | GobalFooter
+  | GlobalFooter
 
-id = View.Style.Namespace.id
+id : a -> Attribute b
+id = NS.id

@@ -1,0 +1,18 @@
+var _robot_overlord$robot_overlord$Link$link = F3(
+	function (attrs, route, string) {
+		return A2(
+			_elm_lang$html$Html$a,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$href('javascript://'),
+					_elm_lang$html$Html_Events$onClick(
+					A2(
+						_elm_lang$core$List_ops['::'],
+						_robot_overlord$robot_overlord$Signal$NavigateTo(route),
+						attrs))
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(string)
+				]));
+	});
