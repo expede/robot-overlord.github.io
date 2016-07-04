@@ -11,6 +11,10 @@ import Signal exposing (Signal(..))
 
 import View.Style.Class exposing (Class(..), class)
 
+-- Note to self: add section about design process
+
+-- Also, document your code, already!
+
 designPage : Html Signal
 designPage =
   section [ class [ FillPage ] ]
