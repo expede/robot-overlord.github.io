@@ -5,6 +5,7 @@ import Html exposing
   , section, header
   , h1, p
   , text
+  , figure
   )
 
 import View.Asset exposing (logo)
@@ -12,10 +13,10 @@ import View.Style.Class exposing (Class(..), class)
 
 homePage : Html a
 homePage =
-  section [ class [ FillPage ] ]
-    [ header [ class [ FillViewport ] ]
-        [ h1 [ class [ Logo ] ]
-            [ logo, text "Robot Overlord"]
+  section [class [FillPage]]
+    [ header [class [FillViewport]]
+        [ figure [class [Logo]] [logo]
+        , h1     []             [text "Robot Overlord"]
         ]
     ]
 

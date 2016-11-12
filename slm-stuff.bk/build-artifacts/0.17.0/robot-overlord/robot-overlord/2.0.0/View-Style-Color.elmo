@@ -1,0 +1,8 @@
+var _robot_overlord$robot_overlord$View_Style_Color$white = A3(_elm_lang$core$Color$rgb, 255, 255, 255);
+var _robot_overlord$robot_overlord$View_Style_Color$navy = A3(_elm_lang$core$Color$rgb, 34, 40, 50);
+var _robot_overlord$robot_overlord$View_Style_Color$lightBlue = A3(_elm_lang$core$Color$rgb, 102, 216, 213);
+var _robot_overlord$robot_overlord$View_Style_Color$pink = A3(_elm_lang$core$Color$rgb, 236, 112, 119);
+var _robot_overlord$robot_overlord$View_Style_Color$accent = _robot_overlord$robot_overlord$View_Style_Color$pink;
+var _robot_overlord$robot_overlord$View_Style_Color$highlight = _robot_overlord$robot_overlord$View_Style_Color$lightBlue;
+var _robot_overlord$robot_overlord$View_Style_Color$base = _robot_overlord$robot_overlord$View_Style_Color$navy;
+var _robot_overlord$robot_overlord$View_Style_Color$neutral = _robot_overlord$robot_overlord$View_Style_Color$white;

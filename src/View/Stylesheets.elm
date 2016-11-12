@@ -9,7 +9,7 @@ import View.Style exposing (css)
 port files : CssFileStructure -> Cmd msg
 
 cssFiles : CssFileStructure
-cssFiles = toFileStructure [ ("style.css", compile css) ]
+cssFiles = toFileStructure [ ("./static/style.css", compile css) ]
 
 main : Program Never
 main =

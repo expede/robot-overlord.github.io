@@ -1,0 +1,10 @@
+var _robot_overlord$robot_overlord$Router_Match$notFoundMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$NotFound, '/404');
+var _robot_overlord$robot_overlord$Router_Match$portfolioMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Portfolio, '/portfolio');
+var _robot_overlord$robot_overlord$Router_Match$contactMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Contact, '/contact');
+var _robot_overlord$robot_overlord$Router_Match$aboutMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$About, '/about');
+var _robot_overlord$robot_overlord$Router_Match$designMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Design, '/design');
+var _robot_overlord$robot_overlord$Router_Match$codeMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Code, '/code');
+var _robot_overlord$robot_overlord$Router_Match$navigationMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Navigation, '');
+var _robot_overlord$robot_overlord$Router_Match$homeMatcher = A2(_sporto$hop$Hop_Matchers$match1, _robot_overlord$robot_overlord$Router_Route$Home, '');
+var _robot_overlord$robot_overlord$Router_Match$matchers = _elm_lang$core$Native_List.fromArray(
+	[_robot_overlord$robot_overlord$Router_Match$homeMatcher, _robot_overlord$robot_overlord$Router_Match$navigationMatcher, _robot_overlord$robot_overlord$Router_Match$codeMatcher, _robot_overlord$robot_overlord$Router_Match$designMatcher, _robot_overlord$robot_overlord$Router_Match$aboutMatcher, _robot_overlord$robot_overlord$Router_Match$contactMatcher, _robot_overlord$robot_overlord$Router_Match$portfolioMatcher]);

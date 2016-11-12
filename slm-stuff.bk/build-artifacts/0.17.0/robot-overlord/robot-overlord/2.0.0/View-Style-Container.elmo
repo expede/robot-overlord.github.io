@@ -1,0 +1,9 @@
+var _robot_overlord$robot_overlord$View_Style_Container$base = _rtfeldman$elm_css$Css_Elements$body(
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_rtfeldman$elm_css$Css$overflowX(_rtfeldman$elm_css$Css$auto),
+			_rtfeldman$elm_css$Css$minWidth(
+			_rtfeldman$elm_css$Css$px(1280))
+		]));
+var _robot_overlord$robot_overlord$View_Style_Container$containers = _elm_lang$core$Native_List.fromArray(
+	[_robot_overlord$robot_overlord$View_Style_Container$base]);

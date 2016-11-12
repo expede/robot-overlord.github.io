@@ -3,7 +3,11 @@ var _robot_overlord$robot_overlord$View_Style_Container$base = _rtfeldman$elm_cs
 		[
 			_rtfeldman$elm_css$Css$overflowX(_rtfeldman$elm_css$Css$auto),
 			_rtfeldman$elm_css$Css$minWidth(
-			_rtfeldman$elm_css$Css$px(1280))
+			_rtfeldman$elm_css$Css$px(1280)),
+			_rtfeldman$elm_css$Css$fontFamilies(
+			_elm_lang$core$Native_List.fromArray(
+				['Exo', 'sans-serif'])),
+			_rtfeldman$elm_css$Css$fontWeight(_rtfeldman$elm_css$Css$bold)
 		]));
 var _robot_overlord$robot_overlord$View_Style_Container$containers = _elm_lang$core$Native_List.fromArray(
 	[_robot_overlord$robot_overlord$View_Style_Container$base]);

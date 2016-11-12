@@ -10,4 +10,6 @@ base : Snippet
 base = body
          [ overflowX auto
          , minWidth <| px 1280
+         , fontFamilies ["Exo", "sans-serif"]
+         , fontWeight bold
          ]

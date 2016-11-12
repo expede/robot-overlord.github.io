@@ -1,4 +1,4 @@
-var _robot_overlord$robot_overlord$View_Asset$logoPath = '/media/logo.png';
+var _robot_overlord$robot_overlord$View_Asset$logoPath = './media/logo.png';
 var _robot_overlord$robot_overlord$View_Asset$logo = A2(
 	_elm_lang$html$Html$img,
 	_elm_lang$core$Native_List.fromArray(
