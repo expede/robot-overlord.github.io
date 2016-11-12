@@ -1,6 +1,6 @@
 var _robot_overlord$robot_overlord$Model$Model = F2(
 	function (a, b) {
-		return {location: a, route: b};
+		return {address: a, route: b};
 	});
 var _robot_overlord$robot_overlord$Model$init = function (_p0) {
 	var _p1 = _p0;

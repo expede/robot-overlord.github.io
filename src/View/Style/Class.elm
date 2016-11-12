@@ -7,6 +7,7 @@ type Class
   = Logo
   | FillPage
   | FillViewport
+  | TrueCenter
 
 class : List a -> Attribute b
 class = NS.class

@@ -1,5 +1,0 @@
-var _robot_overlord$robot_overlord$View_Style_Namespace$namespace = 'overlord';
-var _robot_overlord$robot_overlord$View_Style_Namespace$_p0 = _rtfeldman$elm_css_helpers$Html_CssHelpers$withNamespace(_robot_overlord$robot_overlord$View_Style_Namespace$namespace);
-var _robot_overlord$robot_overlord$View_Style_Namespace$id = _robot_overlord$robot_overlord$View_Style_Namespace$_p0.id;
-var _robot_overlord$robot_overlord$View_Style_Namespace$class = _robot_overlord$robot_overlord$View_Style_Namespace$_p0.$class;
-var _robot_overlord$robot_overlord$View_Style_Namespace$classList = _robot_overlord$robot_overlord$View_Style_Namespace$_p0.classList;

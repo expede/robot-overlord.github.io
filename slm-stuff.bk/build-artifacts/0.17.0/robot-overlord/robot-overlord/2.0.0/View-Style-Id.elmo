@@ -1,4 +1,0 @@
-var _robot_overlord$robot_overlord$View_Style_Id$id = _robot_overlord$robot_overlord$View_Style_Namespace$id;
-var _robot_overlord$robot_overlord$View_Style_Id$GlobalFooter = {ctor: 'GlobalFooter'};
-var _robot_overlord$robot_overlord$View_Style_Id$GlobalHeader = {ctor: 'GlobalHeader'};
-var _robot_overlord$robot_overlord$View_Style_Id$NavBar = {ctor: 'NavBar'};

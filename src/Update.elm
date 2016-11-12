@@ -1,29 +1,38 @@
 module Update exposing (update, urlParser, urlUpdate)
 
 import Navigation
-import Hop exposing (makeUrl, makeUrlFromLocation, matchUrl, setQuery)
-import Hop.Types exposing (Query, Location)
+import Hop exposing (outputFromPath)
+import Hop.Types exposing (Address, Query)
 
 import Model exposing (Model)
 import Signal exposing (Signal(..))
 
 import Router exposing (routerConfig)
+import Router.Match exposing (matchers)
 import Router.Route exposing (Route(..), resolve)
 
+import UrlParser exposing (parse)
+
 update : Signal -> Model -> (Model, Cmd Signal)
-update msg model =
-  case (Debug.log "msg" msg) of
-     NavigateTo route ->
-       let command = Navigation.newUrl <| makeUrl routerConfig <| resolve route
-         in (model, command)
+update signal model =
+    case (Debug.log "msg" signal) of
+        NavigateTo path ->
+            (model, Navigation.newUrl <| outputFromPath routerConfig path)
 
-urlParser : Navigation.Parser (Route, Hop.Types.Location)
-urlParser = Navigation.makeParser (.href >> matchUrl routerConfig)
+urlParser : Navigation.Parser (Route, Address)
+urlParser =
+    let
+        parse path =
+            path
+                |> parse identity Router.Match.matchers
+                |> Result.withDefault NotFound
 
-urlUpdate : (Route, Location) -> Model -> (Model, Cmd Signal)
-urlUpdate (route, location) model =
-  ( { model | route    = route
-            , location = location
-    }
-  , Cmd.none
-  )
+        resolver = Hop.makeResolver routerConfig parse
+    in
+        Navigation.makeParser (.href >> resolver)
+
+urlUpdate : (Route, Address) -> Model -> (Model, Cmd Signal)
+urlUpdate (route, address) model =
+    ( { model | route = route, address = address }
+    , Cmd.none
+    )

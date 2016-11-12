@@ -1,3 +1,0 @@
-var _robot_overlord$robot_overlord$Signal$NavigateTo = function (a) {
-	return {ctor: 'NavigateTo', _0: a};
-};

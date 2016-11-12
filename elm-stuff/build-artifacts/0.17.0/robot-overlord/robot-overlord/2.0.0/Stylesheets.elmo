@@ -4,7 +4,9 @@ var _robot_overlord$robot_overlord$Stylesheets$cssFiles = _rtfeldman$elm_css$Css
 			{
 			ctor: '_Tuple2',
 			_0: './static/style.css',
-			_1: _rtfeldman$elm_css$Css_File$compile(_robot_overlord$robot_overlord$View_Style$css)
+			_1: _rtfeldman$elm_css$Css_File$compile(
+				_elm_lang$core$Native_List.fromArray(
+					[_robot_overlord$robot_overlord$View_Style$css]))
 		}
 		]));
 var _robot_overlord$robot_overlord$Stylesheets$files = _elm_lang$core$Native_Platform.outgoingPort(

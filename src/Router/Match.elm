@@ -1,43 +1,42 @@
 module Router.Match exposing (matchers)
 
-import Hop.Types exposing (PathMatcher)
-import Hop.Matchers exposing (match1)
-
 import Router.Route exposing (Route(..))
+import UrlParser exposing(Parser, format, oneOf, s)
 
-homeMatcher : PathMatcher Route
-homeMatcher = match1 Home ""
+-- homeMatcher : Parser (a -> result) result
+homeMatcher = format Home (s "")
 
-navigationMatcher : PathMatcher Route
-navigationMatcher = match1 Navigation ""
+-- navigationMatcher : Parser (a -> result) result
+navigationMatcher = format Navigation (s "navigate")
 
-codeMatcher : PathMatcher Route
-codeMatcher = match1 Code "/code"
+-- codeMatcher : PathMatcher Route
+-- codeMatcher = match1 Code "/code"
 
-designMatcher : PathMatcher Route
-designMatcher = match1 Design "/design"
+-- designMatcher : PathMatcher Route
+-- designMatcher = match1 Design "/design"
 
-aboutMatcher : PathMatcher Route
-aboutMatcher = match1 About "/about"
+-- aboutMatcher : PathMatcher Route
+-- aboutMatcher = match1 About "/about"
 
-contactMatcher : PathMatcher Route
-contactMatcher = match1 Contact "/contact"
+-- contactMatcher : PathMatcher Route
+-- contactMatcher = match1 Contact "/contact"
 
-portfolioMatcher : PathMatcher Route
-portfolioMatcher = match1 Portfolio "/portfolio"
+-- portfolioMatcher : PathMatcher Route
+-- portfolioMatcher = match1 Portfolio "/portfolio"
 
-notFoundMatcher : PathMatcher Route
-notFoundMatcher = match1 NotFound "/404"
+-- notFoundMatcher : PathMatcher Route
+-- notFoundMatcher = match1 NotFound "/404"
 
-matchers : List (PathMatcher Route)
+-- matchers : Int -- List (PathMatcher Route)
 matchers =
+    oneOf
   [ homeMatcher
   , navigationMatcher
 
-  , codeMatcher
-  , designMatcher
+  -- , codeMatcher
+  -- , designMatcher
 
-  , aboutMatcher
-  , contactMatcher
-  , portfolioMatcher
+  -- , aboutMatcher
+  -- , contactMatcher
+  -- , portfolioMatcher
   ] -- display404Page

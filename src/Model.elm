@@ -1,16 +1,16 @@
 module Model exposing (Model, init)
 
-import Hop.Types exposing (Query, Location)
+import Hop.Types exposing (Address, Query)
 
 import Signal exposing (Signal(..))
 import Router.Route exposing (Route)
 
 type alias Model =
-  { location : Location
-  , route    : Route
+  { address : Address
+  , route   : Route
   }
 
-init : (Route, Location) -> (Model, Cmd Signal)
+init : (Route, Address) -> (Model, Cmd Signal)
 init (route, location) =
   ( Model location route
   , Cmd.none

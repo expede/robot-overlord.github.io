@@ -1,6 +1,23 @@
 body {
-    overflow-x: auto;
-    min-width: 1280px;
+    margin: 0px;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+}
+
+h1, h2 {
     font-family: Exo, sans-serif;
     font-weight: bold;
+    font-size: 5em;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.overlordLogo {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.overlordLogo + h1 {
+    margin-top: 0px;
 }
