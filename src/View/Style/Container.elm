@@ -45,7 +45,7 @@ trueCenter : Snippet
 trueCenter =
     (.) TrueCenter
         [ displayFlex
-        -- , justifyContent center -- waiting on elm-css 7.0
+        -- , justifyContent center -- waiting on elm-css 7.1
         , property "justify-content" "center"
         , alignItems center
         ]
