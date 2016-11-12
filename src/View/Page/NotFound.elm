@@ -1,7 +1,7 @@
-module View.Page.NotFound exposing (notFound)
+module View.Page.NotFound exposing (notFoundPage)
 
 import Html exposing (Html, section, h1, text)
 
-notFound : Html a
-notFound =
+notFoundPage : Html a
+notFoundPage =
   section [] [ h1 [] [ text "page not found" ] ]

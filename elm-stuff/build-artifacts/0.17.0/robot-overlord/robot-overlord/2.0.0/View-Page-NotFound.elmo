@@ -1,4 +1,4 @@
-var _robot_overlord$robot_overlord$View_Page_NotFound$notFound = A2(
+var _robot_overlord$robot_overlord$View_Page_NotFound$notFoundPage = A2(
 	_elm_lang$html$Html$section,
 	_elm_lang$core$Native_List.fromArray(
 		[]),

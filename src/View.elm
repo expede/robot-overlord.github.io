@@ -1,6 +1,6 @@
 module View exposing (view)
 
-import Html exposing (Html)
+import Html exposing (Html, section)
 
 import Model exposing (Model)
 import Router.Route exposing (Route(..))

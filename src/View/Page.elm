@@ -7,7 +7,7 @@ import Signal exposing (Signal)
 
 import View.Page.Home exposing (homePage)
 import View.Page.Navigation exposing (navigationPage)
--- import View.Page.NotFound exposing (notFoundPage)
+import View.Page.NotFound exposing (notFoundPage)
 
 import View.Page.Code exposing (codePage)
 import View.Page.Design exposing (designPage)
@@ -22,11 +22,12 @@ page : Route -> Page
 page route =
   case route of
     Home       -> homePage
-    Navigation -> navigationPage
+    _          -> notFoundPage
+    -- Navigation -> navigationPage
     -- NotFound   -> notFoundPage
 
-    Code       -> codePage
-    Design     -> designPage
+    -- Code       -> codePage
+    -- Design     -> designPage
 
     -- About      -> aboutPage
     -- Contact    -> contactPage
