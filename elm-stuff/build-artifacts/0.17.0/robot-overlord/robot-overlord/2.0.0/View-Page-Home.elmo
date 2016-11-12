@@ -4,7 +4,7 @@ var _robot_overlord$robot_overlord$View_Page_Home$homePage = A2(
 		[
 			_robot_overlord$robot_overlord$View_Style_Class$class(
 			_elm_lang$core$Native_List.fromArray(
-				[_robot_overlord$robot_overlord$View_Style_Class$FillPage, _robot_overlord$robot_overlord$View_Style_Class$TrueCenter]))
+				[_robot_overlord$robot_overlord$View_Style_Class$TrueCenter]))
 		]),
 	_elm_lang$core$Native_List.fromArray(
 		[

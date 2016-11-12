@@ -13,7 +13,7 @@ import View.Style.Class exposing (Class(..), class)
 
 homePage : Html a
 homePage =
-  section [class [FillPage, TrueCenter]]
+  section [ class [ TrueCenter ] ]
     [ header [class [FillViewport]]
         [ figure [class [Logo]] [logo]
         , h1     []             [text "Robot Overlord"]
