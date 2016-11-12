@@ -1,0 +1,35 @@
+var _robot_overlord$robot_overlord$Update$urlUpdate = F2(
+	function (_p0, model) {
+		var _p1 = _p0;
+		return {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Native_Utils.update(
+				model,
+				{route: _p1._0, address: _p1._1}),
+			_1: _elm_lang$core$Platform_Cmd$none
+		};
+	});
+var _robot_overlord$robot_overlord$Update$urlParser = function () {
+	var parsePath = function (path) {
+		return A2(
+			_elm_lang$core$Result$withDefault,
+			_robot_overlord$robot_overlord$Router_Route$NotFound,
+			A3(_evancz$url_parser$UrlParser$parse, _elm_lang$core$Basics$identity, _robot_overlord$robot_overlord$Router_Match$matchers, path));
+	};
+	var resolver = A2(_sporto$hop$Hop$makeResolver, _robot_overlord$robot_overlord$Router$routerConfig, parsePath);
+	return _elm_lang$navigation$Navigation$makeParser(
+		function (_p2) {
+			return resolver(
+				function (_) {
+					return _.href;
+				}(_p2));
+		});
+}();
+var _robot_overlord$robot_overlord$Update$update = F2(
+	function (signal, model) {
+		var _p3 = A2(_elm_lang$core$Debug$log, 'signal', signal);
+		var path = _robot_overlord$robot_overlord$Router_Route$resolve(_p3._0);
+		var command = _elm_lang$navigation$Navigation$newUrl(
+			A2(_sporto$hop$Hop$outputFromPath, _robot_overlord$robot_overlord$Router$routerConfig, path));
+		return {ctor: '_Tuple2', _0: model, _1: command};
+	});
