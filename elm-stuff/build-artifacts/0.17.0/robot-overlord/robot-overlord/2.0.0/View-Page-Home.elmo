@@ -28,42 +28,8 @@ var _robot_overlord$robot_overlord$View_Page_Home$homePage = A2(
 						]),
 					_elm_lang$core$Native_List.fromArray(
 						[
-							_elm_lang$html$Html$text('Robot'),
 							_robot_overlord$robot_overlord$View_Asset$logo,
-							_elm_lang$html$Html$text('Overlord')
-						]))
-				])),
-			A2(
-			_elm_lang$html$Html$section,
-			_elm_lang$core$Native_List.fromArray(
-				[]),
-			_elm_lang$core$Native_List.fromArray(
-				[
-					A2(
-					_elm_lang$html$Html$h1,
-					_elm_lang$core$Native_List.fromArray(
-						[]),
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_elm_lang$html$Html$text('We Ship High Quality Products')
-						])),
-					A2(
-					_elm_lang$html$Html$p,
-					_elm_lang$core$Native_List.fromArray(
-						[]),
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_elm_lang$html$Html$text('We work with exciting clients to ship defining products. '),
-							_elm_lang$html$Html$text('')
-						])),
-					A2(
-					_elm_lang$html$Html$p,
-					_elm_lang$core$Native_List.fromArray(
-						[]),
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_elm_lang$html$Html$text('We curate leading-edge, best-in-class technologies.'),
-							_elm_lang$html$Html$text('')
+							_elm_lang$html$Html$text('Robot Overlord')
 						]))
 				]))
 		]));

@@ -8,4 +8,4 @@ logo : Html a
 logo = img [ src logoPath ] []
 
 logoPath : String
-logoPath = "./logo.svg"
+logoPath = "/media/logo.png"

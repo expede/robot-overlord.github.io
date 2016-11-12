@@ -7,5 +7,5 @@ foot : Html a
 foot =
   footer [ id [ GlobalFooter ] ]
     [ p [] [ text "©2016 Robot Overlord Software Inc." ]
-    , p [] [ text "Subscribe" ]
+    -- , p [] [ text "Subscribe" ]
     ]

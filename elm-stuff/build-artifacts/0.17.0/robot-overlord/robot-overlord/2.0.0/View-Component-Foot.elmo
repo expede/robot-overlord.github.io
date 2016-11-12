@@ -15,13 +15,5 @@ var _robot_overlord$robot_overlord$View_Component_Foot$foot = A2(
 			_elm_lang$core$Native_List.fromArray(
 				[
 					_elm_lang$html$Html$text('©2016 Robot Overlord Software Inc.')
-				])),
-			A2(
-			_elm_lang$html$Html$p,
-			_elm_lang$core$Native_List.fromArray(
-				[]),
-			_elm_lang$core$Native_List.fromArray(
-				[
-					_elm_lang$html$Html$text('Subscribe')
 				]))
 		]));
