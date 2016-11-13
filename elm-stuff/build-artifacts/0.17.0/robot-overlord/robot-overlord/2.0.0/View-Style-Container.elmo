@@ -84,7 +84,7 @@ var _robot_overlord$robot_overlord$View_Style_Container$typography = A2(
 				['Exo', 'sans-serif'])),
 			_rtfeldman$elm_css$Css$fontWeight(_rtfeldman$elm_css$Css$bold),
 			_rtfeldman$elm_css$Css$fontSize(
-			_rtfeldman$elm_css$Css$em(5)),
+			_rtfeldman$elm_css$Css$em(4)),
 			_rtfeldman$elm_css$Css$fontStyle(_rtfeldman$elm_css$Css$italic),
 			_rtfeldman$elm_css$Css$textTransform(_rtfeldman$elm_css$Css$uppercase)
 		]));
@@ -99,7 +99,7 @@ var _robot_overlord$robot_overlord$View_Style_Container$global = _rtfeldman$elm_
 			_elm_lang$core$Native_List.fromArray(
 				['Open Sans', 'sans-serif'])),
 			_rtfeldman$elm_css$Css$fontSize(
-			_rtfeldman$elm_css$Css$px(14))
+			_rtfeldman$elm_css$Css$pt(14))
 		]));
 var _robot_overlord$robot_overlord$View_Style_Container$containers = _elm_lang$core$Native_List.fromArray(
 	[_robot_overlord$robot_overlord$View_Style_Container$global, _robot_overlord$robot_overlord$View_Style_Container$globalHeader, _robot_overlord$robot_overlord$View_Style_Container$globalFooter, _robot_overlord$robot_overlord$View_Style_Container$typography, _robot_overlord$robot_overlord$View_Style_Container$logo, _robot_overlord$robot_overlord$View_Style_Container$trueCenter]);

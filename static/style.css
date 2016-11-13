@@ -3,7 +3,7 @@ body {
     position: relative;
     min-height: 100vh;
     font-family: Open Sans, sans-serif;
-    font-size: 14px;
+    font-size: 14pt;
 }
 
 #GlobalHeader {
@@ -28,7 +28,7 @@ body {
 h1, h2 {
     font-family: Exo, sans-serif;
     font-weight: bold;
-    font-size: 5em;
+    font-size: 4em;
     font-style: italic;
     text-transform: uppercase;
 }

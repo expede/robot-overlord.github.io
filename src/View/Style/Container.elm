@@ -25,7 +25,7 @@ global =
     , position relative
     , minHeight <| vh 100
     , fontFamilies ["Open Sans", "sans-serif"]
-    , fontSize <| px 14
+    , fontSize <| pt 14
     ]
 
 typography : Snippet
@@ -33,7 +33,7 @@ typography =
     each [h1, h2]
         [ fontFamilies ["Exo", "sans-serif"]
         , fontWeight bold
-        , fontSize <| em 5
+        , fontSize <| em 4
         , fontStyle italic
         , textTransform uppercase
         ]
@@ -45,7 +45,7 @@ logo =
         , margin zero
         , adjacentSiblings
               [ h1
-                [marginTop zero]
+                [ marginTop zero ]
               ]
         ]
 
