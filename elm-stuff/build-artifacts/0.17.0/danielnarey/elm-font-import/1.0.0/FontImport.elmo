@@ -1,0 +1,102 @@
+var _danielnarey$elm_font_import$FontImport$toImportDirective = function (fontFamilies) {
+	var encodeSubsets = function (subsets) {
+		return _elm_lang$core$List$isEmpty(subsets) ? '' : A2(
+			F2(
+				function (x, y) {
+					return A2(_elm_lang$core$Basics_ops['++'], x, y);
+				}),
+			'&subset=',
+			A2(_elm_lang$core$String$join, ',', subsets));
+	};
+	var encodeVariants = function (variants) {
+		return _elm_lang$core$List$isEmpty(variants) ? '' : A2(
+			F2(
+				function (x, y) {
+					return A2(_elm_lang$core$Basics_ops['++'], x, y);
+				}),
+			':',
+			A2(_elm_lang$core$String$join, ',', variants));
+	};
+	var encodeName = function (name) {
+		return A2(
+			_elm_lang$core$String$join,
+			'+',
+			_elm_lang$core$String$words(name));
+	};
+	var encodeFamily = function (family) {
+		return A2(
+			_danielnarey$elm_toolkit$Toolkit_Operators_ops['|++'],
+			A2(
+				_danielnarey$elm_toolkit$Toolkit_Operators_ops['|++'],
+				encodeName(family.name),
+				encodeVariants(family.variants)),
+			encodeSubsets(family.subsets));
+	};
+	return function (a) {
+		return A2(
+			_elm_lang$core$Basics_ops['++'],
+			'@import url(\'',
+			A2(_elm_lang$core$Basics_ops['++'], a, '\');'));
+	}(
+		A2(
+			F2(
+				function (x, y) {
+					return A2(_elm_lang$core$Basics_ops['++'], x, y);
+				}),
+			'https://fonts.googleapis.com/css?family=',
+			A2(
+				_elm_lang$core$String$join,
+				'|',
+				A2(_danielnarey$elm_toolkit$Toolkit_Operators_ops['.|>'], fontFamilies, encodeFamily))));
+};
+var _danielnarey$elm_font_import$FontImport$toStyleNode = function (fontFamilies) {
+	return A3(
+		_elm_lang$html$Html$node,
+		'style',
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_danielnarey$elm_toolkit$Toolkit_Helpers$wrapList(
+			_elm_lang$html$Html$text(
+				_danielnarey$elm_font_import$FontImport$toImportDirective(fontFamilies))));
+};
+var _danielnarey$elm_font_import$FontImport$addSubset = F2(
+	function (subset, family) {
+		return _elm_lang$core$Native_Utils.update(
+			family,
+			{
+				subsets: A2(_danielnarey$elm_toolkit$Toolkit_Operators_ops['|::'], family.subsets, subset)
+			});
+	});
+var _danielnarey$elm_font_import$FontImport$withSubsets = F2(
+	function (subsetList, family) {
+		return _elm_lang$core$Native_Utils.update(
+			family,
+			{subsets: subsetList});
+	});
+var _danielnarey$elm_font_import$FontImport$addVariant = F2(
+	function (variant, family) {
+		return _elm_lang$core$Native_Utils.update(
+			family,
+			{
+				variants: A2(_danielnarey$elm_toolkit$Toolkit_Operators_ops['|::'], family.variants, variant)
+			});
+	});
+var _danielnarey$elm_font_import$FontImport$withVariants = F2(
+	function (variantList, family) {
+		return _elm_lang$core$Native_Utils.update(
+			family,
+			{variants: variantList});
+	});
+var _danielnarey$elm_font_import$FontImport$FontFamily = F3(
+	function (a, b, c) {
+		return {name: a, variants: b, subsets: c};
+	});
+var _danielnarey$elm_font_import$FontImport$newFontFamily = function (name) {
+	return A3(
+		_danielnarey$elm_font_import$FontImport$FontFamily,
+		name,
+		_elm_lang$core$Native_List.fromArray(
+			[]),
+		_elm_lang$core$Native_List.fromArray(
+			[]));
+};

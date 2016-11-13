@@ -1,0 +1,114 @@
+var _sporto$hop$Hop_Address$queryKVtoTuple = function (kv) {
+	var splitted = A2(_elm_lang$core$String$split, '=', kv);
+	var first = A2(
+		_elm_lang$core$Maybe$withDefault,
+		'',
+		_elm_lang$core$List$head(splitted));
+	var firstDecoded = _evancz$elm_http$Http$uriDecode(first);
+	var second = A2(
+		_elm_lang$core$Maybe$withDefault,
+		'',
+		_elm_lang$core$List$head(
+			A2(_elm_lang$core$List$drop, 1, splitted)));
+	var secondDecoded = _evancz$elm_http$Http$uriDecode(second);
+	return {ctor: '_Tuple2', _0: firstDecoded, _1: secondDecoded};
+};
+var _sporto$hop$Hop_Address$extractQuery = function (route) {
+	return A2(
+		_elm_lang$core$Maybe$withDefault,
+		'',
+		_elm_lang$core$List$head(
+			A2(
+				_elm_lang$core$List$drop,
+				1,
+				A2(_elm_lang$core$String$split, '?', route))));
+};
+var _sporto$hop$Hop_Address$parseQuery = function (route) {
+	return _elm_lang$core$Dict$fromList(
+		A2(
+			_elm_lang$core$List$map,
+			_sporto$hop$Hop_Address$queryKVtoTuple,
+			A2(
+				_elm_lang$core$List$filter,
+				function (_p0) {
+					return _elm_lang$core$Basics$not(
+						_elm_lang$core$String$isEmpty(_p0));
+				},
+				A2(
+					_elm_lang$core$String$split,
+					'&',
+					_sporto$hop$Hop_Address$extractQuery(route)))));
+};
+var _sporto$hop$Hop_Address$extractPath = function (route) {
+	return A2(
+		_elm_lang$core$Maybe$withDefault,
+		'',
+		_elm_lang$core$List$head(
+			A2(
+				_elm_lang$core$String$split,
+				'?',
+				A2(
+					_elm_lang$core$Maybe$withDefault,
+					'',
+					_elm_lang$core$List$head(
+						_elm_lang$core$List$reverse(
+							A2(_elm_lang$core$String$split, '#', route)))))));
+};
+var _sporto$hop$Hop_Address$parsePath = function (route) {
+	return A2(
+		_elm_lang$core$List$map,
+		_evancz$elm_http$Http$uriDecode,
+		A2(
+			_elm_lang$core$List$filter,
+			function (segment) {
+				return _elm_lang$core$Basics$not(
+					_elm_lang$core$String$isEmpty(segment));
+			},
+			A2(
+				_elm_lang$core$String$split,
+				'/',
+				_sporto$hop$Hop_Address$extractPath(route))));
+};
+var _sporto$hop$Hop_Address$parse = function (route) {
+	return {
+		path: _sporto$hop$Hop_Address$parsePath(route),
+		query: _sporto$hop$Hop_Address$parseQuery(route)
+	};
+};
+var _sporto$hop$Hop_Address$getQuery = function (address) {
+	return _elm_lang$core$Dict$isEmpty(address.query) ? '' : A2(
+		_elm_lang$core$String$append,
+		'?',
+		A2(
+			_elm_lang$core$String$join,
+			'&',
+			A2(
+				_elm_lang$core$List$map,
+				function (_p1) {
+					var _p2 = _p1;
+					return A2(
+						_elm_lang$core$Basics_ops['++'],
+						_p2._0,
+						A2(_elm_lang$core$Basics_ops['++'], '=', _p2._1));
+				},
+				A2(
+					_elm_lang$core$List$map,
+					function (_p3) {
+						var _p4 = _p3;
+						return {
+							ctor: '_Tuple2',
+							_0: _evancz$elm_http$Http$uriEncode(_p4._0),
+							_1: _evancz$elm_http$Http$uriEncode(_p4._1)
+						};
+					},
+					_elm_lang$core$Dict$toList(address.query)))));
+};
+var _sporto$hop$Hop_Address$getPath = function (address) {
+	return A2(
+		_elm_lang$core$String$append,
+		'/',
+		A2(
+			_elm_lang$core$String$join,
+			'/',
+			A2(_elm_lang$core$List$map, _evancz$elm_http$Http$uriEncode, address.path)));
+};

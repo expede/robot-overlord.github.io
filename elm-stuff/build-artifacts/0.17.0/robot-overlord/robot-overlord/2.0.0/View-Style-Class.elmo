@@ -1,0 +1,6 @@
+var _robot_overlord$robot_overlord$View_Style_Class$classList = _robot_overlord$robot_overlord$View_Style_Namespace$classList;
+var _robot_overlord$robot_overlord$View_Style_Class$class = _robot_overlord$robot_overlord$View_Style_Namespace$class;
+var _robot_overlord$robot_overlord$View_Style_Class$TrueCenter = {ctor: 'TrueCenter'};
+var _robot_overlord$robot_overlord$View_Style_Class$FillViewport = {ctor: 'FillViewport'};
+var _robot_overlord$robot_overlord$View_Style_Class$FillPage = {ctor: 'FillPage'};
+var _robot_overlord$robot_overlord$View_Style_Class$Logo = {ctor: 'Logo'};

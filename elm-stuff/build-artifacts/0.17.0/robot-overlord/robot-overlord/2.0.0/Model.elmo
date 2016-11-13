@@ -1,0 +1,12 @@
+var _robot_overlord$robot_overlord$Model$Model = F2(
+	function (a, b) {
+		return {address: a, route: b};
+	});
+var _robot_overlord$robot_overlord$Model$init = function (_p0) {
+	var _p1 = _p0;
+	return {
+		ctor: '_Tuple2',
+		_0: A2(_robot_overlord$robot_overlord$Model$Model, _p1._1, _p1._0),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
