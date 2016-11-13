@@ -92,8 +92,6 @@ var _robot_overlord$robot_overlord$View_Style_Container$global = _rtfeldman$elm_
 	_elm_lang$core$Native_List.fromArray(
 		[
 			_rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$zero),
-			_rtfeldman$elm_css$Css$padding(
-			_rtfeldman$elm_css$Css$em(1)),
 			_rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
 			_rtfeldman$elm_css$Css$minHeight(
 			_rtfeldman$elm_css$Css$vh(100)),

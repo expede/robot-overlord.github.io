@@ -22,7 +22,6 @@ global : Snippet
 global =
     body
     [ margin zero
-    , padding <| em 1
     , position relative
     , minHeight <| vh 100
     , fontFamilies ["Open Sans", "sans-serif"]
