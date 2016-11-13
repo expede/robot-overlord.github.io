@@ -22,10 +22,11 @@ global : Snippet
 global =
     body
     [ margin zero
+    , padding <| em 1
     , position relative
     , minHeight <| vh 100
     , fontFamilies ["Open Sans", "sans-serif"]
-    , fontSize <| pt 14
+    , fontSize <| px 16
     ]
 
 typography : Snippet
@@ -36,6 +37,8 @@ typography =
         , fontSize <| em 4
         , fontStyle italic
         , textTransform uppercase
+        -- , mediaQuery "screen and (max-width: 460px)"
+        --     [body [fontSize <| em 3]]
         ]
 
 logo : Snippet

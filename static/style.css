@@ -1,9 +1,10 @@
 body {
     margin: 0;
+    padding: 1em;
     position: relative;
     min-height: 100vh;
     font-family: Open Sans, sans-serif;
-    font-size: 14pt;
+    font-size: 16px;
 }
 
 #GlobalHeader {

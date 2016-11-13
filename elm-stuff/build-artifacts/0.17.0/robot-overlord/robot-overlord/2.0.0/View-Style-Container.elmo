@@ -92,6 +92,8 @@ var _robot_overlord$robot_overlord$View_Style_Container$global = _rtfeldman$elm_
 	_elm_lang$core$Native_List.fromArray(
 		[
 			_rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$zero),
+			_rtfeldman$elm_css$Css$padding(
+			_rtfeldman$elm_css$Css$em(1)),
 			_rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
 			_rtfeldman$elm_css$Css$minHeight(
 			_rtfeldman$elm_css$Css$vh(100)),
@@ -99,7 +101,7 @@ var _robot_overlord$robot_overlord$View_Style_Container$global = _rtfeldman$elm_
 			_elm_lang$core$Native_List.fromArray(
 				['Open Sans', 'sans-serif'])),
 			_rtfeldman$elm_css$Css$fontSize(
-			_rtfeldman$elm_css$Css$pt(14))
+			_rtfeldman$elm_css$Css$px(16))
 		]));
 var _robot_overlord$robot_overlord$View_Style_Container$containers = _elm_lang$core$Native_List.fromArray(
 	[_robot_overlord$robot_overlord$View_Style_Container$global, _robot_overlord$robot_overlord$View_Style_Container$globalHeader, _robot_overlord$robot_overlord$View_Style_Container$globalFooter, _robot_overlord$robot_overlord$View_Style_Container$typography, _robot_overlord$robot_overlord$View_Style_Container$logo, _robot_overlord$robot_overlord$View_Style_Container$trueCenter]);
