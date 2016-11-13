@@ -1,6 +1,6 @@
 module View.Style.Color exposing (base, neutral, highlight, accent)
 
-import Color exposing (Color, rgb)
+import Css exposing (Color, rgb)
 
 neutral : Color
 neutral = white
@@ -17,6 +17,9 @@ accent = pink
 --------------------------------
 -- Primitives: do not export! --
 --------------------------------
+
+trueBlack : Color
+trueBlack = rgb 0 0 0
 
 pink : Color
 pink = rgb 236 112 119

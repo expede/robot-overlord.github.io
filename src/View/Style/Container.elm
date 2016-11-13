@@ -1,16 +1,17 @@
 module View.Style.Container exposing (containers)
 
 import Css exposing (..)
-import Css.Elements exposing (body, li, h1, h2)
-
-import Exts.List exposing (singleton)
+import Css.Elements exposing (body, li, h1, h2, a)
 
 import View.Style.Class exposing (Class(..))
-import View.Style.Id exposing    (Id(..))
+import View.Style.Id    exposing (Id(..))
+
+import View.Style.Color exposing (..)
 
 containers : List Snippet
 containers =
     [ global
+    , globalHeader
     , globalFooter
     , typography
     , logo
@@ -35,7 +36,6 @@ typography =
         , fontSize <| em 5
         , fontStyle italic
         , textTransform uppercase
-        , textAlign center
         ]
 
 logo : Snippet
@@ -59,11 +59,25 @@ trueCenter =
         , alignItems center
         ]
 
+globalHeader : Snippet
+globalHeader =
+    (#) GlobalHeader
+        [ textAlign center
+        , descendants
+              [ a [ fontFamilies [ "Exo", "sans-serif" ]
+                  , textDecoration none
+                  , fontStyle normal
+                  , color base
+                  ]
+              ]
+        ]
+
 globalFooter : Snippet
 globalFooter =
     (#) GlobalFooter
         [ position absolute
         , bottom zero
         , width <| vw 100
+        , fontFamilies [ "Exo", "sans-serif" ]
         , textAlign center
         ]
