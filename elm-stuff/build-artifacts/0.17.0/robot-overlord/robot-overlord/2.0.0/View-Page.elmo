@@ -1,8 +1,0 @@
-var _robot_overlord$robot_overlord$View_Page$page = function (route) {
-	var _p0 = route;
-	if (_p0.ctor === 'Home') {
-		return _robot_overlord$robot_overlord$View_Page_Home$homePage;
-	} else {
-		return _robot_overlord$robot_overlord$View_Page_NotFound$notFoundPage;
-	}
-};

@@ -1,0 +1,56 @@
+{
+  "name": "purescript-pux",
+  "description": "Build type-safe web apps with PureScript.",
+  "authors": [
+    "Alexander Mingoia <talk@alexmingoia.com>"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "keywords": [
+    "purescript",
+    "pux",
+    "react",
+    "elm",
+    "flux",
+    "redux",
+    "frp",
+    "virtual-dom"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexmingoia/purescript-pux.git"
+  },
+  "dependencies": {
+    "purescript-aff": "^3.0.0",
+    "purescript-eff": "^3.1.0",
+    "purescript-lists": "^4.0.1",
+    "purescript-signal": "^9.0.0",
+    "purescript-maps": "^3.0.0",
+    "purescript-functions": "^3.0.0",
+    "purescript-profunctor": "^3.0.0",
+    "purescript-react": "^3.0.0",
+    "purescript-globals": "^3.0.0",
+    "purescript-dom": "^4.2.0",
+    "purescript-smolder": "^9.0.0",
+    "purescript-css": "^3.0.0"
+  },
+  "devDependencies": {
+    "purescript-affjax": "^4.0.0",
+    "purescript-argonaut": "^3.0.0"
+  },
+  "homepage": "https://github.com/alexmingoia/purescript-pux",
+  "version": "10.0.0",
+  "_release": "10.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v10.0.0",
+    "commit": "8c8a8c42133fdc96067e8a0db7275bca722c894c"
+  },
+  "_source": "https://github.com/alexmingoia/purescript-pux.git",
+  "_target": "^10.0.0",
+  "_originalSource": "purescript-pux",
+  "_direct": true
+}

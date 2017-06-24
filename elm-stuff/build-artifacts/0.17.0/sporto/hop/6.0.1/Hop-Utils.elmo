@@ -1,7 +1,0 @@
-var _sporto$hop$Hop_Utils$dedupSlash = A3(
-	_elm_lang$core$Regex$replace,
-	_elm_lang$core$Regex$All,
-	_elm_lang$core$Regex$regex('/+'),
-	function (_p0) {
-		return '/';
-	});
