@@ -18,7 +18,7 @@ view _ =
     header ! id "top-header" $ do
       div ! id "inner-header" $ do
         img ! id "logo"
-            ! src  "/happybot.svg"
+            ! src "/static/happybot.svg"
 
         h1 do
           text "Robot"
