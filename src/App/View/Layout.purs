@@ -13,8 +13,6 @@ import App.Routes (Route(..), TrainingRoute(..), fromRoute)
 -- Subviews --
 --------------
 
-import App.View.Style (css)
-
 import App.View.GlobalNav as GlobalNav
 import App.View.Homepage as Homepage
 import App.View.NotFound as NotFound
@@ -44,8 +42,6 @@ import Text.Smolder.Markup ((!), (#!), text)
 view :: State -> HTML Event
 view state@(State {route}) =
   div do
-    style css
-
     GlobalNav.view
 
     case route of

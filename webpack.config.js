@@ -42,6 +42,10 @@ module.exports = {
           psc: 'psa',
           pscIde: true
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },

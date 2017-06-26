@@ -20,6 +20,7 @@ var Color = require("../Color");
 var Color_Scheme_X11 = require("../Color.Scheme.X11");
 var Control_Bind = require("../Control.Bind");
 var Data_Function = require("../Data.Function");
+var Data_Maybe = require("../Data.Maybe");
 var Data_NonEmpty = require("../Data.NonEmpty");
 var globalNav = CSS_String.fromString(CSS_Selector.isStringSelector)("#global-nav");
 var navLinks = CSS_Selector.child(globalNav)(CSS_Elements.a);

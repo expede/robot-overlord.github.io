@@ -39,7 +39,8 @@ view =
       --   $ text "Open Source"
 
       a ! className "contact"
-        #> Contact
+        -- #> Contact
+        ! href "mailto:beep@robotoverlord.io"
         $ text "Contact Us"
 
 navigate htmlElement route =
