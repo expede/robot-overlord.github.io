@@ -8,7 +8,7 @@
     "postinstall": "bower cache clean && bower install",
     "clean": "rimraf static/dist",
     "build": "npm run clean && webpack --config ./webpack.config.js --progress --profile --colors",
-    "watch": "npm run clean && webpack-dev-server --content-base static/ --hot --inline --config webpack.config.js",
+    "watch": "npm run clean && webpack-dev-server --hot --inline --config webpack.config.js",
     "serve": "npm run build && serve static",
     "start": "npm run watch",
     "test": "pulp test"
@@ -26,6 +26,7 @@
     "bower": "^1.7.9",
     "css-loader": "^0.28.4",
     "node-sass": "^4.5.3",
+    "normalize-css": "^2.3.1",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "purescript": "^0.11.4",
