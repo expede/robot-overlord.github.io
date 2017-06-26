@@ -1,9 +1,0 @@
-**node_modules/
-**bower_components/
-**DS_Store
-**output/
-**dist/
-**static/dist/
-.pulp-cache
-.psc*
-examples/*/*.js
