@@ -27,6 +27,12 @@ view _ =
 
         h2 $ text "Changing the way the world writes software"
 
+-- <form method="POST" action="http://formspree.io/YOUREMAILHERE">
+--   <input type="email" name="email" placeholder="Your email">
+--   <textarea name="message" placeholder="Your message"></textarea>
+--   <button type="submit">Send</button>
+-- </form>
+
       -- span ! id "continue" $ do
       --   text "▼"
 
