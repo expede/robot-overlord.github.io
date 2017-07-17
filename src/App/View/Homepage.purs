@@ -56,13 +56,16 @@ view _ =
       section ! id "bar" $ do
         div ! className "half-block" $ do
           h2 ! className "content center" $ do
-            text       "\"We believe that "
+            -- h1 ! className "back" $ text "“"
+            -- h1 ! className "back" $ text "”"
+
+            text       "We believe that "
             em $ text  "functional programming is the future, "
             text       "and it's not hard to see why. Modern frameworks like "
             a ! href   "http://www.phoenixframework.org/"
               ! target "_blank"
               $ text   "Phoenix"
-            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?\""
+            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
 
         div ! className "half-block" $ do
           h2  $ text "...and we teach because we love tech"
@@ -72,12 +75,12 @@ view _ =
             We founded the Vancouver Functional Programmers and Vancouver Erlang & Elixir meetups.
             Our pasionate instructors curate new and emerging technologies
             as they become available to ensure that we have the most up to date
-            material and references
+            material and references.
           """
 
           h3 ! id "foo" $ do
             a ! href "bo" -- #> Contact
-              $ text "Let's build something awesome together"
+              $ text "Come learn something awesome"
 
     -- Move to OSS section
     -- p $ text "We're proud to have released some of the top libraries, including:"
