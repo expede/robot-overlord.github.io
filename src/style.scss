@@ -1,19 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Open+Sans);
 
 body {
-  /* background-color: rgb(239, 239, 239); */
-  /* background-color: #292929; */
   color: #292929;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 
 a {
-  /* color: white; */
   font-weight: 900;
 
   &:visited,
   &:link,
+  &:focus,
   &:active,
   &:hover {
     color: #292929;
@@ -27,7 +25,6 @@ a {
 h1, h2, h3, #global-nav a {
   text-transform: uppercase;
   font-family: "Exo", sans-serif;
-  color: white;
 }
 
 h1 {
@@ -79,8 +76,7 @@ a {
 }
 
 #top-header {
-  width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 2em);
 
   font-size: 1.5rem;
 
@@ -89,12 +85,28 @@ a {
   justify-content: center;
 
   background-color: #292929;
+  color: white;
 
   h1 {
-    /* font-size: 8em; */
     font-style: italic;
-
+    /* text-align: center; */
   }
+
+  h3 {
+    text-align: center;
+    opacity: 0.67;
+  }
+}
+
+#global-footer {
+  background-color: #292929;
+  color: white;
+  margin: 0;
+  padding: 1em 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #inner-header {
@@ -123,9 +135,73 @@ a {
   /* left: 0; */
 }
 
+#global-nav #logo-wrapper {
+  background: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  float: left;
+  margin-right: auto;
+}
+
 #pagey {
   border-left: solid 3em red;
   width: 50%;
+}
+
+#marketing > section {
+  width: 100%;
+  min-height: 66vh;
+  height: 100vh;
+}
+
+.img-block {
+  float: left;
+
+  width: 40%;
+  min-height: 100%;
+
+  background-color: #262626;
+  background-origin: center;
+  transform: scaleX(-1);
+}
+
+.block-right {
+  float: right;
+  transform: scaleX(1);
+}
+
+.content-block {
+  padding: 1em;
+
+  float: right;
+  width: calc(60% - 40px);
+
+  &.block-right {
+    float: left;
+  }
+}
+
+#marketing {
+  .img-block {
+    background-image: url("https://cdn-images-1.medium.com/max/2000/1*bNv_UJfqdxywNSP4vf3UPg.jpeg");
+    background-size: cover;
+  }
+}
+
+.full {
+  width: 100%;
+  background-color: #262626;
+  height: 33vh !important;
+  color: yellow;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* @media (max-width: 600px) { */
@@ -191,13 +267,6 @@ a {
   90% {
     transform:translateY(0%);
     padding-bottom: 8px;
-  }
-  95% {
-    transform:translateY(-7%);
-  }
-  97% {
-    transform:translateY(0%);
-    padding-bottom: 9px;
   }
   99% {
     opacity: 0;

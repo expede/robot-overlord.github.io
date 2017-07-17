@@ -13,11 +13,12 @@ import App.Routes (Route(..), TrainingRoute(..), fromRoute)
 -- Subviews --
 --------------
 
+import App.View.Footer    as Footer
 import App.View.GlobalNav as GlobalNav
-import App.View.Homepage as Homepage
-import App.View.NotFound as NotFound
-import App.View.Training as Training
-import App.View.Work     as Work
+import App.View.Homepage  as Homepage
+import App.View.NotFound  as NotFound
+import App.View.Training  as Training
+import App.View.Work      as Work
 
 -------------------
 -- Language Base --
@@ -41,7 +42,7 @@ import Text.Smolder.Markup ((!), (#!), text)
 
 view :: State -> HTML Event
 view state@(State {route}) =
-  div do
+  div $ do
     GlobalNav.view
 
     case route of
@@ -51,3 +52,5 @@ view state@(State {route}) =
       (Training training) -> Training.view training
       Contact             -> Work.view     state
       (NotFound url)      -> NotFound.view state
+
+    Footer.view

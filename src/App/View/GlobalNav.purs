@@ -30,8 +30,10 @@ import Text.Smolder.Markup ((!), (#!), text)
 view :: HTML Event
 view =
     nav ! id "global-nav" $ do
-      img ! id "logo"
-        ! src "/static/happybot.svg"
+      a #> Home
+        !  id "logo-wrapper" $ do
+        img ! id "logo"
+            ! src "/static/happybot.svg"
 
       a ! className "training"
         #> Training TrainingHome
