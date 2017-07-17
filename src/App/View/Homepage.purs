@@ -69,14 +69,6 @@ view _ =
         input ! type' "submit"
               ! value "Subscribe"
 
--- <form method="post" action="https://goodbits.io/e/556cc53a-be05-41d2-9be0-eafda4340f47" target="_blank">
---   <input type="text" name="first_name" placeholder="First Name"></input>
---   <input type="text" name="last_name" placeholder="Last Name"></input>
---   <input type="text" name="email" placeholder="Email"></input>
---   <input type="submit" value="Subscribe">
--- </form>
-
-    -- section ! id "pagey" $ do
     --   section do
     --     h1 $ text "Stay ahead of the curve"
     --     p  $ text """
