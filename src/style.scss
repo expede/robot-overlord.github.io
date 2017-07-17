@@ -20,6 +20,10 @@ a {
   }
 }
 
+#fp-header {
+  color: yellow;
+}
+
 h1, h2, h3, #global-nav a {
   text-transform: uppercase;
   font-family: "Exo", sans-serif;
@@ -53,9 +57,11 @@ h2 {
 
   a {
     float: right;
-    padding: 0.25em;
-    /* background-color: yellow; */
-    border: 0.25em solid #292929;
+    padding: 0.25em 0.5em;
+    font-weight: 400;
+    color: #FFF !important;
+    background-color: #262626;
+    /* border: 0.25em solid #292929; */
     border-radius: 0.5em;
     margin: 0.225em;
     color: #292929;

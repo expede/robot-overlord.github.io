@@ -17,10 +17,10 @@ view _ =
       div ! id "inner-header" $ do
 
         h2 $ text "Vancouver's top"
-        h1 $ text "functional programming"
+        h1 ! id "fp-header" $ text "functional programming"
         h2 ! id "instructors"
            $ text "instructors"
-        h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • and more"
+        h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • more"
 
       span ! id "continue"
            $ text "▼"
