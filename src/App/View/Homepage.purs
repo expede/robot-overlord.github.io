@@ -7,7 +7,7 @@ import App.State (State)
 import Control.Bind (discard)
 import Data.Function (($))
 import Pux.DOM.HTML (HTML)
-import Text.Smolder.HTML.Attributes (action, id, method, name, placeholder, src, target, type', value)
+import Text.Smolder.HTML.Attributes (action, id, method, name, placeholder, src, target, type', value, href)
 import Text.Smolder.Markup ((!), text)
 
 view :: State -> HTML Event
@@ -15,44 +15,61 @@ view _ =
   section ! id "homepage" $ do
     header ! id "top-header" $ do
       div ! id "inner-header" $ do
-        img ! id "logo"
-            ! src "/static/happybot.svg"
 
-        h1 do
-          text "Robot"
-          br
-          text "Overlord"
+        h2 $ text "Vancouver's top"
+        h1 $ text "functional programming instructors"
+  -- these should all be links, perhaps? Link indicator will need to be subtle
+  -- VVVVVVVVVVVVVVVVVVVVV
+        h3 $ text "Elixir, Phoenix, Elm, Clojure, React, Lodash, techniques, and more"
 
-        h2 $ text "Changing the way the world writes software"
+        p $ do
+          em $ text "We help teams learn and adpot the absolute best, pragmatic tools available. "
+          text      "Moving to a new paradeigm should be fun, not painful. "
+          text      "______"
 
       span ! id "continue" $ do
         text "▼"
 
+    section $ do
+      h2 $ text "We ♥ FP"
+      p $ do
+        text       "We believe that "
+        em $ text  "functional programming is the future, "
+        text       "and it's not hard to see why. Modern frameworks like"
+        a ! href   "http://www.phoenixframework.org/"
+          ! target "_blank"
+          $ text   "Phoenix"
+        text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
+
+      -- Move to OSS section
+      p $ text "We're proud to have released some of the top libraries, including:"
+
+  -- break into its own page
+  -- link on main page: Learn with us
     section ! id "contact-form" $ do
-      h1 $ text "Get in touch"
+      h1 $ text "We’d love to work with you."
 
       form ! method "POST"
-           ! action "http://formspree.io/beep@robotoverlord.io"
-           $ do
+           ! action "http://formspree.io/beep@robotoverlord.io" $ do
 
         input ! type' "email"
               ! name "email"
               ! placeholder "Your email"
 
+        -- should have a label
         textarea ! name "message"
                  ! placeholder "Your message"
                  $ text ""
 
         button ! type' "submit"
-               $ text "Send"
+               $ text "Submit"
 
       h1 $ text "Stay up to date"
       h2 $ text "Updates, offers, tips, and more"
 
       form ! method "POST"
            ! action "https://goodbits.io/e/556cc53a-be05-41d2-9be0-eafda4340f47"
-           ! target "_blank"
-           $ do
+           ! target "_blank" $ do
 
         input ! type' "text"
               ! name  "first_name"

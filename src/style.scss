@@ -1,15 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Open+Sans);
 
 body {
-  background-color: rgb(239, 239, 239);
+  /* background-color: rgb(239, 239, 239); */
+  /* background-color: #292929; */
   color: black;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 
-h1, h2, #global-nav a {
+a {
+  /* color: white; */
+  font-weight: 900;
+
+  &:visited,
+  &:link,
+  &:active,
+  &:hover {
+    color: #292929;
+  }
+}
+
+p {
+  color: white;
+}
+
+h1, h2, h3, #global-nav a {
   text-transform: uppercase;
   font-family: "Exo", sans-serif;
+  color: white;
 }
 
 h1 {
@@ -22,8 +40,18 @@ h2 {
 
 #global-nav {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  padding: 1em;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  width: 100%;
+  text-align: center;
+
+  a {
+    padding: 0.25em;
+    background-color: yellow;
+    color: #292929;
+  }
 }
 
 #global-nav a {
@@ -43,6 +71,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-color: #292929;
 
   h1 {
     font-size: 8em;
@@ -71,19 +101,19 @@ a {
 }
 
 #logo {
-  width: 25em;
+  height: 2em;
 }
 
 #pagey {
   border-left: solid 3em red;
-  background-color: white;
+  /* background-color: #292929; */
   width: 50%;
 }
 
 @media (max-width: 600px) {
   body {
     font-size: 10px;
-    padding: 1em;
+    /* padding: 1em; */
   }
 
   #top-header {

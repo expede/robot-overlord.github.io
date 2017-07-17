@@ -22,7 +22,7 @@ import Pux.DOM.Events (onClick)
 import Pux.DOM.HTML (HTML)
 
 import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (href, id, className)
+import Text.Smolder.HTML.Attributes (href, id, className, src)
 import Text.Smolder.Markup ((!), (#!), text)
 
 ------------
@@ -30,18 +30,21 @@ import Text.Smolder.Markup ((!), (#!), text)
 view :: HTML Event
 view =
     nav ! id "global-nav" $ do
-      -- a ! className "training"
-      --   #> Training TrainingHome
-      --   $ text "Training"
+      img ! id "logo"
+        ! src "/static/happybot.svg"
 
-      -- a ! className "oss"
-      --   #> OpenSource
-      --   $ text "Open Source"
+      a ! className "training"
+        #> Training TrainingHome
+        $ text "Learn with us"
 
-      a ! className "contact"
-        -- #> Contact
+      a ! className "oss"
+        #> OpenSource
+        $ text "Open Source"
+
+      a ! className "follow"
+        -- -- #> Contact
         ! href "mailto:beep@robotoverlord.io"
-        $ text "Contact Us"
+        $ text "Follow"
 
 navigate htmlElement route =
   htmlElement
