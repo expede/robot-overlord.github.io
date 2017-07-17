@@ -52,28 +52,35 @@ view _ =
           span ! className "red"
                $ text " ♥ "
           text "FP"
-        -- p  $ text "We teach because we love tech"
 
-      section $ do
+      section ! id "bar" $ do
         div ! className "half-block" $ do
           h2 ! className "content center" $ do
-            text       "We believe that "
+            text       "\"We believe that "
             em $ text  "functional programming is the future, "
-            text       "and it's not hard to see why. Modern frameworks like"
+            text       "and it's not hard to see why. Modern frameworks like "
             a ! href   "http://www.phoenixframework.org/"
               ! target "_blank"
               $ text   "Phoenix"
-            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
+            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?\""
 
         div ! className "half-block" $ do
-          text "We founded the Vancouver Functional Programmers meetup in 2015"
-          text "and the Vancouver Erlang & Elixir meetup in 2015"
+          h2  $ text "...and we teach because we love tech"
+          h3 $ text "(Like... a lot)"
+          text """
+            Yes, we're "those" people.
+            We founded the Vancouver Functional Programmers and Vancouver Erlang & Elixir meetups.
+            Our pasionate instructors curate new and emerging technologies
+            as they become available to ensure that we have the most up to date
+            material and references
+          """
 
-          -- a ! href "bo" $ do
-          --   text "call us"
+          h3 ! id "foo" $ do
+            a ! href "bo" -- #> Contact
+              $ text "Let's build something awesome together"
 
-          -- Move to OSS section
-          -- p $ text "We're proud to have released some of the top libraries, including:"
+    -- Move to OSS section
+    -- p $ text "We're proud to have released some of the top libraries, including:"
 
     -- -- break into its own page
     -- -- link on main page: Learn with us
@@ -121,11 +128,6 @@ view _ =
       --     h1 $ text "Stay ahead of the curve"
       --     p  $ text """
       --       It's well known that tech is a fast moving field
-      --     """
-      --     p  $ text """
-      --       Our pasionate instructors curate new and emerging technologies
-      --       as they become available to ensure that we have the most up to date
-      --       material and references
       --     """
 
       --   section do

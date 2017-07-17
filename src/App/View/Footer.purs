@@ -18,7 +18,7 @@ view =
   footer ! id "global-footer" $ do
     h2 $ text "Content © 2017 Robot Overlord Software Inc."
 
-    a ! className "home"
-      ! href (fromRoute Home)
-      #! onClick (Navigate $ fromRoute Home)
-      $ text "Work"
+    -- a ! className "home"
+    --   ! href (fromRoute Home)
+    --   #! onClick (Navigate $ fromRoute Home)
+    --   $ text "Work"

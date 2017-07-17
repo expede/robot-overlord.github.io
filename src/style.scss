@@ -99,8 +99,8 @@ a {
 }
 
 #global-footer {
-  background-color: #FFF;
-  color: #262626;
+  background-color: #262626;
+  color: #FFF;
   margin: 0;
   padding: 1em 0;
 
@@ -153,10 +153,23 @@ a {
   width: 50%;
 }
 
+#foo {
+  background-color: yellow;
+  width: 23em;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+}
+
+#bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #marketing > section {
   width: 100%;
   min-height: 66vh;
-  height: 100vh;
+  height: 80vh;
 }
 
 .red {
@@ -170,9 +183,12 @@ a {
 }
 
 .half-block {
-  width: 50%;
+  /* width: 50%; */
   /* display: inline-block; */
-  float: left;
+  /* float: left; */
+  flex-grow: 1;
+  flex-basis: 0;
+
   background-color: #262626;
   height: 100%;
   color: #FFF;
