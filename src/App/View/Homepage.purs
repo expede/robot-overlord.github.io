@@ -17,20 +17,20 @@ view _ =
       div ! id "inner-header" $ do
 
         h2 $ text "Vancouver's top"
-        h1 $ text "functional programming instructors"
-  -- these should all be links, perhaps? Link indicator will need to be subtle
-  -- VVVVVVVVVVVVVVVVVVVVV
-        h3 $ text "Elixir, Phoenix, Elm, Clojure, React, Lodash, techniques, and more"
+        h1 $ text "functional programming"
+        h2 ! id "instructors"
+           $ text "instructors"
+        h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • and more"
 
-        p $ do
-          em $ text "We help teams learn and adpot the absolute best, pragmatic tools available. "
-          text      "Moving to a new paradeigm should be fun, not painful. "
-          text      "______"
-
-      span ! id "continue" $ do
-        text "▼"
+      span ! id "continue"
+           $ text "▼"
 
     section $ do
+      p $ do
+        em $ text "We help teams learn and adpot the absolute best, pragmatic tools available. "
+        text      "Moving to a new paradeigm should be fun, not painful. "
+        text      "______"
+
       h2 $ text "We ♥ FP"
       p $ do
         text       "We believe that "
