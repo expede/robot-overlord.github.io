@@ -46,18 +46,34 @@ view _ =
         div ! className "img-block block-right"
             $ text ""
 
-        h2 $ text "We ♥ FP"
-        p $ do
-          text       "We believe that "
-          em $ text  "functional programming is the future, "
-          text       "and it's not hard to see why. Modern frameworks like"
-          a ! href   "http://www.phoenixframework.org/"
-            ! target "_blank"
-            $ text   "Phoenix"
-          text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
+      section ! className "full" $ do
+        h1 $ do
+          text "We"
+          span ! className "red"
+               $ text " ♥ "
+          text "FP"
+        -- p  $ text "We teach because we love tech"
 
-        -- Move to OSS section
-        p $ text "We're proud to have released some of the top libraries, including:"
+      section $ do
+        div ! className "half-block" $ do
+          h2 ! className "content center" $ do
+            text       "We believe that "
+            em $ text  "functional programming is the future, "
+            text       "and it's not hard to see why. Modern frameworks like"
+            a ! href   "http://www.phoenixframework.org/"
+              ! target "_blank"
+              $ text   "Phoenix"
+            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
+
+        div ! className "half-block" $ do
+          text "We founded the Vancouver Functional Programmers meetup in 2015"
+          text "and the Vancouver Erlang & Elixir meetup in 2015"
+
+          -- a ! href "bo" $ do
+          --   text "call us"
+
+          -- Move to OSS section
+          -- p $ text "We're proud to have released some of the top libraries, including:"
 
     -- -- break into its own page
     -- -- link on main page: Learn with us

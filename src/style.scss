@@ -99,8 +99,8 @@ a {
 }
 
 #global-footer {
-  background-color: #292929;
-  color: white;
+  background-color: #FFF;
+  color: #262626;
   margin: 0;
   padding: 1em 0;
 
@@ -157,6 +157,38 @@ a {
   width: 100%;
   min-height: 66vh;
   height: 100vh;
+}
+
+.red {
+  color: red;
+}
+
+.center {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.half-block {
+  width: 50%;
+  /* display: inline-block; */
+  float: left;
+  background-color: #262626;
+  height: 100%;
+  color: #FFF;
+}
+
+.test {
+  width: 8em;
+  float: left;
+  filter: grayscale(100%) invert(100%);
+}
+
+.test2 {
+  width: 8em;
+  float: left;
+
+  filter: grayscale(100%);
 }
 
 .img-block {
