@@ -9,7 +9,7 @@ import Data.Function (($))
 import Pux.DOM.HTML (HTML)
 
 import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (id, src)
+import Text.Smolder.HTML.Attributes (id, src, type', placeholder, method, action, name)
 import Text.Smolder.Markup ((!), text)
 
 view :: State -> HTML Event
@@ -27,11 +27,22 @@ view _ =
 
         h2 $ text "Changing the way the world writes software"
 
--- <form method="POST" action="http://formspree.io/YOUREMAILHERE">
---   <input type="email" name="email" placeholder="Your email">
---   <textarea name="message" placeholder="Your message"></textarea>
---   <button type="submit">Send</button>
--- </form>
+    section ! id "contact-form" $ do
+      h1 $ text "Get in touch"
+
+      form ! method "POST"
+           ! action "http://formspree.io/beep@robotoverlord.io" $ do
+
+        input ! type' "email"
+              ! name "email"
+              ! placeholder "Your email"
+
+        textarea ! name "message"
+                 ! placeholder "Your message"
+                 $ text ""
+
+        button ! type' "submit"
+               $ text "Send"
 
       -- span ! id "continue" $ do
       --   text "▼"
