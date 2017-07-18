@@ -67,8 +67,9 @@ view _ =
             text "Instructors"
 
           div do
-            h2 $ text "International conference talks: 3"
-            h2 $ text "Student country count: 6"
+            h2 $ text "Students from 6 countries (and counting)"
+            h2 $ text "3 International conference talks"
+            h2 $ text "1 mentorship award"
 
       section $ do
         div ! className "content-block block-right" $ do

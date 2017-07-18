@@ -35,6 +35,10 @@ view =
         img ! id "logo"
             ! src "/static/happybot.svg"
 
+      a ! className "home"
+        #> Home
+        $ text "Home"
+
       a ! className "training"
         #> Training TrainingHome
         $ text "Learn with us"

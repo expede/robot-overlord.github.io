@@ -240,7 +240,7 @@ a {
   filter: grayscale(100%);
 }
 
-.img-block {
+.img-block, .img-block-2 {
   float: left;
 
   width: 40%;
@@ -303,7 +303,7 @@ a {
   }
 
   .img-block-2 {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/a0/cb/fb/a0cbfb511209808761121efc8c397369--classroom-design-in-the-classroom.jpg");
+    background-image: url("http://images.wisegeek.com/working-in-an-office.jpg");
     background-size: cover;
   }
 }
