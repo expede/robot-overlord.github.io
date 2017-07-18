@@ -180,7 +180,6 @@ a {
   font-size: 25em;
   opacity: 0.1;
   z-index: 1;
-  /* top: 0em; */
 
   top: 0;
   right: -1rem;
@@ -249,28 +248,62 @@ a {
 
   background-color: #262626;
   background-origin: center;
-  transform: scaleX(-1);
 }
 
 .block-right {
   float: right;
-  transform: scaleX(1);
 }
 
 .content-block {
-  padding: 1em;
-
-  float: right;
-  width: calc(60% - 40px);
+  /* padding: 1em; */
+  margin: 0 auto;
+  width: 60%;
 
   &.block-right {
     float: left;
+  }
+
+  margin-top: 7em;
+
+  float: right;
+
+  text-align: center;
+
+  ul, p {
+    font-size: 1.3em;
+  }
+
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    text-align: left;
+  }
+
+  a {
+    padding: 0.25em 0.5em;
+    font-weight: 400;
+    background-color: #262626;
+    /* border: 0.25em solid #292929; */
+    border-radius: 0.5em;
+    margin: 0.225em;
+
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 1.3em;
   }
 }
 
 #marketing {
   .img-block {
     background-image: url("https://cdn-images-1.medium.com/max/2000/1*bNv_UJfqdxywNSP4vf3UPg.jpeg");
+    background-size: cover;
+  }
+
+  .img-block-2 {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/a0/cb/fb/a0cbfb511209808761121efc8c397369--classroom-design-in-the-classroom.jpg");
     background-size: cover;
   }
 }
@@ -284,6 +317,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  h2 {
+    text-align: right;
+  }
+
+  a {
+    color: yellow;
+  }
 }
 
 /* @media (max-width: 600px) { */

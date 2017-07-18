@@ -27,21 +27,67 @@ view _ =
 
     section ! id "marketing" $ do
       section ! id "intensives" $ do
-        div ! className "img-block"
+        div ! className "img-block-2"
             $ text ""
 
         div ! className "content-block" $ do
-          h1 $ text "Intensive Hands-On Workshops and Deep Dives"
-          p  $ text ""
+          h1 $ text "Intensive"
+          h2 $ do
+            text "Hands-On Workshops and Deep Dives"
+
+          p $ text "Our courses are offered as retreats or on-site, including:"
+
+          ul do
+            li $ text "Full week Elixir & Phoneix bootcamp"
+            li $ text "Phoenix for Rubyists"
+            li $ text "Scalable functional front-end bootcamp with Elm"
+            li $ text "Zen front-ends with Om"
+            li $ text "Functional foundations for Javascript"
+            li $ text "...and custom material built to suit your needs"
+
+  -- link to courses page
+  -- inlcude a form to suggest new courses
+          h2 $ text "Our course catalogue is expanding all the time"
+          a ! href "" $ text "See courses"
+
+  -- MOVE TO COURSE SECTION
+  -- -- charge for office hours as upsell for online courses
+  --         p $ text "All courses $600/day/seat, and include take-home exercises, cheat sheets, and office hours."
+  --         p $ text "Have a large group? Drop us a line for a custom quote."
+
+  -- -- link to newsletter
+  --         p $ text "Looking for online classes? We have some exciting stuff in development for you! Sign up to get notified when we launch!"
 
       section ! className "full" $ do
-        h1 $ text "Passionate, Award Winning Instructors"
-        -- p  $ text "We teach because we love tech"
+        div do
+          h1 do
+            text "Passionate,"
+            a ! href "https://twitter.com/expede/status/837666553999028225"
+              $ text "Award Winning"
+            text "Instructors"
+
+          div do
+            h2 $ text "International conference talks: 3"
+            h2 $ text "Student country count: 6"
 
       section $ do
         div ! className "content-block block-right" $ do
-          h1 $ text "Learn and adpot the absolute best, pragmatic tools available"
-          p $ text "Moving to a new paradeigm should be fun, not painful. "
+          div !className "inner" $ do
+            h1 $ text "What people are saying"
+            h2 $ text "New tools should be fun"
+
+            blockquote do
+              p $ text "Sorry, Data. Shields up! Rrrrred alert! I recommend you don't fire until you're within 40,000 kilometers. Yes, absolutely, I do indeed concur, wholeheartedly!"
+              p $ text "Libraries come and go, but techniques are forever"
+              p $ text "~ Commander Riker, USS Enterprise"
+
+
+            h2 $ text "adpot the absolute best, pragmatic tools available"
+            p  $ text "Even experienced developers find value in having a guide to avoid common pitfalls, get a sense of idiomatic solution, and to have best practices shown in context."
+
+            blockquote do
+              p $ text "Sorry, Data. Shields up! Rrrrred alert! I recommend you don't fire until you're within 40,000 kilometers. Yes, absolutely, I do indeed concur, wholeheartedly!"
+              p $ text "~ Commander Riker, USS Enterprise"
 
         div ! className "img-block block-right"
             $ text ""
@@ -65,26 +111,38 @@ view _ =
             a ! href   "http://www.phoenixframework.org/"
               ! target "_blank"
               $ text   "Phoenix"
-            text       "are built for web scale, realtime interactions, speed up development, and are easy to extend. What's not to love?"
+            text       "are built for web scale, realtime interactions, and speed up development. What's not to love?"
 
         div ! className "half-block" $ do
-          h2  $ text "...and we teach because we love tech"
-          h3 $ text "(Like... a lot)"
-          text """
-            Yes, we're "those" people.
-            We founded the Vancouver Functional Programmers and Vancouver Erlang & Elixir meetups.
-            Our pasionate instructors curate new and emerging technologies
-            as they become available to ensure that we have the most up to date
-            material and references.
-          """
+          h2  $ text "...like, a lot!"
+          p   $ do
+            text     "Yes, we're \"those\" people. We founded the "
+            a ! href "https://www.meetup.com/Vancouver-Functional-Programmers/events/222312064/"
+              ! target "_blank"
+              $ text "Vancouver Functional Programmers"
+            text     "and"
+            a ! href "https://www.meetup.com/Vancouver-Erlang-Elixir-Meetup/"
+              ! target "_blank"
+              $ text "Vancouver Erlang & Elixir"
+            text     "meetups,"
+            a ! href "http://www.elixir.london/Elixir-LDN-2017/brooklyn-zelenka"
+              ! target "_blank"
+              $ text "give international conference talks,"
+            text     "and"
+            a ! href "https://github.com/robot-overlord/robot-overlord.github.io"
+              ! target "_blank"
+              $ text "practice what we preach."
+
+          p $ do
+            text     "Our pasionate instructors curate languages, libraries, and techniques to find the most pragmatic tech with the highest gains over the competition. "
+            text     "We even"
+            a ! href ""
+              $ text "maintain several of our own,"
+            text     "including several Elixir libraries with dedicated followings."
 
           h3 ! id "foo" $ do
             a ! href "bo" -- #> Contact
               $ text "Come learn something awesome"
-
-    -- Move to OSS section
-    -- p $ text "We're proud to have released some of the top libraries, including:"
-
     -- -- break into its own page
     -- -- link on main page: Learn with us
     --   section ! id "contact-form" $ do
@@ -126,24 +184,6 @@ view _ =
 
     --       input ! type' "submit"
     --             ! value "Subscribe"
-
-      --   section do
-      --     h1 $ text "Stay ahead of the curve"
-      --     p  $ text """
-      --       It's well known that tech is a fast moving field
-      --     """
-
-      --   section do
-      --     h1 $ text "Intensive Hands-On Workshops and Deep Dives"
-      --     p  $ text ""
-
-      --   section do
-      --     h1 $ text "Passionate, Award Winning Instructors"
-      --     p  $ text "We teach because we love tech"
-
-      --   section do
-      --     h1 $ text "Training"
-      --     p  $ text "We offer many different three main training modalities: class, on-site, and retreat"
 
   -- -- navigate :: Eventable (Event -> Event) Event
   -- --          => Attributable Event

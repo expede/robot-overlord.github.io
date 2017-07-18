@@ -27,3 +27,7 @@ view s =
       ! href (fromRoute Home)
       #! onClick (Navigate $ fromRoute Home)
       $ text "Work"
+
+
+    -- Move to OSS section
+    -- p $ text "We're proud to have released some of the top libraries, including:"

@@ -16,7 +16,7 @@ import Text.Smolder.Markup ((!), (#!), text)
 view :: HTML Event
 view =
   footer ! id "global-footer" $ do
-    h2 $ text "Content © 2017 Robot Overlord Software Inc."
+    h2 $ text "© 2017 Robot Overlord Software Inc."
 
     -- a ! className "home"
     --   ! href (fromRoute Home)
