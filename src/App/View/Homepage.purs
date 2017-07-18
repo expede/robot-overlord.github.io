@@ -1,12 +1,17 @@
 module App.View.Homepage where
 
-import Text.Smolder.HTML
 
 import App.Events (Event)
+import App.Navigate ((#>))
+import App.Routes (Route(..), TrainingRoute(..))
 import App.State (State)
-import Control.Bind (discard)
+
 import Data.Function (($))
+import Control.Bind (discard)
+
 import Pux.DOM.HTML (HTML)
+
+import Text.Smolder.HTML
 import Text.Smolder.HTML.Attributes (action, id, className, method, name, placeholder, src, target, type', value, href)
 import Text.Smolder.Markup ((!), text)
 
@@ -50,14 +55,6 @@ view _ =
           h2 $ text "Our course catalogue is expanding all the time"
           a ! href "" $ text "See courses"
 
-  -- MOVE TO COURSE SECTION
-  -- -- charge for office hours as upsell for online courses
-  --         p $ text "All courses $600/day/seat, and include take-home exercises, cheat sheets, and office hours."
-  --         p $ text "Have a large group? Drop us a line for a custom quote."
-
-  -- -- link to newsletter
-  --         p $ text "Looking for online classes? We have some exciting stuff in development for you! Sign up to get notified when we launch!"
-
       section ! className "full" $ do
         div do
           h1 do
@@ -75,7 +72,7 @@ view _ =
         div ! className "content-block block-right" $ do
           div !className "inner" $ do
             h1 $ text "What people are saying"
-            h2 $ text "New tools should be fun"
+            h2 $ text "FP without the hard mode"
 
             blockquote do
               p $ text "Sorry, Data. Shields up! Rrrrred alert! I recommend you don't fire until you're within 40,000 kilometers. Yes, absolutely, I do indeed concur, wholeheartedly!"
@@ -137,63 +134,10 @@ view _ =
           p $ do
             text     "Our pasionate instructors curate languages, libraries, and techniques to find the most pragmatic tech with the highest gains over the competition. "
             text     "We even"
-            a ! href ""
+            a #> OpenSource
               $ text "maintain several of our own,"
             text     "including several Elixir libraries with dedicated followings."
 
           h3 ! id "foo" $ do
-            a ! href "bo" -- #> Contact
+            a #> (Training TrainingHome)
               $ text "Come learn something awesome"
-    -- -- break into its own page
-    -- -- link on main page: Learn with us
-    --   section ! id "contact-form" $ do
-    --     h1 $ text "We’d love to work with you."
-
-    --     form ! method "POST"
-    --          ! action "http://formspree.io/beep@robotoverlord.io" $ do
-
-    --       input ! type' "email"
-    --             ! name "email"
-    --             ! placeholder "Your email"
-
-    --       -- should have a label
-    --       textarea ! name "message"
-    --                ! placeholder "Your message"
-    --                $ text ""
-
-    --       button ! type' "submit"
-    --              $ text "Submit"
-
-    --     h1 $ text "Stay up to date"
-    --     h2 $ text "Updates, offers, tips, and more"
-
-    --     form ! method "POST"
-    --          ! action "https://goodbits.io/e/556cc53a-be05-41d2-9be0-eafda4340f47"
-    --          ! target "_blank" $ do
-
-    --       input ! type' "text"
-    --             ! name  "first_name"
-    --             ! placeholder "First Name"
-
-    --       input ! type' "text"
-    --             ! name  "last_name"
-    --             ! placeholder "Last Name"
-
-    --       input ! type' "text"
-    --             ! name  "email"
-    --             ! placeholder "Email"
-
-    --       input ! type' "submit"
-    --             ! value "Subscribe"
-
-  -- -- navigate :: Eventable (Event -> Event) Event
-  -- --          => Attributable Event
-  -- --          => Event
-  -- --          -> Route
-  -- --          -> Event
-  -- navigate htmlElement route =
-  --   htmlElement
-  --     !  href (fromRoute route)
-  --     #! onClick (Navigate $ fromRoute route)
-
-  -- infixl 4 navigate as #>

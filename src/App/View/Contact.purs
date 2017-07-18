@@ -9,27 +9,29 @@ import Data.Function (($))
 import Pux.DOM.HTML (HTML)
 import Pux.DOM.Events (onClick)
 
-import Text.Smolder.HTML (section, a, div, h1, h2, h3, header, img, p, span)
+import Text.Smolder.HTML
 import Text.Smolder.HTML as HTML
-import Text.Smolder.HTML.Attributes -- (href, className, src)
+import Text.Smolder.HTML.Attributes (action, id, className, method, name, placeholder, src, target, type', value, href)
 import Text.Smolder.Markup ((!), (#!), text)
 
 view :: State -> HTML Event
 view s =
-  section ! id "oss" $ do
+  section ! id "contact" $ do
     header ! id "top-header" $ do
       div ! id "inner-header" $ do
-        h1 $ text "Open Source Software"
-        h2 $ text "We're proud to have released several popular libraries, including:"
+        h1 ! id "fp-header" $ text "Contact & Register"
+        h2 $ text "Get in touch"
 
-    section do
-      h1 $ text "Exceptional"
+        form ! method "POST"
+              ! action "http://formspree.io/beep@robotoverlord.io" $ do
 
-    section do
-      h1 $ text "Quark"
+          input ! type' "email"
+                ! placeholder "Email"
+                ! name "email"
 
-    section do
-      h1 $ text "Algae"
+          textarea ! name "message"
+                   ! placeholder "Message"
+                   $ text ""
 
-    section do
-      h1 $ text "Witchcraft"
+          input ! type' "submit"
+                ! value "Submit"

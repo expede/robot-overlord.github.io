@@ -6,6 +6,7 @@ module App.View.GlobalNav where
 
 import App.Events (Event(..))
 import App.Routes (Route(..), TrainingRoute(..), fromRoute)
+import App.Navigate ((#>))
 
 -------------------
 -- Language Base --
@@ -48,13 +49,12 @@ view =
         $ text "Open Source"
 
       a ! className "follow"
-        -- -- #> Contact
-        ! href "mailto:beep@robotoverlord.io"
-        $ text "Follow"
+        #> Contact
+        $ text "Contact"
 
-navigate htmlElement route =
-  htmlElement
-    !  href (fromRoute route)
-    #! onClick (Navigate $ fromRoute route)
+-- navigate htmlElement route =
+--   htmlElement
+--     !  href (fromRoute route)
+--     #! onClick (Navigate $ fromRoute route)
 
-infixl 4 navigate as #>
+-- infixl 4 navigate as #>

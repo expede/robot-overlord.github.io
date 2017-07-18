@@ -20,7 +20,7 @@ view _ =
       div ! id "inner-header" $ do
 
         h1 ! id "fp-header" $ text "Courses & bootcamps"
-        h2 $ text "Because learning curves can be lowered"
+        h2 $ text "Have your team hit the ground running"
 
       span ! id "continue"
            $ text "▼"
@@ -28,6 +28,12 @@ view _ =
     section ! id "elixir" $ do
       h1 $ text "Elixir & Phoenix"
       p  $ text "blah blah bah we're good at this"
+
+      h2 $ text "Who should take this course?"
+      p  $ text ":peopel...."
+
+      p $ text "$3500/seat corporate (contact us for self pay)"
+      a ! href "" $ text "Register"
 
       h2 $ text "Learning outcomes"
 
@@ -78,6 +84,11 @@ view _ =
       ul do
         li $ text "Understanding of Elixir syntax"
 
+    section do
+      h1 $ text "Pricing"
+      p  $ text "All courses $600/day/seat, and include take-home exercises, cheat sheets, and office hours."
+      p  $ text "Have a large group? Drop us a line for a custom quote."
+
     section ! id "coming-soon" $ do
       h1 $ text "Coming soon"
 
@@ -96,3 +107,6 @@ view _ =
         li $ text "Rust"
 
       p $ text "Select courses are being prepared for online release....."
+
+  -- -- link to newsletter
+  --         p $ text "Looking for online classes? We have some exciting stuff in development for you! Sign up to get notified when we launch!"

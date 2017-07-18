@@ -57,7 +57,7 @@ h2 {
     padding: 0.25em 0.5em;
     font-weight: 400;
     color: #FFF !important;
-    background-color: #262626;
+    background-color: #292929;
     /* border: 0.25em solid #292929; */
     border-radius: 0.5em;
     margin: 0.225em;
@@ -99,14 +99,48 @@ a {
 }
 
 #global-footer {
-  background-color: #262626;
+  background-color: #292929;
   color: #FFF;
   margin: 0;
   padding: 1em 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+form {
+  margin: 2em;
+}
+
+input, textarea {
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+
+  &[type=submit] {
+    background-color: yellow;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  height: 10em;
+  width: 100%;
+}
+
+#contact {
+  input, textarea {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+  }
+
+  input[type=submit] {
+    width: auto;
+  }
 }
 
 #inner-header {
@@ -157,7 +191,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #262626;
+  background-color: #292929;
 
   a {
     color: yellow;
@@ -171,7 +205,7 @@ a {
   border-radius: 0.25em;
 
   a {
-    color: #262626;
+    color: #292929;
   }
 }
 
@@ -240,13 +274,13 @@ a {
   filter: grayscale(100%);
 }
 
-.img-block, .img-block-2 {
+.img-block, .img-block-2, .img-block-3 {
   float: left;
 
   width: 40%;
   min-height: 100%;
 
-  background-color: #262626;
+  background-color: #292929;
   background-origin: center;
 }
 
@@ -284,7 +318,7 @@ a {
   a {
     padding: 0.25em 0.5em;
     font-weight: 400;
-    background-color: #262626;
+    background-color: #292929;
     /* border: 0.25em solid #292929; */
     border-radius: 0.5em;
     margin: 0.225em;
@@ -296,21 +330,25 @@ a {
   }
 }
 
-#marketing {
-  .img-block {
-    background-image: url("https://cdn-images-1.medium.com/max/2000/1*bNv_UJfqdxywNSP4vf3UPg.jpeg");
-    background-size: cover;
-  }
+.img-block {
+  background-image: url("https://cdn-images-1.medium.com/max/2000/1*bNv_UJfqdxywNSP4vf3UPg.jpeg");
+  background-size: cover;
+}
 
-  .img-block-2 {
-    background-image: url("http://images.wisegeek.com/working-in-an-office.jpg");
-    background-size: cover;
-  }
+.img-block-2 {
+  background-image: url("https://pbs.twimg.com/media/DAkElzLWsAEwwzb.jpg");
+  background-size: cover;
+}
+
+.img-block-3 {
+  background-image: url("https://pbs.twimg.com/media/DAXRYXRUQAALojG.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .full {
   width: 100%;
-  background-color: #262626;
+  background-color: #292929;
   height: 33vh !important;
   color: yellow;
 
