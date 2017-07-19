@@ -1,7 +1,8 @@
 module App.View.Training where
 
 import App.Events (Event)
-import App.Routes (TrainingRoute(..))
+import App.Routes (Route(..), TrainingRoute(..), fromRoute)
+import App.Navigate ((#>))
 
 import Data.Function (($))
 import Control.Bind (discard)
@@ -27,22 +28,16 @@ view _ =
 
     section ! id "elixir" $ do
       h1 $ text "Elixir & Phoenix"
-      p  $ text "blah blah bah we're good at this"
-
-      h2 $ text "Who should take this course?"
-      p  $ text ":peopel...."
-
-      p $ text "$3500/seat corporate (contact us for self pay)"
-      a ! href "" $ text "Register"
 
       h2 $ text "Learning outcomes"
 
       ul do
         li $ text "Understanding of Elixir syntax"
-        li $ text "Flow based programming"
-        li $ text "Data structures"
+        li $ text "Flow-based programming"
+        li $ text "Primitive data structures"
         li $ text "Modelling data in Elixir"
         li $ text "Optional types & typespecs"
+        li $ text "The Actor Model"
         li $ text "Fault tollerant systems with OTP"
         li $ text "Phoenix's MVVC+ archetecture"
         li $ text "CRUD verticals"
@@ -53,17 +48,33 @@ view _ =
         li $ text "Starter kit"
 
       section do
-        h1 $ text "Elixir & Phoenix Bootcamp"
-        h2 $ text "A full 5 day, 40-hour bootcamp"
-        p  $ text ""
+        section ! className "full" $ do
+          h2 $ text "Elixir & Phoenix Bootcamp"
+          h3 $ text "A very full 5 day bootcamp"
+          h3 $ text "$3500/seat"
+
+          a ! className "follow"
+            #> Contact
+            $ text "Book now"
 
       section do
-        h1 $ text "Elixir from the ground up"
+        section ! className "full" $ do
+          h2 $ text "Elixir from the ground up"
+          h3 $ text "3 day hands-on workshop"
+          h3 $ text "$2200/seat"
+
+          a ! className "follow"
+            #> Contact
+            $ text "Book now"
 
       section do
-        h1 $ text "Phoenix for Rubyists"
+        section ! className "full" $ do
+          h2 $ text "Phoenix for Rubyists: Part I"
+          h3 $ text "3 day hands-on workshop"
+          h3 $ text "$2200/seat"
+
         p  $ text """
-        Coming from Ruby? Elixir & Phoenix drew inspiration (and contributors) from Ruby & Rails.
+        Coming from Ruby and Rails? Elixir & Phoenix drew inspiration (and contributors) from Ruby & Rails.
         While this is a helpful starting place, Elixir turns Ruby on its head. Using pipelining
         and the actor model over the more traditional object oriented and inheritance style of Ruby
         trips many people up. Further, Phoenix eliminates many of the scaling workarounds that we need
@@ -75,22 +86,62 @@ view _ =
         navigate the transition to Elixir and Phoenix.
         """
 
-    section ! id "js" $ do
-      h1 $ text "Functional foundations with Javascript"
-      p  $ text "blah blah bah we're good at this"
+      section do
+        section ! className "full" $ do
+          h2 $ text "Phoenix for Rubyists: Part II"
+          h3 $ text "2 day hands-on workshop"
+          h3 $ text "$1500/seat"
 
+        p  $ text """
+        While Part I takes you through a standard Phoenix app, Part II goes even deeper.
+        We discuss additions to the core archetecture to further improve performance,
+        and more importantly to make code even more reusable and cut through the
+        last of the boilerplate.
+        """
+
+        p $ text """
+        While optional, we recommend that students come with an existing Phoenix
+        application to refactor. Just finished Part I? Not to worry,
+        the app from that course will suit this purpose!
+        """
+
+        a ! className "follow"
+          #> Contact
+          $ text "Book now"
+
+    section ! id "js" $ do
+      h1 $ text "Javascript"
       h2 $ text "Learning outcomes"
 
       ul do
-        li $ text "Understanding of Elixir syntax"
+        li $ text "Immutability"
+        li $ text "Understanding explicit recursion"
+        li $ text "Code reuse with classic combinators"
+        li $ text "Highly reproducable tests"
+        li $ text "Faster code with fewer lines"
+        li $ text "Comparison of functional libraries"
+        li $ text "Functionally refactoring React code"
+        li $ text "Best practices & style guide"
+        li $ text "Unit, doc, behaviour, and property testing"
+        li $ text "Recommendations from the field"
+        li $ text "Starter kit"
 
-    section do
-      h1 $ text "Pricing"
-      p  $ text "All courses $600/day/seat, and include take-home exercises, cheat sheets, and office hours."
-      p  $ text "Have a large group? Drop us a line for a custom quote."
+      section do
+        section ! className "full" $ do
+          h2 $ text "Functional foundations with Javascript"
+          h3 $ text "2 day hands-on workshop"
+          h3 $ text "$1500/seat"
+
+          a ! className "follow"
+            #> Contact
+            $ text "Book now"
+
+        p $ text """
+        Javascript: fast, ubiquitous, functional.
+        """
 
     section ! id "coming-soon" $ do
-      h1 $ text "Coming soon"
+      h1 $ text "Coming soon or on request"
 
       p $ text "The below are currently slated for development. Want to see something else? Drop us a line, and let us know!"
       p $ text "We're happy t develop customized material for clients, if something is not on the list below."
@@ -107,6 +158,3 @@ view _ =
         li $ text "Rust"
 
       p $ text "Select courses are being prepared for online release....."
-
-  -- -- link to newsletter
-  --         p $ text "Looking for online classes? We have some exciting stuff in development for you! Sign up to get notified when we launch!"

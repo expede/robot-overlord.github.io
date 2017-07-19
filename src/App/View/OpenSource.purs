@@ -23,10 +23,21 @@ view s =
         h2 $ text "We're proud to sponsor several libraries"
 
     section do
-      h1 $ text "Elixir"
-      p  $ text "We love Elixir. We've used it in client projects, and moved ...."
+      h1 $ text "Elixir Libraries"
 
-      section do
+      p  $ text """
+      We belive deeply in Elixir. We are one of the few shops to have used Phoenix
+      since before the 1.0, and have both founded the Vancouver Erlang & Elixir Meetup,
+      and trained several companies in Canada and abroad on how to use them.
+      """
+
+      p $ text """
+      Along the way, we've developed a number of tools that we've found helpful.
+      As huge fans of open source, we're happy to share them with the world,
+      and to provide support for their ongoing development.
+      """
+
+      section ! id "exceptional" $ do
         h2 $ text "Exceptional"
         h3 $ text "Freedom from {:error}s"
 
@@ -66,7 +77,7 @@ view s =
               ! target "_blank"
               $ text "GitHub"
 
-      section do
+      section ! id "quark" $ do
         h2 $ text "Quark"
         h3 $ text "Elixir's missing classic functional programming library"
 
@@ -95,7 +106,7 @@ view s =
               ! target "_blank"
               $ text "GitHub"
 
-      section do
+      section ! id "algae" $ do
         h2 $ text "Algae"
         h3 $ text "Bootstrapped algebraic data types"
 
@@ -128,7 +139,7 @@ view s =
               ! target "_blank"
               $ text "GitHub"
 
-      section do
+      section ! id "witchcraft" $ do
         h2 $ text "Witchcraft"
         h3 $ text "Monads and other dark magic"
 
@@ -165,7 +176,7 @@ view s =
               ! target "_blank"
               $ text "GitHub"
 
-      section do
+      section ! id "typeclass" $ do
         h2 $ text "TypeClass"
         h3 $ text "(Semi-)principled type classes for Elixir"
 

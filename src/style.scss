@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 body {
   color: #292929;
@@ -129,6 +130,12 @@ input, textarea {
 textarea {
   height: 10em;
   width: 100%;
+}
+
+#oss {
+  h1 {
+    text-align: center;
+  }
 }
 
 #contact {
