@@ -1,52 +1,107 @@
-@import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Open+Sans);
+/***********/
+/* Imports */
+/***********/
+
+@import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Roboto);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
+/*************/
+/* Constants */
+/*************/
+
+$color-accent:   #FFFF00;
+$color-base:     #262626;
+$color-contrast: #FFFFFF;
+
+$font-header: "Exo", sans-serif;
+$font-body:   "Roboto", sans-serif;
+
+$weight-heavy: 900;
+$weight-base:  400;
+
+/********/
+/* Base */
+/********/
+
 body {
-  color: #292929;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  color:       $color-base;
+  font-family: $font-body;
+  font-size:   14px;
+}
+
+h1, h2, h3, #global-nav a {
+  text-transform: uppercase;
+  font-family:    $font-header;
 }
 
 a {
-  font-weight: 900;
+  font-weight: $weight-heavy;
 
   &:visited,
   &:link,
   &:focus,
   &:active,
   &:hover {
-    color: #292929;
+    color: $color-base;
   }
 }
+
+h1 {
+  font-size: 3em;
+  margin:    0;
+}
+
+h2 {
+  font-size: 2em;
+  margin:    0;
+}
+
+a {
+  border-radius: 2px 2px 2px 2px;
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+}
+
+form {
+  margin: 2em;
+}
+
+input, textarea {
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+
+  &[type=submit] {
+    background-color: yellow;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  height: 10em;
+  width: 100%;
+}
+
+/*******************/
+/* Global Sections */
+/*******************/
 
 #fp-header {
   color: yellow;
 }
 
-h1, h2, h3, #global-nav a {
-  text-transform: uppercase;
-  font-family: "Exo", sans-serif;
-}
-
-h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-h2 {
-  font-size: 2em;
-  margin: 0;
-}
-
 #global-nav {
-  color: #FFF;
+  color: $color-contrast;
 
   font-size: 1.5em;
 
   height: 3em;
 
-  display: flex;
-  align-items: center;
+  display:         flex;
+  align-items:     center;
   justify-content: flex-end;
 
   background-color: #FFF;
@@ -59,17 +114,10 @@ h2 {
     font-weight: 400;
     color: #FFF !important;
     background-color: #292929;
-    /* border: 0.25em solid #292929; */
     border-radius: 0.5em;
     margin: 0.225em;
     color: #292929;
   }
-}
-
-a {
-  border-radius: 2px 2px 2px 2px;
-  padding: 6px 6px 6px 6px;
-  text-decoration: none;
 }
 
 #instructors {
@@ -99,7 +147,7 @@ a {
   }
 }
 
-#global-footer {
+footer.global {
   background-color: #292929;
   color: #FFF;
   margin: 0;
@@ -107,29 +155,6 @@ a {
 
   width: 100%;
   text-align: center;
-}
-
-form {
-  margin: 2em;
-}
-
-input, textarea {
-  border-radius: 5px;
-  margin: 0.5em;
-  padding: 0.5em;
-  background-color: rgba(255, 255, 255, 0.75);
-  border: none;
-
-  &[type=submit] {
-    background-color: yellow;
-    font-family: "Exo", sans-serif;
-    text-transform: uppercase;
-  }
-}
-
-textarea {
-  height: 10em;
-  width: 100%;
 }
 
 #oss {
@@ -164,37 +189,28 @@ textarea {
   animation-iteration-count: infinite;
 }
 
-/* #inner-header { */
-/*   width: 80em; */
-/*   display: inline-block; */
-/* } */
-
-#logo {
+nav.global .logo {
   height: 2em;
+  width:  4em;
+
   margin-right: auto;
-  /* position: absolute; */
-  /* left: 0; */
-}
-
-#global-nav #logo-wrapper {
-  background: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 0;
+
   border: none;
   float: left;
-  margin-right: auto;
+
+  background-color:  none;
+  background-image:  url(/static/happybot.svg);
+  background-size:   contain;
+  background-repeat: no-repeat;
 }
 
-#pagey {
-  border-left: solid 3em red;
-  width: 50%;
-}
+/* #pagey { */
+/*   border-left: solid 3em red; */
+/*   width: 50%; */
+/* } */
 
-#bar {
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,16 +221,16 @@ textarea {
   }
 }
 
-#foo {
-  background-color: yellow;
-  width: 19em;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
+/* #foo { */
+/*   background-color: yellow; */
+/*   width: 19em; */
+/*   padding: 0.5em 1em; */
+/*   border-radius: 0.25em; */
 
-  a {
-    color: #292929;
-  }
-}
+/*   a { */
+/*     color: #292929; */
+/*   } */
+/* } */
 
 .back {
   position: absolute;
@@ -233,7 +249,8 @@ textarea {
 
 #marketing > section {
   width: 100%;
-  min-height: 66vh;
+  min-height: 10em;
+  max-height: 20em;
   height: 80vh;
 }
 
@@ -243,7 +260,7 @@ textarea {
   left: 0;
 }
 
-.red {
+#heart {
   color: red;
 }
 

@@ -4,57 +4,48 @@ module App.View.GlobalNav where
 -- App Base --
 --------------
 
-import App.Events (Event(..))
-import App.Routes (Route(..), TrainingRoute(..), fromRoute)
+import App.Events   (Event)
 import App.Navigate ((#>))
+import App.Routes   (Route(..), TrainingRoute(..))
 
 -------------------
 -- Language Base --
 -------------------
 
-import Control.Bind (discard)
+import Control.Bind  (discard)
 import Data.Function (($))
 
 ---------------
 -- Framework --
 ---------------
 
-import Pux.DOM.Events (onClick)
 import Pux.DOM.HTML (HTML)
 
-import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (href, id, className, src)
-import Text.Smolder.Markup ((!), (#!), text)
+import Text.Smolder.HTML            (nav, a)
+import Text.Smolder.HTML.Attributes (className)
+import Text.Smolder.Markup          ((!), text)
 
 ------------
 
 view :: HTML Event
 view =
-    nav ! id "global-nav" $ do
-      a #> Home
-        !  id "logo-wrapper" $ do
-        img ! id "logo"
-            ! src "/static/happybot.svg"
+  nav ! className "global" $ do
+    a #> Home
+      ! className "logo"
+      $ text ""
 
-      a ! className "home"
-        #> Home
-        $ text "Home"
+    a ! className "home"
+      #> Home
+      $ text "Home"
 
-      a ! className "training"
-        #> Training TrainingHome
-        $ text "Learn with us"
+    a ! className "training"
+      #> Training TrainingHome
+      $ text "Learn with us"
 
-      a ! className "oss"
-        #> OpenSource
-        $ text "Open Source"
+    a ! className "oss"
+      #> OpenSource
+      $ text "Open Source"
 
-      a ! className "follow"
-        #> Contact
-        $ text "Contact"
-
--- navigate htmlElement route =
---   htmlElement
---     !  href (fromRoute route)
---     #! onClick (Navigate $ fromRoute route)
-
--- infixl 4 navigate as #>
+    a ! className "follow"
+      #> Contact
+      $ text "Contact"

@@ -1,44 +1,59 @@
 module App.View.Homepage where
 
+-------------------
+-- Language Base --
+-------------------
+
+import Data.Function (($))
+import Control.Bind (discard)
+
+---------
+-- App --
+---------
 
 import App.Events (Event)
 import App.Navigate ((#>))
 import App.Routes (Route(..), TrainingRoute(..))
 import App.State (State)
 
-import Data.Function (($))
-import Control.Bind (discard)
+---------------
+-- Framework --
+---------------
 
 import Pux.DOM.HTML (HTML)
 
 import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (action, id, className, method, name, placeholder, src, target, type', value, href)
-import Text.Smolder.Markup ((!), text)
+import Text.Smolder.HTML.Attributes (id, className, target, href)
+import Text.Smolder.Markup          ((!), text)
+
+----------
 
 view :: State -> HTML Event
 view _ =
   section ! id "homepage" $ do
-    header ! id "top-header" $ do
-      div ! id "inner-header" $ do
-
+    header ! className "full" $ do
+      div ! className "inner" $ do
         h2 $ text "Vancouver's top"
         h1 ! id "fp-header" $ text "functional programming"
         h2 ! id "instructors"
            $ text "instructors"
+
         h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • more"
 
       span ! id "continue"
            $ text "▼"
 
-    section ! id "marketing" $ do
+    section ! id "main" $ do
       section ! id "intensives" $ do
-        div ! className "img-block-2"
+        div ! className "img"
+            ! className "left"
             $ text ""
 
-        div ! className "content-block" $ do
+        div ! className "content"
+            ! className "right" $ do
+
           h1 $ text "Intensive"
-          h2 $ do
-            text "Hands-On Workshops and Deep Dives"
+          h2 $ text "Hands-On Workshops and Deep Dives"
 
           p $ text "Our courses are offered as retreats or on-site, including:"
 
@@ -50,62 +65,60 @@ view _ =
             li $ text "Functional foundations for Javascript"
             li $ text "...and custom material built to suit your needs"
 
-  -- link to courses page
-  -- inlcude a form to suggest new courses
           h2 $ text "Our course catalogue is expanding all the time"
           a #> Training TrainingHome
             $  text "See courses"
 
       section ! className "full" $ do
-        div do
-          h1 do
-            text "Passionate,"
-            a ! href "https://twitter.com/expede/status/837666553999028225"
-              $ text "Award Winning"
-            text "Instructors"
+        h1 do
+          text "Passionate,"
+          a ! href "https://twitter.com/expede/status/837666553999028225"
+            $ text "Award Winning"
+          text "Instructors"
 
-          div do
-            h2 $ text "Students from 6 countries (and counting)"
-            h2 $ text "3 International conference talks"
-            h2 $ text "1 mentorship award"
+        div do
+          h2 $ text "Students from 6 countries (and counting)"
+          h2 $ text "3 International conference talks"
+          h2 $ text "1 mentorship award"
 
       section $ do
-        div ! className "content-block block-right" $ do
-          div !className "inner" $ do
-            h1 $ text "What people are saying"
-            h2 $ text "FP without the hard mode"
+        div ! className "content"
+            ! className "right" $ do
 
-            blockquote do
-              p $ text """
-                I learned a lot at the Elixir bootcamp! What matters most when
-                a teacher is helping their students learn something new is meeting
-                people where they were at skill-wise. It was very clear and
-                felt like a safe place to learn something new.
-              """
-              p $ text "~Stu Weir, STAT Search Analytics"
+          -- div ! className "inner" $ do
+          h1 $ text "What people are saying"
+          h2 $ text "FP without the hard mode"
 
-            -- h2 $ text "adpot the absolute best, pragmatic tools available"
-            -- blockquote do
-            --   p  $ text """
-            --     Phoenix is really impressive. _______
-            --   """
-            --   p $ text "~Steve Godin, CodeCore"
+          blockquote do
+            p $ text """
+              I learned a lot at the Elixir bootcamp! What matters most when
+              a teacher is helping their students learn something new is meeting
+              people where they were at skill-wise. It was very clear and
+              felt like a safe place to learn something new.
+            """
+            p $ text "~Stu Weir, STAT Search Analytics"
 
-        div ! className "img-block block-right"
+          -- h2 $ text "adpot the absolute best, pragmatic tools available"
+          -- blockquote do
+          --   p  $ text """
+          --     Phoenix is really impressive. _______
+          --   """
+          --   p $ text "~Steve Godin, CodeCore"
+
+        div ! className "img"
+            ! className "right"
             $ text ""
 
       section ! className "full" $ do
         h1 $ do
           text "We"
-          span ! className "red"
+          span ! id "heart"
                $ text " ♥ "
           text "FP"
 
-      section ! id "bar" $ do
-        div ! className "half-block" $ do
+      section ! className "center" $ do
+        section ! className "half" $ do
           h2 ! className "content center" $ do
-            -- h1 ! className "back" $ text "“"
-            -- h1 ! className "back" $ text "”"
 
             text       "We believe that "
             em $ text  "functional programming is the future, "
@@ -115,9 +128,10 @@ view _ =
               $ text   "Phoenix"
             text       "are built for web scale, realtime interactions, and speed up development. What's not to love?"
 
-        div ! className "half-block" $ do
+        div ! className "half" $ do
           h2  $ text "...like, a lot!"
-          p   $ do
+
+          p $ do
             text     "Yes, we're \"those\" people. We founded the "
             a ! href "https://www.meetup.com/Vancouver-Functional-Programmers/events/222312064/"
               ! target "_blank"
@@ -142,6 +156,5 @@ view _ =
               $ text "maintain several of our own,"
             text     "including several Elixir libraries with dedicated followings."
 
-          h3 ! id "foo" $ do
-            a #> (Training TrainingHome)
-              $ text "Come learn something awesome"
+          a #> Training TrainingHome
+            $ h3 $ text "Come learn something awesome"
