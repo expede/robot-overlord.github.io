@@ -27,12 +27,12 @@ import Text.Smolder.Markup          ((!), text)
 
 view :: HTML Event
 view =
-  header ! className "full" $ do
+  header ! className "splash" $ do
+
     div ! className "inner" $ do
       h2 $ text "Vancouver's top"
-      h1 ! id "fp-header" $ text "functional programming"
-      h2 ! id "instructors"
-         $ text "instructors"
+      h1 $ text "functional programming"
+      h2 $ text "instructors"
 
       h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • more"
 

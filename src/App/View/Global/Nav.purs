@@ -22,14 +22,14 @@ import Data.Function (($))
 import Pux.DOM.HTML (HTML)
 
 import Text.Smolder.HTML            (nav, a)
-import Text.Smolder.HTML.Attributes (className)
+import Text.Smolder.HTML.Attributes (className, id)
 import Text.Smolder.Markup          ((!), text)
 
 ------------
 
 view :: HTML Event
 view =
-  nav ! className "global" $ do
+  nav ! id "global-nav" $ do
     a #> Home
       ! className "logo"
       $ text ""

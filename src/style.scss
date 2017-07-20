@@ -8,15 +8,15 @@
  /* Constants */
 /*************/
 
-$color-base:     #262626;
+$color-base:     #292929;
 $color-contrast: #FFFFFF;
 $color-accent:   #FFFF00; // Yellow
 
 $font-header: "Exo",         sans-serif;
 $font-body:   "Roboto Slab", sans-serif;
 
-$weight-heavy: 900;
 $weight-base:  400;
+$weight-heavy: 900;
 
   /********/
  /* Base */
@@ -28,7 +28,8 @@ body {
   font-size:   14px;
 }
 
-h1, h2, h3, nav.global a {
+h1, h2, h3,
+#global-nav a {
   text-transform: uppercase;
   font-family:    $font-header;
   font-weight:    $weight-heavy;
@@ -46,10 +47,10 @@ h2 {
 
 a {
   font-weight: $weight-heavy;
+  text-decoration: none;
 
   border-radius: 2px 2px 2px 2px;
-  padding: 6px 6px 6px 6px;
-  text-decoration: none;
+  padding:       6px 6px 6px 6px;
 
   &:visited,
   &:link,
@@ -89,8 +90,8 @@ textarea {
 
 .full {
   width: 100%;
-  background-color: #292929;
-  height: 33vh !important;
+  background-color: $color-base;
+  height: 33vh;
   color: yellow;
 
   display: flex;
@@ -101,23 +102,21 @@ textarea {
     width: 100%;
   }
 
-  h2 {
-    text-align: right;
-  }
+  /* h2 { */
+  /*   text-align: right; */
+  /* } */
 
   a {
     color: yellow;
   }
 }
 
-
   /*******************/
  /* Global Sections */
 /*******************/
 
-nav.global {
-  color: $color-contrast;
-
+#global-nav {
+  color:     $color-contrast;
   font-size: 1.5em;
 
   height: 3em;
@@ -126,7 +125,7 @@ nav.global {
   align-items:     center;
   justify-content: flex-end;
 
-  background-color: #FFF;
+  background-color: $color-contrast;
   text-align: center;
   padding: 0 0.5em 0 0.5em;
 
@@ -160,7 +159,7 @@ nav.global {
   }
 }
 
-footer.global {
+#global-footer {
   background-color: $color-base;
   color:            $color-contrast;
 
@@ -175,34 +174,35 @@ footer.global {
  /* Named Sections */
 /******************/
 
-#fp-header {
-  color: yellow;
-}
-
 #instructors {
   text-align: right;
 }
 
-#top-header {
+.splash {
+  @extend .full;
+
   height: calc(100vh - 2em);
 
+  color:     $color-contrast;
   font-size: 1.5rem;
 
-  display: flex;
-  align-items: center;
+  display:         flex;
+  align-items:     center;
   justify-content: center;
-
-  background-color: #292929;
-  color: white;
 
   h1 {
     font-style: italic;
-    /* text-align: center; */
+    text-align: center;
+    color: yellow;
+  }
+
+  h2:last-of-type {
+    text-align: right;
   }
 
   h3 {
     text-align: center;
-    opacity: 0.67;
+    opacity:    0.67;
   }
 }
 
@@ -224,12 +224,12 @@ footer.global {
   }
 }
 
-#inner-header {
+.inner {
   max-width: 80%;
 }
 
 #continue {
-  color: #FFF;
+  color: $color-contrast;
   position: absolute;
   top: 95%;
 
@@ -247,7 +247,7 @@ footer.global {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #292929;
+  background-color: $color-base;
 
   a {
     color: yellow;
@@ -261,7 +261,7 @@ footer.global {
 /*   border-radius: 0.25em; */
 
 /*   a { */
-/*     color: #292929; */
+/*     color: $color-base; */
 /*   } */
 /* } */
 
@@ -315,7 +315,7 @@ footer.global {
   max-width: 40%;
 
   height: 100%;
-  color: #FFF;
+  color: $color-contrast;
 }
 
 .test {
@@ -337,7 +337,7 @@ footer.global {
   width: 40%;
   min-height: 100%;
 
-  background-color: #292929;
+  background-color: $color-base;
   background-origin: center;
 }
 
@@ -375,14 +375,14 @@ footer.global {
   a {
     padding: 0.25em 0.5em;
     font-weight: 400;
-    background-color: #292929;
-    /* border: 0.25em solid #292929; */
+    background-color: $color-base;
+    /* border: 0.25em solid $color-base; */
     border-radius: 0.5em;
     margin: 0.225em;
 
     font-family: "Exo", sans-serif;
     text-transform: uppercase;
-    color: #FFF;
+    color: $color-contrast;
     font-size: 1.3em;
   }
 }

@@ -7,12 +7,12 @@ import Data.Function (($))
 import Pux.DOM.HTML  (HTML)
 
 import Text.Smolder.HTML            (footer, section, form, input, h2)
-import Text.Smolder.HTML.Attributes (action, className, method, name, placeholder, target, type', value)
+import Text.Smolder.HTML.Attributes (action, id, method, name, placeholder, target, type', value)
 import Text.Smolder.Markup          ((!), text)
 
 view :: HTML Event
 view =
-  footer ! className "global" $ do
+  footer ! id "global-footer" $ do
     h2 $ text "© 2017 Robot Overlord Software Inc."
 
     section $ do
