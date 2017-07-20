@@ -4,17 +4,17 @@ module App.View.Layout where
 -- App Base --
 --------------
 
-import App.Events (Event(..))
+import App.Events (Event)
 import App.Routes (Route(..))
-import App.State (State(..))
-import App.Routes (Route(..), TrainingRoute(..), fromRoute)
+import App.State  (State(..))
 
 --------------
 -- Subviews --
 --------------
 
-import App.View.Footer     as Footer
-import App.View.GlobalNav  as GlobalNav
+import App.View.Global.Footer as Footer
+import App.View.Global.Nav    as GlobalNav
+
 import App.View.Homepage   as Homepage
 import App.View.NotFound   as NotFound
 import App.View.Training   as Training
@@ -25,19 +25,15 @@ import App.View.Contact    as Contact
 -- Language Base --
 -------------------
 
-import Control.Bind (discard)
+import Control.Bind  (discard)
 import Data.Function (($))
 
 ---------------
 -- Framework --
 ---------------
 
-import Pux.DOM.Events (onClick)
-import Pux.DOM.HTML (HTML, style)
-
-import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (href, id, className, src)
-import Text.Smolder.Markup ((!), (#!), text)
+import Pux.DOM.HTML      (HTML)
+import Text.Smolder.HTML (div)
 
 ------------
 

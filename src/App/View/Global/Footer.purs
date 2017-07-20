@@ -1,4 +1,4 @@
-module App.View.Footer where
+module App.View.Global.Footer where
 
 import App.Events (Event)
 

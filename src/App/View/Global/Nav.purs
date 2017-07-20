@@ -1,4 +1,4 @@
-module App.View.GlobalNav where
+module App.View.Global.Nav where
 
 --------------
 -- App Base --
