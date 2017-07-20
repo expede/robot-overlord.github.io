@@ -1,26 +1,25 @@
+  /***********/
+ /* Imports */
 /***********/
-/* Imports */
-/***********/
 
-@import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Roboto);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Exo:900,900i|Roboto+Slab);
 
-/*************/
-/* Constants */
+  /*************/
+ /* Constants */
 /*************/
 
-$color-accent:   #FFFF00;
 $color-base:     #262626;
 $color-contrast: #FFFFFF;
+$color-accent:   #FFFF00; // Yellow
 
-$font-header: "Exo", sans-serif;
-$font-body:   "Roboto", sans-serif;
+$font-header: "Exo",         sans-serif;
+$font-body:   "Roboto Slab", sans-serif;
 
 $weight-heavy: 900;
 $weight-base:  400;
 
-/********/
-/* Base */
+  /********/
+ /* Base */
 /********/
 
 body {
@@ -29,21 +28,10 @@ body {
   font-size:   14px;
 }
 
-h1, h2, h3, #global-nav a {
+h1, h2, h3, nav.global a {
   text-transform: uppercase;
   font-family:    $font-header;
-}
-
-a {
-  font-weight: $weight-heavy;
-
-  &:visited,
-  &:link,
-  &:focus,
-  &:active,
-  &:hover {
-    color: $color-base;
-  }
+  font-weight:    $weight-heavy;
 }
 
 h1 {
@@ -57,9 +45,19 @@ h2 {
 }
 
 a {
+  font-weight: $weight-heavy;
+
   border-radius: 2px 2px 2px 2px;
   padding: 6px 6px 6px 6px;
   text-decoration: none;
+
+  &:visited,
+  &:link,
+  &:focus,
+  &:active,
+  &:hover {
+    color: $color-base;
+  }
 }
 
 form {
@@ -82,18 +80,42 @@ input, textarea {
 
 textarea {
   height: 10em;
+  width:  100%;
+}
+
+  /**********/
+ /* Layout */
+/**********/
+
+.full {
   width: 100%;
-}
-
-/*******************/
-/* Global Sections */
-/*******************/
-
-#fp-header {
+  background-color: #292929;
+  height: 33vh !important;
   color: yellow;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    width: 100%;
+  }
+
+  h2 {
+    text-align: right;
+  }
+
+  a {
+    color: yellow;
+  }
 }
 
-#global-nav {
+
+  /*******************/
+ /* Global Sections */
+/*******************/
+
+nav.global {
   color: $color-contrast;
 
   font-size: 1.5em;
@@ -109,15 +131,52 @@ textarea {
   padding: 0 0.5em 0 0.5em;
 
   a {
+    color:            $color-contrast;
+    background-color: $color-base;
+
     float: right;
+
+    margin:  0.25em;
     padding: 0.25em 0.5em;
-    font-weight: 400;
-    color: #FFF !important;
-    background-color: #292929;
+
     border-radius: 0.5em;
-    margin: 0.225em;
-    color: #292929;
+    font-weight: $weight-base;
   }
+
+  .logo {
+    height: 2em;
+    width:  4em;
+
+    margin-right: auto;
+    padding: 0;
+
+    border: none;
+    float: left;
+
+    background-color:  $color-contrast;
+    background-image:  url(/static/happybot.svg);
+    background-size:   contain;
+    background-repeat: no-repeat;
+  }
+}
+
+footer.global {
+  background-color: $color-base;
+  color:            $color-contrast;
+
+  margin:  0;
+  padding: 1em 0;
+
+  width:      100%;
+  text-align: center;
+}
+
+  /******************/
+ /* Named Sections */
+/******************/
+
+#fp-header {
+  color: yellow;
 }
 
 #instructors {
@@ -145,16 +204,6 @@ textarea {
     text-align: center;
     opacity: 0.67;
   }
-}
-
-footer.global {
-  background-color: #292929;
-  color: #FFF;
-  margin: 0;
-  padding: 1em 0;
-
-  width: 100%;
-  text-align: center;
 }
 
 #oss {
@@ -187,22 +236,6 @@ footer.global {
   animation-duration: 10s;
   animation-name: bounce;
   animation-iteration-count: infinite;
-}
-
-nav.global .logo {
-  height: 2em;
-  width:  4em;
-
-  margin-right: auto;
-  padding: 0;
-
-  border: none;
-  float: left;
-
-  background-color:  none;
-  background-image:  url(/static/happybot.svg);
-  background-size:   contain;
-  background-repeat: no-repeat;
 }
 
 /* #pagey { */
@@ -370,53 +403,9 @@ nav.global .logo {
   background-position: center;
 }
 
-.full {
-  width: 100%;
-  background-color: #292929;
-  height: 33vh !important;
-  color: yellow;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  h2 {
-    text-align: right;
-  }
-
-  a {
-    color: yellow;
-  }
-}
-
-/* @media (max-width: 600px) { */
-/*   body { */
-/*     font-size: 10px; */
-/*     /\* padding: 1em; *\/ */
-/*   } */
-
-/*   #top-header { */
-/*     h1 { */
-/*       font-size: 3em; */
-/*       margin-left: 1em; */
-/*       float: left; */
-/*     } */
-
-/*     h2 { */
-/*       clear: both; */
-/*       margin-top: 4em; */
-/*     } */
-/*   } */
-
-/*   #logo { */
-/*     width: 12em; */
-/*     float: left; */
-/*   } */
-
-/*   #inner-header { */
-/*     min-width: 100%; */
-/*   } */
-/* } */
+  /**************/
+ /* Animations */
+/**************/
 
 @keyframes bounce {
   0% {
