@@ -51,5 +51,6 @@ view =
         li $ text "...and custom material built to suit your needs"
 
       h2 $ text "Our course catalogue is expanding all the time"
+
       a #> Training TrainingHome
         $  text "See courses"

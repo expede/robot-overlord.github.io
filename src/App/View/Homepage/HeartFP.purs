@@ -12,7 +12,7 @@ import Control.Bind (discard)
 ---------
 
 import App.Events   (Event)
-import App.Navigate ((#>))
+import App.Navigate ((#>), (!>))
 import App.Routes   (Route(..), TrainingRoute(..))
 
 ---------------
@@ -22,7 +22,7 @@ import App.Routes   (Route(..), TrainingRoute(..))
 import Pux.DOM.HTML (HTML)
 
 import Text.Smolder.HTML
-import Text.Smolder.HTML.Attributes (className, id, href, target)
+import Text.Smolder.HTML.Attributes (className, id)
 import Text.Smolder.Markup          ((!), text)
 
 ----------
@@ -43,30 +43,29 @@ view =
           text       "We believe that "
           em $ text  "functional programming is the future, "
           text       "and it's not hard to see why. Modern frameworks like "
-          a ! href   "http://www.phoenixframework.org/"
-            ! target "_blank"
+          a !> "http://www.phoenixframework.org/"
             $ text   "Phoenix"
           text       "are built for web scale, realtime interactions, and speed up development. What's not to love?"
 
       div ! className "half" $ do
-        h2  $ text "...like, a lot!"
+        h2 $ text "...like, a lot!"
 
         p $ do
           text     "Yes, we're \"those\" people. We founded the "
-          a ! href "https://www.meetup.com/Vancouver-Functional-Programmers/events/222312064/"
-            ! target "_blank"
+
+          a !> "https://www.meetup.com/Vancouver-Functional-Programmers/events/222312064/"
             $ text "Vancouver Functional Programmers"
           text     "and"
-          a ! href "https://www.meetup.com/Vancouver-Erlang-Elixir-Meetup/"
-            ! target "_blank"
+
+          a !> "https://www.meetup.com/Vancouver-Erlang-Elixir-Meetup/"
             $ text "Vancouver Erlang & Elixir"
           text     "meetups,"
-          a ! href "http://www.elixir.london/Elixir-LDN-2017/brooklyn-zelenka"
-            ! target "_blank"
+
+          a !> "http://www.elixir.london/Elixir-LDN-2017/brooklyn-zelenka"
             $ text "give international conference talks,"
+
           text     "and"
-          a ! href "https://github.com/robot-overlord/robot-overlord.github.io"
-            ! target "_blank"
+          a !> "https://github.com/robot-overlord/robot-overlord.github.io"
             $ text "practice what we preach."
 
         p $ do
