@@ -53,7 +53,8 @@ view _ =
   -- link to courses page
   -- inlcude a form to suggest new courses
           h2 $ text "Our course catalogue is expanding all the time"
-          a ! href "" $ text "See courses"
+          a #> Training TrainingHome
+            $  text "See courses"
 
       section ! className "full" $ do
         div do
@@ -75,17 +76,20 @@ view _ =
             h2 $ text "FP without the hard mode"
 
             blockquote do
-              p $ text "Sorry, Data. Shields up! Rrrrred alert! I recommend you don't fire until you're within 40,000 kilometers. Yes, absolutely, I do indeed concur, wholeheartedly!"
-              p $ text "Libraries come and go, but techniques are forever"
-              p $ text "~ Commander Riker, USS Enterprise"
+              p $ text """
+                I learned a lot at the Elixir bootcamp! What matters most when
+                a teacher is helping their students learn something new is meeting
+                people where they were at skill-wise. It was very clear and
+                felt like a safe place to learn something new.
+              """
+              p $ text "~Stu Weir, STAT Search Analytics"
 
-
-            h2 $ text "adpot the absolute best, pragmatic tools available"
-            p  $ text "Even experienced developers find value in having a guide to avoid common pitfalls, get a sense of idiomatic solution, and to have best practices shown in context."
-
-            blockquote do
-              p $ text "Sorry, Data. Shields up! Rrrrred alert! I recommend you don't fire until you're within 40,000 kilometers. Yes, absolutely, I do indeed concur, wholeheartedly!"
-              p $ text "~ Commander Riker, USS Enterprise"
+            -- h2 $ text "adpot the absolute best, pragmatic tools available"
+            -- blockquote do
+            --   p  $ text """
+            --     Phoenix is really impressive. _______
+            --   """
+            --   p $ text "~Steve Godin, CodeCore"
 
         div ! className "img-block block-right"
             $ text ""
