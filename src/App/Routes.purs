@@ -38,7 +38,7 @@ data TrainingRoute
 -------------
 
 match :: String -> Route
-match url = fromMaybe (NotFound url) $ router url toRoute
+match url = fromMaybe (Home) $ router url toRoute
 
 toRoute :: Match Route
 toRoute =
