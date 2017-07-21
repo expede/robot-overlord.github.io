@@ -35,5 +35,5 @@ view =
 
       h3 $ text "Elixir • Phoenix • Elm • Clojure • React • Lodash • techniques • more"
 
-    span ! id "continue"
-         $ text "▼"
+    -- span ! id "continue"
+    --      $ text "▼"

@@ -41,8 +41,8 @@ view _ =
   section ! id "homepage" $ do
     Header.view
 
-    section ! id "main" $ do
-      Intensives.view
-      Instructors.view
-      Testimonials.view
-      HeartFP.view
+    -- section ! id "main" $ do
+    --   Intensives.view
+    --   Instructors.view
+    --   Testimonials.view
+    --   HeartFP.view

@@ -34,18 +34,18 @@ view =
       ! className "logo"
       $ text ""
 
-    a ! className "home"
-      #> Home
-      $ text "Home"
+    -- a ! className "home"
+    --   #> Home
+    --   $ text "Home"
 
-    a ! className "training"
-      #> Training TrainingHome
-      $ text "Learn with us"
+    -- a ! className "training"
+    --   #> Training TrainingHome
+    --   $ text "Learn with us"
 
-    a ! className "oss"
-      #> OpenSource
-      $ text "Open Source"
+    -- a ! className "oss"
+    --   #> OpenSource
+    --   $ text "Open Source"
 
-    a ! className "follow"
-      #> Contact
-      $ text "Contact"
+    -- a ! className "follow"
+    --   #> Contact
+    --   $ text "Contact"
