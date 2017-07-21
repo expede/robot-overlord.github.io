@@ -29,14 +29,15 @@ import Text.Smolder.Markup          ((!), text)
 
 view :: HTML Event
 view =
-  section ! className "full" $ do
-    h1 $ do
+  section ! id "heart-fp"
+          ! className "full" $ do
+    h1 do
       text "We"
       span ! id "heart"
-            $ text " ♥ "
+           $ text " ♥ "
       text "FP"
 
-    section ! className "center" $ do
+    section ! className "center-contents full" $ do
       section ! className "half" $ do
         h2 ! className "content center" $ do
 

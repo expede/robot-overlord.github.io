@@ -89,98 +89,50 @@ textarea {
 /**********/
 
 .full {
-  width: 100%;
+  color:            $color-accent;
   background-color: $color-base;
-  height: 33vh;
-  color: yellow;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width:   100%;
+  padding: 10em 0;
+
+  section, div {
+    display: block;
+  }
 
   h1 {
-    width: 100%;
+    text-align: center;
+    color: $color-accent;
   }
 
-  /* h2 { */
-  /*   text-align: right; */
-  /* } */
+  color: $color-contrast;
 
   a {
-    color: yellow;
+    color: $color-accent;
   }
 }
 
-  /*******************/
- /* Global Sections */
-/*******************/
+.half {
+  display: inline-block;
+  max-width: 50%;
+  float: left;
+}
 
-#global-nav {
-  color:     $color-contrast;
-  font-size: 1.5em;
-
-  height: 3em;
-
+.center-contents {
   display:         flex;
   align-items:     center;
-  justify-content: flex-end;
-
-  background-color: $color-contrast;
-  text-align: center;
-  padding: 0 0.5em 0 0.5em;
-
-  a {
-    color:            $color-contrast;
-    background-color: $color-base;
-
-    float: right;
-
-    margin:  0.25em;
-    padding: 0.25em 0.5em;
-
-    border-radius: 0.5em;
-    font-weight: $weight-base;
-  }
-
-  .logo {
-    height: 2em;
-    width:  4em;
-
-    margin-right: auto;
-    padding: 0;
-
-    border: none;
-    float: left;
-
-    background-color:  $color-contrast;
-    background-image:  url(/static/happybot.svg);
-    background-size:   contain;
-    background-repeat: no-repeat;
-  }
-}
-
-#global-footer {
-  background-color: $color-base;
-  color:            $color-contrast;
-
-  margin:  0;
-  padding: 1em 0;
-
-  width:      100%;
-  text-align: center;
+  justify-content: center;
 }
 
   /******************/
  /* Named Sections */
 /******************/
 
-#instructors {
-  text-align: right;
-}
-
 .splash {
   @extend .full;
 
+  padding: 0;
+
+  max-height: 100vh;
   height: calc(100vh - 2em);
 
   color:     $color-contrast;
@@ -204,6 +156,11 @@ textarea {
     text-align: center;
     opacity:    0.67;
   }
+}
+
+#instructors {
+  text-align: right;
+  color:      $color-accent;
 }
 
 #oss {
@@ -297,95 +254,95 @@ textarea {
   color: red;
 }
 
-.center {
-  text-align: center;
-  width: 80%;
-  /* margin-left: 10%; */
-}
+/* .center { */
+/*   text-align: center; */
+/*   width: 80%; */
+/*   /\* margin-left: 10%; *\/ */
+/* } */
 
-.half-block {
-  /* width: 50%; */
-  /* display: inline-block; */
-  /* float: left; */
-  flex-grow: 1;
-  flex-basis: 0;
+/* .half-block { */
+/*   /\* width: 50%; *\/ */
+/*   /\* display: inline-block; *\/ */
+/*   /\* float: left; *\/ */
+/*   flex-grow: 1; */
+/*   flex-basis: 0; */
 
-  position: relative;
+/*   position: relative; */
 
-  max-width: 40%;
+/*   max-width: 40%; */
 
-  height: 100%;
-  color: $color-contrast;
-}
+/*   height: 100%; */
+/*   color: $color-contrast; */
+/* } */
 
-.test {
-  width: 8em;
-  float: left;
-  filter: grayscale(100%) invert(100%);
-}
+/* .test { */
+/*   width: 8em; */
+/*   float: left; */
+/*   filter: grayscale(100%) invert(100%); */
+/* } */
 
-.test2 {
-  width: 8em;
-  float: left;
+/* .test2 { */
+/*   width: 8em; */
+/*   float: left; */
 
-  filter: grayscale(100%);
-}
+/*   filter: grayscale(100%); */
+/* } */
 
-.img-block, .img-block-2, .img-block-3 {
-  float: left;
+/* .img-block, .img-block-2, .img-block-3 { */
+/*   float: left; */
 
-  width: 40%;
-  min-height: 100%;
+/*   width: 40%; */
+/*   min-height: 100%; */
 
-  background-color: $color-base;
-  background-origin: center;
-}
+/*   background-color: $color-base; */
+/*   background-origin: center; */
+/* } */
 
-.block-right {
-  float: right;
-}
+/* .block-right { */
+/*   float: right; */
+/* } */
 
-.content-block {
-  /* padding: 1em; */
-  margin: 0 auto;
-  width: 60%;
+/* .content-block { */
+/*   /\* padding: 1em; *\/ */
+/*   margin: 0 auto; */
+/*   width: 60%; */
 
-  &.block-right {
-    float: left;
-  }
+/*   &.block-right { */
+/*     float: left; */
+/*   } */
 
-  margin-top: 7em;
+/*   margin-top: 7em; */
 
-  float: right;
+/*   float: right; */
 
-  text-align: center;
+/*   text-align: center; */
 
-  ul, p {
-    font-size: 1.3em;
-  }
+/*   ul, p { */
+/*     font-size: 1.3em; */
+/*   } */
 
-  ul {
-    display: inline-block;
-  }
+/*   ul { */
+/*     display: inline-block; */
+/*   } */
 
-  li {
-    text-align: left;
-  }
+/*   li { */
+/*     text-align: left; */
+/*   } */
 
-  a {
-    padding: 0.25em 0.5em;
-    font-weight: 400;
-    background-color: $color-base;
-    /* border: 0.25em solid $color-base; */
-    border-radius: 0.5em;
-    margin: 0.225em;
+/*   a { */
+/*     padding: 0.25em 0.5em; */
+/*     font-weight: 400; */
+/*     background-color: $color-base; */
+/*     /\* border: 0.25em solid $color-base; *\/ */
+/*     border-radius: 0.5em; */
+/*     margin: 0.225em; */
 
-    font-family: "Exo", sans-serif;
-    text-transform: uppercase;
-    color: $color-contrast;
-    font-size: 1.3em;
-  }
-}
+/*     font-family: "Exo", sans-serif; */
+/*     text-transform: uppercase; */
+/*     color: $color-contrast; */
+/*     font-size: 1.3em; */
+/*   } */
+/* } */
 
 .img-block {
   background-image: url("https://cdn-images-1.medium.com/max/2000/1*bNv_UJfqdxywNSP4vf3UPg.jpeg");
@@ -401,6 +358,65 @@ textarea {
   background-image: url("https://pbs.twimg.com/media/DAXRYXRUQAALojG.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/*******************/
+/* Global Sections */
+/*******************/
+
+#global-nav {
+  color:     $color-contrast;
+  font-size: 1.5em;
+
+  height: 3em;
+
+  display:         flex;
+  align-items:     center;
+  justify-content: flex-end;
+
+  background-color: $color-contrast;
+  text-align: center;
+  padding: 0 0.5em 0 0.5em;
+
+  a {
+    color:            $color-contrast;
+    background-color: $color-base;
+
+    float: right;
+
+    margin:  0.25em;
+    padding: 0.25em 0.5em;
+
+    border-radius: 0.5em;
+    font-weight: $weight-base;
+  }
+
+  .logo {
+    height: 2em;
+    width:  4em;
+
+    margin-right: auto;
+    padding: 0;
+
+    border: none;
+    float: left;
+
+    background-color:  $color-contrast;
+    background-image:  url(/static/happybot.svg);
+    background-size:   contain;
+    background-repeat: no-repeat;
+  }
+}
+
+#global-footer {
+  background-color: $color-base;
+  color:            $color-contrast;
+
+  margin:  0;
+  padding: 1em 0;
+
+  width:      100%;
+  text-align: center;
 }
 
   /**************/

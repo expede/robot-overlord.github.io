@@ -28,7 +28,6 @@ import Text.Smolder.Markup          ((!), text)
 view :: HTML Event
 view =
   header ! className "splash" $ do
-
     div ! className "inner" $ do
       h2 $ text "Vancouver's top"
       h1 $ text "functional programming"
