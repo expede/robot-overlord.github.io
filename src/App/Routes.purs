@@ -68,7 +68,7 @@ fromRoute route =
     About             -> "/#about"
     OpenSource        -> "/#opensource"
     Contact           -> "/#contact"
-    Training training -> "/#training" <> fromTrainingRoute training
+    Training training -> "/#training" -- <> fromTrainingRoute training
     NotFound url      -> url
 
 fromTrainingRoute :: TrainingRoute -> String
