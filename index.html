@@ -20,6 +20,10 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Exo:500,700,900i|Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" media="screen" />
+
     <link rel="manifest" href="/manifest.json">
 
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -78,54 +82,66 @@
       content="http://www.robotoverlord.io/static/happybot.png"
     />
   </head>
-  <body>
-    <header>
-      <img src="foo" />
 
+  <body>
+    <nav id="page-nav">
+      <ul>
+        <li>*</li>
+        <li>*</li>
+        <li>*</li>
+        <li>*</li>
+        <li>*</li>
+      </ul>
+    </nav>
+
+    <section id="hero" class="page">
       <section class="card" >
         <h1>Vancouver's Top Functional Programming Instructors</h1>
         <div class="circle">↓</div>
       </section>
-    </header>
+    </section>
 
-    <section id="training">
+    <section id="training" class="page">
       <section id="essentials">
-        <h2>Essentials</h2>
+        <header>
+          <h2>On-site and Retreat Training</h2>
+          <p>Lorem ipsum dolor</p>
+       </header>
 
         <ul>
           <li>Functional Programming Essentials</li>
-        </ul>
-      </section>
-
-      <section id="elixir">
-        <h2>Elixir and Pheonix</h2>
-
-        <ul>
-          <li>Up and Running with Elixir and Pheonix</li>
-          <li>Going Deeper with Elixir</li>
-          <li>Macros and Metaprogramming</li>
-          <li>...</li>
+          <li>Elixir & Phoenix</li>
+          <li>Javascript</li>
+          <li>Elm</li>
+          <li>Coming Soon or On Request</li>
         </ul>
       </section>
     </section>
 
-    <section id="oss">
-      <h2>Open Source</h2>
-      <h3>We sponsor the development of several projects</h3>
+    <section id="oss" class="page">
+      <header>
+        <h2>Open Source</h2>
+        <p>We sponsor the development of several projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     </header>
 
       <ul>
         <li>Exceptional</li>
         <li>Quark</li>
         <li>Algae</li>
+        <li>Operator</li>
         <li>Witchcraft</li>
+        <li>TypeClass</li>
       </ul>
-
     </section>
 
-    <section id="about">
-      <blockquote>
-        We work closely with partners to devlopworld class products. We are selective about finding a good fit, yadda yadda.
-      </blockquote>
+    <section id="about" class="page">
+      <header>
+        <h2>About Robot Overlord</h2>
+
+        <blockquote>
+          We work closely with partners to devlop world class products. We are selective about finding a good fit, yadda yadda.
+        </blockquote>
+     </header>
 
       <p>Brooklyn Zelenka and Jenn Cooper are the founding partners at Robot Overlord Software, a functionally-focused web and mobile app agency based out of Vancouver, Canada. They have written many production Phoenix apps, and released several Elixir libraries including Witchcraft (“Scalaz for Elixir”) and Exceptional (the second most downloaded error handling library on Hex).</p>
 
@@ -136,18 +152,16 @@
       <img src="whatevs.gif">
     </section>
 
-    <footer>
+    <section id="contact" class="page">
       <ul>
         <li>foo</li>
         <li>bar</li>
         <li>baz</li>
       </ul>
 
-      <p>Copyright 2017 Rpbot Overlord Software Inc.</p>
-    </footer>
+      <p>Copyright 2017 Robot Overlord Software Inc.</p>
+    </section>
 
-    <div id="app"></div>
-    <!-- <script type="application/javascript" src="./static/dist/bundle.js"></script> -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

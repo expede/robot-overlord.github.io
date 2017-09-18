@@ -1,0 +1,53 @@
+$font-main:   'Open Sans', sans-serif;
+$font-header: 'Exo', sans-serif;
+
+$color-base: #F2FDFF;
+$color-fill: #DDF0F3;
+
+$color-bright: #00CEF0;
+$color-strong: #495572;
+
+$color-highlight: #7042E1;
+$color-lowloght: #FFF;
+
+body {
+  font-family: $font-main;
+  background-color: $color-base;
+
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header;
+  margin:  0;
+  padding: 0;
+}
+
+#page-nav {
+  position: fixed;
+  z-index:  100;
+  left:     1.5rem;
+  top:      50vh;
+  margin-top: -3rem;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.page {
+  width:  100vw;
+  min-height: 100vh;
+  clear:  both;
+
+  padding: 3rem;
+}
+
+#hero {
+  background-image: url('./images/toy-robots-blue-hd.jpg');
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: $color-bright;
+}
