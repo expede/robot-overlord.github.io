@@ -3,10 +3,35 @@ body {
   background-color: #F2FDFF;
   font-size: 16px; }
 
+#wrapper {
+  max-width: 1376px;
+  margin: 0 auto;
+  overflow-x: hidden; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Exo", sans-serif;
   margin: 0;
   padding: 0; }
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem; }
+
+.card {
+  border-radius: 4rem;
+  width: 1280px;
+  height: 864px;
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: #00CEF0; }
+
+#logo {
+  position: fixed;
+  top: 0.5rem;
+  left: 50vw;
+  translate: -50%; }
 
 #page-nav {
   position: fixed;
@@ -17,18 +42,20 @@ h1, h2, h3, h4, h5, h6 {
   #page-nav ul {
     list-style: none;
     padding: 0; }
+  #page-nav li {
+    position: relative; }
+    #page-nav li .tooltip {
+      display: none;
+      postion: fixed;
+      z-index: 200;
+      left: 200rem;
+      top: 0; }
+    #page-nav li:hover {
+      cursor: pointer; }
+      #page-nav li:hover .tooltip {
+        display: block; }
 
-.page {
-  width: 100vw;
-  min-height: 100vh;
-  clear: both;
-  padding: 3rem; }
-
-#hero {
-  background-image: url("./images/toy-robots-blue-hd.jpg");
-  background-size: contain;
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-color: #00CEF0; }
+#hero .card {
+  background-image: url("./images/toy-robots-blue-hd.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
