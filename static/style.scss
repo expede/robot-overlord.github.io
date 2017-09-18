@@ -3,7 +3,6 @@ $font-header: 'Exo', sans-serif;
 
 $color-main:   #495572;
 
-
 $color-base: #F2FDFF;
 $color-fill: #DDF0F3;
 
@@ -16,6 +15,7 @@ body {
   font-family:      $font-main;
   background-color: $color-base;
 
+  color: $color-main;
   font-size: 16px;
 }
 
@@ -29,6 +29,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-header;
   margin:  0;
   padding: 0;
+}
+
+.brand {
+  font-weight: 900;
+  font-style:  italic;
+  text-transform: uppercase;
 }
 
 .page {
@@ -87,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   left:     1.5rem;
   top:      50vh;
   margin-top: -3rem;
+  color: $color-accent;
 
   ul {
     list-style: none;

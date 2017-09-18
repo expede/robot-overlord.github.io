@@ -1,6 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #F2FDFF;
+  color: #495572;
   font-size: 16px; }
 
 #wrapper {
@@ -11,6 +12,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Exo", sans-serif;
   margin: 0;
   padding: 0; }
+
+.brand {
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase; }
 
 .page {
   width: 100%;
@@ -52,7 +58,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   left: 1.5rem;
   top: 50vh;
-  margin-top: -3rem; }
+  margin-top: -3rem;
+  color: #7042E1; }
   #page-nav ul {
     list-style: none;
     padding: 0; }
