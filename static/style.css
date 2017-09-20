@@ -1,15 +1,18 @@
+html {
+  background: red; }
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #F2FDFF;
   color: #495572;
-  font-size: 20px; }
+  font-size: 20px;
+  /* max-width: 100vw; */
+  position: absolute;
+  top: 0;
+  width: 100vw; }
 
 a {
   text-decoration: none; }
-
-#wrapper {
-  max-width: 1376px;
-  margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Exo", sans-serif;
@@ -22,14 +25,19 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 .page {
-  width: 100%;
+  margin: 0 auto;
   min-height: 100vh;
-  padding: 3rem; }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .card {
   border-radius: 4rem;
-  width: 1280px;
-  height: 864px;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 80vh;
+  max-height: 864px;
   background-size: contain;
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -47,12 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #logo {
   position: fixed;
-  top: 0.5rem;
+  top: 24px;
   left: 50vw;
   transform: translate(-50%); }
   #logo svg {
-    height: 2rem;
-    width: 3rem; }
+    height: 24px;
+    width: 48px; }
     #logo svg path {
       fill: #495572; }
 
@@ -73,6 +81,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .card {
   background-image: url("./images/toy-robots-blue-hd.jpg"); }
+
+#wrapper {
+  max-width: 1304px;
+  margin: 0 auto;
+  margin-top: 48px;
+  display: flex;
+  flex-flow: row wrap; }
 
 [tooltip] {
   position: relative; }
