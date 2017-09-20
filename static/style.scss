@@ -16,7 +16,11 @@ body {
   background-color: $color-base;
 
   color: $color-main;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 #wrapper {
@@ -100,23 +104,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
   }
 
-  li {
-    position: relative;
+  li:hover {
+    cursor: pointer;
 
-    .tooltip {
-      display: none;
-      postion: fixed;
-      z-index: 200;
-      left: 200rem;
-      top: 0;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-      .tooltip {
-        display: block;
-      }
+    &[tooltip]::before,
+    &[tooltip]::after {
+      display: inline-block;
     }
   }
 }
@@ -125,4 +118,39 @@ h1, h2, h3, h4, h5, h6 {
   .card {
     background-image: url('./images/toy-robots-blue-hd.jpg');
   }
+}
+
+[tooltip]{
+  position: relative;
+}
+
+[tooltip]::before {
+  content: "";
+  position: absolute;
+  border-width: 6px 5px 0 5px; /* depth | bottom diag | right | top diag */
+  border-style: solid;
+  border-color: $color-main transparent transparent transparent;
+  z-index: 100;
+
+  top: 10px;
+  left: 17px;
+  transform: rotate(90deg);
+
+  display: none;
+}
+
+[tooltip]::after {
+  content: attr(tooltip);
+  position: absolute;
+  top: -4px;
+  left: 24px;
+  background: $color-main;
+  text-align: center;
+  color: $color-base;
+  padding: 10px 5px;
+  font-size: 0.8rem;
+  min-width: 80px;
+  border-radius: 8px;
+  pointer-events: none;
+  display: none !important;
 }

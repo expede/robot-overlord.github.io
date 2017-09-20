@@ -2,7 +2,10 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: #F2FDFF;
   color: #495572;
-  font-size: 16px; }
+  font-size: 20px; }
+
+a {
+  text-decoration: none; }
 
 #wrapper {
   max-width: 1376px;
@@ -63,20 +66,43 @@ h1, h2, h3, h4, h5, h6 {
   #page-nav ul {
     list-style: none;
     padding: 0; }
-  #page-nav li {
-    position: relative; }
-    #page-nav li .tooltip {
-      display: none;
-      postion: fixed;
-      z-index: 200;
-      left: 200rem;
-      top: 0; }
-    #page-nav li:hover {
-      cursor: pointer; }
-      #page-nav li:hover .tooltip {
-        display: block; }
+  #page-nav li:hover {
+    cursor: pointer; }
+    #page-nav li:hover[tooltip]::before, #page-nav li:hover[tooltip]::after {
+      display: inline-block; }
 
 #hero .card {
   background-image: url("./images/toy-robots-blue-hd.jpg"); }
+
+[tooltip] {
+  position: relative; }
+
+[tooltip]::before {
+  content: "";
+  position: absolute;
+  border-width: 6px 5px 0 5px;
+  /* depth | bottom diag | right | top diag */
+  border-style: solid;
+  border-color: #495572 transparent transparent transparent;
+  z-index: 100;
+  top: 10px;
+  left: 17px;
+  transform: rotate(90deg);
+  display: none; }
+
+[tooltip]::after {
+  content: attr(tooltip);
+  position: absolute;
+  top: -4px;
+  left: 24px;
+  background: #495572;
+  text-align: center;
+  color: #F2FDFF;
+  padding: 10px 5px;
+  font-size: 0.8rem;
+  min-width: 80px;
+  border-radius: 8px;
+  pointer-events: none;
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */
