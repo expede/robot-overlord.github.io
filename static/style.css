@@ -85,8 +85,8 @@ h1, h2, h3, h4, h5, h6 {
   border-style: solid;
   border-color: #495572 transparent transparent transparent;
   z-index: 100;
-  top: 10px;
-  left: 17px;
+  top: 9px;
+  left: 20px;
   transform: rotate(90deg);
   display: none; }
 
@@ -94,15 +94,16 @@ h1, h2, h3, h4, h5, h6 {
   content: attr(tooltip);
   position: absolute;
   top: -4px;
-  left: 24px;
+  left: 26px;
   background: #495572;
   text-align: center;
   color: #F2FDFF;
-  padding: 10px 5px;
+  padding: 8px;
   font-size: 0.8rem;
-  min-width: 80px;
+  /* min-width: 80px; */
+  white-space: nowrap;
   border-radius: 8px;
   pointer-events: none;
-  display: none !important; }
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
