@@ -57,6 +57,17 @@ p {
   margin-top: 0;
 }
 
+footer.sticky {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 96px;
+  text-transform: uppercase;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
 .brand {
   font-weight: 900;
   font-style:  italic;
@@ -78,6 +89,10 @@ p {
 
   align-items: flex-start;
   align-content: flex-start;
+}
+
+#contact {
+  min-height: calc(100vh - 168px);
 }
 
 .full {
