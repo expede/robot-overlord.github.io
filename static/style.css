@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   background: red; }
 
@@ -131,6 +132,12 @@ footer.sticky {
     cursor: pointer; }
     #page-nav li:hover[tooltip]::before, #page-nav li:hover[tooltip]::after {
       display: inline-block; }
+  #page-nav a {
+    height: 120px; }
+  #page-nav a::before {
+    content: '◯'; }
+  #page-nav a.current-nav::before {
+    content: '◉'; }
 
 #hero .card {
   background-image: url("./images/toy-robots-blue-hd.jpg"); }

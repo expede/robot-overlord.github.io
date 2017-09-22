@@ -195,6 +195,18 @@ footer.sticky {
       display: inline-block;
     }
   }
+
+  a {
+    height: 120px;
+  }
+
+  a::before {
+    content: '◯';
+  }
+
+  a.current-nav::before {
+    content: '◉';
+  }
 }
 
 #hero {

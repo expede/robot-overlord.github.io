@@ -107,11 +107,11 @@
 
     <nav id="page-nav">
       <ul>
-        <li tooltip="Top"><a href="#top">◯</a></li>
-        <li tooltip="Training"><a href="#training">◯</a></li>
-        <li tooltip="Open Source"><a href="#oss">◉</a></li>
-        <li tooltip="About"><a href="#about">◯</a></li>
-        <li tooltip="Contact"><a href="#contact">◯</a></li>
+        <li tooltip="Top"><a href="#hero"></a></li>
+        <li tooltip="Training"><a href="#training"></a></li>
+        <li tooltip="Open Source"><a href="#oss"></a></li>
+        <li tooltip="About"><a href="#about"></a></li>
+        <li tooltip="Contact"><a href="#contact"></a></li>
       </ul>
     </nav>
 
@@ -205,21 +205,27 @@
        const pages = Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
 
        const currentPage = () => {
-         const newOffset = pages.find(page => page[1] >= window.pageYOffset)
-         newOffset && newOffset[0];
+         const newOffset = pages.find(page => page[1] >= window.pageYOffset) || pages[-1][0];
+         return (newOffset && newOffset[0]);
        }
+
        let cachedPage = currentPage();
 
-       const updateNav = id => {
-         navs.forEach(nav => nav.classList.remove(activeClass));
-         cachedPage = id;
+       const updateNav = (id) => {
+         const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
 
-         const newActive = document.querySelectorAll(`${navId} a[href="#${id}"]`)
-         newActive && newActive[0].classList.add(activeClass);
+         if (newActive && newActive[0]) {
+           navs.forEach(nav => nav.classList.remove(activeClass));
+           cachedPage = id;
+
+           newActive[0].classList.add(activeClass);
+         }
        }
 
+       updateNav(cachedPage);
+
        window.onscroll = () => {
-         newPage = currentPage()
+         newPage = currentPage();
 
          if (newPage !== cachedPage) {
            updateNav(newPage);
