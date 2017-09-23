@@ -13,8 +13,13 @@ body {
   top: 0;
   width: 100vw; }
 
-a {
-  text-decoration: none; }
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #7042E1; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Exo", sans-serif;
@@ -23,7 +28,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
 h1 {
-  font-weight: 900; }
+  font-weight: 900;
+  font-size: 32px; }
 
 h2 {
   font-size: 40px; }
@@ -45,7 +51,7 @@ footer.sticky {
   opacity: 0.5; }
 
 .brand {
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
   text-transform: uppercase; }
 
@@ -62,7 +68,8 @@ footer.sticky {
     padding-top: 24px; }
 
 #contact {
-  min-height: calc(100vh - 168px); }
+  min-height: calc(100vh - 168px);
+  text-align: center; }
 
 .full {
   width: 100%;
@@ -105,7 +112,12 @@ footer.sticky {
   text-align: center;
   background-color: #FFF;
   color: #7042E1;
-  box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5); }
+  box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5);
+  transition: all 400ms ease; }
+  .circle:hover, .circle:focus {
+    box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.9); }
+  .circle:active {
+    box-shadow: 0px 4px 8px rgba(73, 85, 114, 0.7); }
 
 #logo {
   position: fixed;
@@ -133,21 +145,40 @@ footer.sticky {
     #page-nav li:hover[tooltip]::before, #page-nav li:hover[tooltip]::after {
       display: inline-block; }
   #page-nav a {
-    height: 120px; }
-  #page-nav a::before {
-    content: '◯'; }
-  #page-nav a.current-nav::before {
-    content: '◉'; }
-
-#hero .card {
-  background-image: url("./images/toy-robots-blue-hd.jpg"); }
+    max-height: 22px;
+    line-height: 22px;
+    overflow-y: hidden;
+    margin: 0;
+    display: inline-block; }
+    #page-nav a::before {
+      content: '◯'; }
+    #page-nav a.current-nav::before, #page-nav a:hover::before, #page-nav a:focus::before {
+      font-size: 22px;
+      margin-left: -1px;
+      content: '◉'; }
 
 #wrapper {
-  max-width: 1304px;
+  position: relative;
+  max-width: 1128px;
   margin: 0 auto;
   margin-top: 48px;
   display: flex;
   flex-flow: row wrap; }
+
+#hero {
+  position: relative; }
+  #hero header {
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    transform: translateY(-100%);
+    line-height: 1.5; }
+  #hero .card {
+    background-image: url("./images/toy-robots-blue-hd.jpg");
+    background-size: cover;
+    background-position: bottom right; }
+  #hero .circle {
+    margin-top: 48px; }
 
 [tooltip] {
   position: relative; }
