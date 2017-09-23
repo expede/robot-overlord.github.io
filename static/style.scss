@@ -11,16 +11,11 @@ $color-accent: #7042E1;
 $color-highlight: #00CEF0;
 $color-lowlight:  #FFF;
 
-html {
-  background: red; // DELETE ME
-}
-
 body {
   font-family:      $font-main;
   background-color: $color-base;
   color: $color-main;
   font-size: 20px;
-  /* max-width: 100vw; */
 
   font-weight: 400;
 
