@@ -161,20 +161,19 @@ footer.sticky {
   display: flex;
   flex-flow: row wrap; }
 
-#hero {
+#hero .card {
+  background-image: url("./images/toy-robots-blue-hd.jpg");
+  background-size: cover;
+  background-position: bottom right;
   position: relative; }
-  #hero header {
-    position: absolute;
-    top: 50%;
-    left: 48px;
-    transform: translateY(-100%);
-    line-height: 1.5; }
-  #hero .card {
-    background-image: url("./images/toy-robots-blue-hd.jpg");
-    background-size: cover;
-    background-position: bottom right; }
-  #hero .circle {
-    margin-top: 48px; }
+#hero header {
+  position: absolute;
+  top: 50%;
+  left: 48px;
+  transform: translateY(-50%);
+  line-height: 1.5; }
+#hero .circle {
+  margin-top: 48px; }
 
 [tooltip] {
   position: relative; }
@@ -207,5 +206,35 @@ footer.sticky {
   border-radius: 8px;
   pointer-events: none;
   display: none; }
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap; }
+
+.flipper {
+  width: 184px;
+  height: 184px;
+  margin: 24px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  color: rgba(242, 253, 255, 0.5); }
+  .flipper .front {
+    background-color: #FFF;
+    border: 2px solid #495572;
+    box-sizing: border-box; }
+  .flipper .back {
+    transform: rotateY(180deg);
+    background-color: #7042E1;
+    box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5); }
+  .flipper .front, .flipper .back {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    backface-visibility: hidden;
+    border-radius: 8px; }
+  .flipper:hover {
+    transform: rotateY(180deg); }
 
 /*# sourceMappingURL=style.css.map */
