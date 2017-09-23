@@ -212,12 +212,17 @@ footer.sticky {
   flex-flow: row wrap; }
 
 .flipper {
-  width: 184px;
-  height: 184px;
-  margin: 24px;
+  width: 132px;
+  height: 132px;
+  margin: 16px;
   transform-style: preserve-3d;
   transition: transform 1s;
-  color: rgba(242, 253, 255, 0.5); }
+  color: rgba(242, 253, 255, 0.5);
+  margin-top: 0;
+  transition: all 1500ms ease; }
+  .flipper:hover {
+    transform: rotateY(180deg);
+    margin-top: -8px; }
   .flipper .front {
     background-color: #FFF;
     border: 2px solid #495572;
@@ -230,11 +235,28 @@ footer.sticky {
     margin: 0;
     display: block;
     position: absolute;
-    width: 184px;
-    height: 184px;
+    width: 132px;
+    height: 132px;
     backface-visibility: hidden;
     border-radius: 8px; }
-  .flipper:hover {
-    transform: rotateY(180deg); }
+
+.fader {
+  transition: all 1500ms ease;
+  width: 132px;
+  height: 132px;
+  margin: 16px;
+  background-color: #FFF;
+  border: 2px solid #495572;
+  border-radius: 8px; }
+  .fader div {
+    opacity: 0;
+    background-color: #7042E1;
+    height: 100%;
+    width: 100%;
+    transition: all 1500ms ease; }
+  .fader:hover {
+    margin-top: -8px; }
+    .fader:hover div {
+      opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
