@@ -73,6 +73,8 @@ footer.sticky {
   font-weight: 800;
   font-style:  italic;
   text-transform: uppercase;
+  width: calc(100% - 16px);
+
 }
 
 .page {
@@ -169,23 +171,6 @@ footer.sticky {
   }
 }
 
-#logo {
-  position: fixed;
-
-  top: 24px;
-  left: 50vw;
-  transform: translate(-50%);
-
-  svg {
-    height: 24px;
-    width: 48px;
-
-    path {
-      fill: $color-main;
-    }
-  }
-}
-
 #page-nav {
   position: fixed;
   z-index:  100;
@@ -233,7 +218,9 @@ footer.sticky {
 
 #wrapper {
   position: relative;
-  max-width: 1128px;
+  /* max-width: 1128px; */
+  max-width: 1368px;
+  width: calc(100vw - 144px);
   margin:     0 auto;
   margin-top: 48px;
 
@@ -306,71 +293,68 @@ footer.sticky {
 
 }
 
-.flipper {
-  width: 132px;
-  height: 132px;
-  margin: 16px;
-
-  transform-style: preserve-3d;
-  transition: transform 1s;
-
-  color: rgba($color-base, 0.5);
-
-  margin-top: 0;
-  transition: all 1500ms ease;
-
-  &:hover {
-    transform: rotateY(180deg);
-    margin-top: -8px;
-  }
-
-  .front {
-    background-color: $color-lowlight;
-    border: 2px solid $color-main;
-    box-sizing: border-box;
-  }
-
-  .back {
-    transform: rotateY(180deg);
-    background-color: $color-accent;
-    box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5);
-  }
-
-  .front, .back {
-    margin: 0;
-    display: block;
-    position: absolute;
-    width: 132px;
-    height: 132px;
-    backface-visibility: hidden;
-
-    border-radius: 8px;
-  }
-}
-
 .fader {
   transition: all 1500ms ease;
-  width: 132px;
-  height: 132px;
-  margin: 16px;
+  width: 192px;
+  height: 192px;
+  margin: 0 0 16px 16px;
   background-color: $color-lowlight;
   border: 2px solid $color-main;
   border-radius: 8px;
+  overflow: hidden;
 
-  div {
+  figcaption {
     opacity: 0;
     background-color: $color-accent;
     height: 100%;
     width: 100%;
+    color: white;
+    padding: 8px;
 
     transition: all 1500ms ease;
   }
 
   &:hover {
     margin-top: -8px;
-    div {
-      opacity: 1;
+    border-color: $color-accent;
 
+    figcaption {
+      opacity: 1;
+    }
+  }
+}
+
+.top-logo {
+  margin: 0;
+  top: 24px;
+  left: 50vw;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  font-style: italic;
+  position: absolute;
+
+  font-size: 24px;
+}
+
+#robot {
+  margin-left: -72px;
+}
+
+#overlord {
+  margin-left: 88px;
+}
+
+#logo {
+  position: fixed;
+
+  transform: translate(-50%);
+
+  svg {
+    height: 24px;
+    width: 48px;
+
+    path {
+      fill: $color-main;
     }
   }
 }
