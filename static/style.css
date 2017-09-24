@@ -66,7 +66,8 @@ footer.sticky {
 
 #contact {
   min-height: calc(100vh - 168px);
-  text-align: center; }
+  text-align: center;
+  /* background: linear-gradient(to bottom, transparent, $color-base 10%, $color-base); */ }
 
 .full {
   width: 100%;
@@ -110,11 +111,12 @@ footer.sticky {
   background-color: #FFF;
   color: #7042E1;
   box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5);
-  transition: all 400ms ease; }
+  transition: all 400ms ease-in; }
   .circle:hover, .circle:focus {
     box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.9); }
   .circle:active {
-    box-shadow: 0px 4px 8px rgba(73, 85, 114, 0.7); }
+    box-shadow: 0px 4px 8px rgba(73, 85, 114, 0.7);
+    transition: all 400ms ease-out; }
 
 #page-nav {
   position: fixed;
@@ -211,7 +213,10 @@ footer.sticky {
   background-color: #FFF;
   border: 2px solid #495572;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat; }
   .fader figcaption {
     opacity: 0;
     background-color: #7042E1;
@@ -219,12 +224,14 @@ footer.sticky {
     width: 100%;
     color: white;
     padding: 8px;
-    transition: all 1500ms ease; }
+    transition: all 600ms ease; }
   .fader:hover {
     margin-top: -8px;
     border-color: #7042E1; }
     .fader:hover figcaption {
-      opacity: 1; }
+      opacity: 1;
+      min-width: 100%;
+      min-height: 100%; }
 
 .top-logo {
   margin: 0;
@@ -234,7 +241,8 @@ footer.sticky {
   text-transform: uppercase;
   font-style: italic;
   position: absolute;
-  font-size: 24px; }
+  font-size: 24px;
+  z-index: -10; }
 
 #robot {
   margin-left: -72px; }
@@ -250,5 +258,46 @@ footer.sticky {
     width: 48px; }
     #logo svg path {
       fill: #495572; }
+
+.wild {
+  margin: 8px;
+  width: 192px;
+  height: 192px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-radius: 8px; }
+
+#brooke_0 {
+  background-image: url("./images/brooke_0.gif"); }
+
+#brooke_5 {
+  background-image: url("./images/brooke_5.gif"); }
+
+#brooke_8 {
+  background-image: url("./images/brooke_8.gif"); }
+
+#brooke_9 {
+  background-image: url("./images/brooke_9.gif"); }
+
+#exceptional {
+  background-image: url("https://github.com/expede/exceptional/blob/master/branding/logo.png?raw=true"); }
+
+#quark {
+  background-image: url("https://github.com/expede/quark/blob/master/brand/logo.png?raw=true"); }
+
+#algae {
+  background-image: url("https://github.com/expede/algae/blob/master/brand/mini-logo.png?raw=true"); }
+
+#operator {
+  background-image: url("https://github.com/expede/operator/blob/master/brand/logo.png?raw=true"); }
+
+#witchcraft {
+  background-size: 50%;
+  background-image: url("https://github.com/expede/witchcraft/blob/master/brand/Icon/PNG/WC-icon-sml@2x.png?raw=true"); }
+
+#type_class {
+  background-image: url("https://github.com/expede/type_class/blob/master/brand/logo.png?raw=true"); }
 
 /*# sourceMappingURL=style.css.map */

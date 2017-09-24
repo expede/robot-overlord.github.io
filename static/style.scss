@@ -97,6 +97,7 @@ footer.sticky {
 #contact {
   min-height: calc(100vh - 168px);
   text-align: center;
+  /* background: linear-gradient(to bottom, transparent, $color-base 10%, $color-base); */
 }
 
 .full {
@@ -159,7 +160,7 @@ footer.sticky {
 
   color: $color-accent;
   box-shadow: 0px 8px 16px rgba(73, 85, 114, 0.5);
-  transition: all 400ms ease;
+  transition: all 400ms ease-in;
 
   &:hover,
   &:focus {
@@ -168,6 +169,7 @@ footer.sticky {
 
   &:active {
     box-shadow: 0px 4px 8px rgba(73, 85, 114, 0.7);
+    transition: all 400ms ease-out;
   }
 }
 
@@ -290,7 +292,6 @@ footer.sticky {
 .gallery {
   display: flex;
   flex-flow: row wrap;
-
 }
 
 .fader {
@@ -302,6 +303,9 @@ footer.sticky {
   border: 2px solid $color-main;
   border-radius: 8px;
   overflow: hidden;
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   figcaption {
     opacity: 0;
@@ -311,7 +315,7 @@ footer.sticky {
     color: white;
     padding: 8px;
 
-    transition: all 1500ms ease;
+    transition: all 600ms ease;
   }
 
   &:hover {
@@ -320,6 +324,9 @@ footer.sticky {
 
     figcaption {
       opacity: 1;
+
+      min-width:  100%;
+      min-height: 100%;
     }
   }
 }
@@ -334,6 +341,7 @@ footer.sticky {
   position: absolute;
 
   font-size: 24px;
+  z-index: -10;
 }
 
 #robot {
@@ -357,4 +365,56 @@ footer.sticky {
       fill: $color-main;
     }
   }
+}
+
+.wild {
+  margin: 8px;
+  width:  192px;
+  height: 192px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#brooke_0 {
+  background-image: url("./images/brooke_0.gif");
+}
+
+#brooke_5 {
+  background-image: url("./images/brooke_5.gif");
+}
+
+#brooke_8 {
+  background-image: url("./images/brooke_8.gif");
+}
+
+#brooke_9 {
+  background-image: url("./images/brooke_9.gif");
+}
+
+#exceptional {
+  background-image: url("https://github.com/expede/exceptional/blob/master/branding/logo.png?raw=true");
+}
+
+#quark {
+  background-image: url("https://github.com/expede/quark/blob/master/brand/logo.png?raw=true");
+}
+
+#algae {
+  background-image: url("https://github.com/expede/algae/blob/master/brand/mini-logo.png?raw=true");
+}
+
+#operator {
+  background-image: url("https://github.com/expede/operator/blob/master/brand/logo.png?raw=true");
+}
+
+#witchcraft {
+  background-size: 50%;
+  background-image: url("https://github.com/expede/witchcraft/blob/master/brand/Icon/PNG/WC-icon-sml@2x.png?raw=true");
+}
+
+#type_class {
+  background-image: url("https://github.com/expede/type_class/blob/master/brand/logo.png?raw=true");
 }
