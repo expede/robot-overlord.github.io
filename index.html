@@ -142,13 +142,71 @@
 
         <p class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 
-        <ul id="essentials" class="accordion column">
-          <li><h3>Functional Programming Essentials</h3></li>
-          <li><h3>Elixir & Phoenix</h3></li>
-          <li><h3>Javascript</h3></li>
-          <li><h3>Elm</h3></li>
-          <li><h3>Coming Soon or On Request</h3></li>
-        </ul>
+        <section class="accordion column">
+          <div class="tab">
+            <input id="tab-one" type="checkbox" name="tabs">
+            <label for="tab-one"><span class="label-inner">Functional Programming Essentials</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Functional Programming Concepts for Mere Mortals</li>
+                <li>Functional Techniques for Object Oriented Laguages</li>
+                <li>First Principles: The Untyped Lambda Calculus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-two" type="checkbox" name="tabs">
+            <label for="tab-two"><span class="label-inner">Elixir & Phoenix</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Up and Running with Elixir and Phoenix</li>
+                <li>Elixir from Scratch</li>
+                <li>Phoenix: Modern Monoliths Rising from the Ashes</li>
+                <li>Going Deeper with Elixir</li>
+                <li>Deep Dive Into DSLs, Macros, and Metaprogramming</li>
+                <li>Advanced Error Handling</li>
+                <li>Witchcraft for Principled Elixir Programming</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-three" type="checkbox" name="tabs">
+            <label for="tab-three"><span class="label-inner">Javascript</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Functional Programming Essentials with Lodash and Rambda</li>
+                <li>The Facebook Stack I: React + Flux + Immutable.js + Flow</li>
+                <li>The Facebook Stack II: GraphQL and Relay</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-four" type="checkbox" name="tabs">
+            <label for="tab-four"><span class="label-inner">Elm & PureScript</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Learn You an Elm for Great Good (Elm from Scratch)</li>
+                <li>Thoroughly Testing Elm Applications</li>
+                <li>Up the Abstraction Ladder with a Pux Front-End</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-five" type="checkbox" name="tabs">
+            <label for="tab-five"><span class="label-inner">Coming Soon or On Request</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Ethereum, Solidity, and Smart Contracts</li>
+                <li>Type Safe Systems-Level Programming with Rust</li>
+                <li>TensorFlow / Machine Learning</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section id="oss" class="page">
