@@ -1,3 +1,6 @@
+$screen-small: 900px;
+$screen-tiny: 650px;
+
 $font-main:   'Open Sans', sans-serif;
 $font-header: 'Exo', sans-serif;
 
@@ -232,11 +235,16 @@ footer.sticky {
 
 #hero {
   .card {
-    background-image: url('./images/toy-robots-blue-hd.jpg');
+    background-image: url("./images/toy-robots-blue-hd.jpg");
     background-size: cover;
     background-position: bottom right;
 
     position: relative;
+
+    @media screen and (max-width: $screen-tiny) {
+      background-image: linear-gradient(#00CEF0 50%, transparent 94%, transparent), url("./images/toy-robots-blue-hd.jpg");
+      background-size: 175%;
+    }
   }
 
   header {
@@ -246,10 +254,27 @@ footer.sticky {
     transform: translateY(-50%);
 
     line-height: 1.5;
+
+    @media screen and (max-width: $screen-small) {
+      position: static;
+      transform: none;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $screen-tiny) {
+      text-align: center;
+      padding: 8px;
+      width: calc(100% - 8px);
+    }
   }
 
   .circle {
     margin-top: 48px;
+
+    @media screen and (max-width: $screen-tiny) {
+      margin: 0 auto;
+    }
   }
 }
 
