@@ -140,10 +140,11 @@ footer.sticky {
 
   margin: 0 auto;
   width: 100%;
-  max-width:  1280px;
+  /* max-width:  1280px; */
 
+  height: 100%;
+  max-height: calc(100vh - 144px);
   min-height: 80vh;
-  max-height: 864px;
 
   background-size: contain;
   background-position: right bottom;
@@ -235,6 +236,7 @@ footer.sticky {
 }
 
 #hero {
+
   .card {
     background-image: url("./images/toy-robots-blue-hd.jpg");
     background-size: cover;
