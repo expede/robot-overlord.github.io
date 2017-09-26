@@ -1,3 +1,6 @@
+$screen-huge: 3200px;
+$screen-large: 1600px;
+$screen-medium: 1200px;
 $screen-small: 900px;
 $screen-tiny: 650px;
 
@@ -59,6 +62,10 @@ h3 {
 
 p {
   margin-top: 0;
+
+  @media screen and (max-width: $screen-medium) {
+    line-height: 1.5;
+  }
 }
 
 footer.sticky {
@@ -95,12 +102,33 @@ footer.sticky {
 
   align-items: flex-start;
   align-content: flex-start;
+
+  @media screen and (min-width: $screen-large) {
+    min-height: 8rem;
+  }
+
+  @media screen and (max-width: $screen-small) {
+    display: block;
+    padding-top: 96px;
+  }
 }
 
 #contact {
   min-height: calc(100vh - 168px);
   text-align: center;
-  /* background: linear-gradient(to bottom, transparent, $color-base 10%, $color-base); */
+
+  @media screen and (min-width: $screen-large) {
+    margin-bottom: 128px;
+    min-height: 8rem;
+  }
+
+  @media screen and (max-width: $screen-small) {
+    margin-bottom: 128px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .full {
@@ -116,12 +144,19 @@ footer.sticky {
   padding: 0;
   margin: 0;
 
-  &:nth-child(even) {
-    padding-right: 40px;
+  @media screen and (min-width: $screen-small) {
+    &:nth-child(even) {
+      padding-right: 40px;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 40px;
+    }
   }
 
-  &:nth-child(odd) {
-    padding-left: 40px;
+  @media screen and (max-width: $screen-small) {
+    width: 100%;
+    display: block;
   }
 }
 
@@ -140,7 +175,6 @@ footer.sticky {
 
   margin: 0 auto;
   width: 100%;
-  /* max-width:  1280px; */
 
   height: 100%;
   max-height: calc(100vh - 144px);
@@ -150,10 +184,24 @@ footer.sticky {
   background-position: right bottom;
   background-repeat: no-repeat;
   background-color: $color-highlight;
+
+  @media screen and (min-width: $screen-large) {
+    min-height: 1200px;
+  }
+  @media screen and (max-width: $screen-small) {
+    margin-top: 16px;
+    padding: 16px 0;
+  }
+
+  @media screen and (max-width: $screen-tiny) {
+    h1 {
+      font-size: 24px;
+    }
+  }
 }
 
 .circle {
-  border-radius: 100px;
+  border-radius: 80px;
 
   width: 3rem;
   height: 3rem;
@@ -185,6 +233,10 @@ footer.sticky {
   top:      50vh;
   margin-top: -3rem;
   color: $color-accent;
+
+  @media screen and (max-width: $screen-tiny) {
+    display: none;
+  }
 
   ul {
     list-style: none;
@@ -225,17 +277,26 @@ footer.sticky {
 
 #wrapper {
   position: relative;
-  /* max-width: 1128px; */
-  max-width: 1368px;
+  max-width: 1440px;
   width: calc(100vw - 144px);
   margin:     0 auto;
   margin-top: 48px;
 
   display: flex;
   flex-flow: row wrap;
+
+  @media screen and (max-width: $screen-tiny) {
+    width: calc(100vw - 32px);
+    padding: 16px;
+    font-size: 14px;
+  }
 }
 
 #hero {
+  @media screen and (max-width: $screen-small) {
+    padding-top: 0;
+  }
+
   .card {
     background-image: url("./images/toy-robots-blue-hd.jpg");
     background-size: cover;
@@ -243,16 +304,31 @@ footer.sticky {
 
     position: relative;
 
-    @media screen and (max-width: $screen-tiny) {
+    @media screen and (min-aspect-ratio: 2/1) and (max-width: $screen-large) {
       background-image: linear-gradient(#00CEF0 50%, transparent 94%, transparent), url("./images/toy-robots-blue-hd.jpg");
       background-size: 175%;
+    }
+
+    @media screen and (max-width: $screen-small) {
+      background-image: linear-gradient(#00CEF0 50%, transparent 94%, transparent), url("./images/toy-robots-blue-hd.jpg");
+      background-size: 175%;
+    }
+
+    @media screen and (max-width: $screen-tiny) {
+      min-height: 90vh;
+      width: 100vw;
+
+      border-radius: 0;
+      margin-left: -16px;
     }
   }
 
   header {
     position: absolute;
+
     top: 50%;
     left: 48px;
+
     transform: translateY(-50%);
 
     line-height: 1.5;
@@ -262,10 +338,10 @@ footer.sticky {
       transform: none;
       margin-top: 2rem;
       width: 100%;
+      text-align: center;
     }
 
     @media screen and (max-width: $screen-tiny) {
-      text-align: center;
       padding: 8px;
       width: calc(100% - 8px);
     }
@@ -274,8 +350,9 @@ footer.sticky {
   .circle {
     margin-top: 48px;
 
-    @media screen and (max-width: $screen-tiny) {
+    @media screen and (max-width: $screen-small) {
       margin: 0 auto;
+      margin-top: 80px;
     }
   }
 }
@@ -318,6 +395,10 @@ footer.sticky {
 .gallery {
   display: flex;
   flex-flow: row wrap;
+
+  @media screen and (max-width: $screen-small) {
+    justify-content: center;
+  }
 
   a {
     height: 216px;
@@ -407,9 +488,15 @@ footer.sticky {
   margin-left: 88px;
 }
 
+@media screen and (max-width: $screen-tiny) {
+  #robot,
+  #overlord {
+    display: none;
+  }
+}
+
 #logo {
   position: fixed;
-
   transform: translate(-50%);
 
   svg {
@@ -419,6 +506,10 @@ footer.sticky {
     path {
       fill: $color-main;
     }
+  }
+
+  @media screen and (max-width: $screen-small) {
+    position: absolute;
   }
 }
 
@@ -522,13 +613,19 @@ footer.sticky {
     text-align: center;
   }
 
-  input[type=checkbox] + label::after {
-    content: "+";
+  @media screen and (max-width: $screen-tiny) {
+    text-align: center;
   }
 
-  input[type=checkbox]:checked + label::after {
-    content: "–";
-    line-height: 1.2rem;
+  @media screen and (min-width: $screen-tiny) {
+    input[type=checkbox] + label::after {
+      content: "+";
+    }
+
+    input[type=checkbox]:checked + label::after {
+      content: "–";
+      line-height: 1.2rem;
+    }
   }
 }
 
@@ -542,6 +639,7 @@ footer.sticky {
   max-height: 0;
   overflow: hidden;
   transition: all 800ms ease-out;
+
   li {
     display: inline-block;
   }
@@ -559,6 +657,12 @@ input:checked ~ .tab-content {
 .tab-content li {
   line-height: 3;
   border-bottom: 2px solid $color-accent;
+
+  @media screen and (max-width: $screen-small) {
+    width: 100%;
+    line-height: 2;
+    padding: 16px 0;
+  }
 }
 
 blockquote {

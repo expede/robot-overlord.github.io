@@ -35,6 +35,9 @@ h3 {
 
 p {
   margin-top: 0; }
+  @media screen and (max-width: 1200px) {
+    p {
+      line-height: 1.5; } }
 
 footer.sticky {
   position: absolute;
@@ -63,11 +66,26 @@ footer.sticky {
   align-content: flex-start; }
   .page:first-child {
     padding-top: 24px; }
+  @media screen and (min-width: 1600px) {
+    .page {
+      min-height: 8rem; } }
+  @media screen and (max-width: 900px) {
+    .page {
+      display: block;
+      padding-top: 96px; } }
 
 #contact {
   min-height: calc(100vh - 168px);
-  text-align: center;
-  /* background: linear-gradient(to bottom, transparent, $color-base 10%, $color-base); */ }
+  text-align: center; }
+  @media screen and (min-width: 1600px) {
+    #contact {
+      margin-bottom: 128px;
+      min-height: 8rem; } }
+  @media screen and (max-width: 900px) {
+    #contact {
+      margin-bottom: 128px; }
+      #contact h2 {
+        font-size: 1.5rem; } }
 
 .full {
   width: 100%;
@@ -79,10 +97,15 @@ footer.sticky {
   flex: 1;
   padding: 0;
   margin: 0; }
-  .column:nth-child(even) {
-    padding-right: 40px; }
-  .column:nth-child(odd) {
-    padding-left: 40px; }
+  @media screen and (min-width: 900px) {
+    .column:nth-child(even) {
+      padding-right: 40px; }
+    .column:nth-child(odd) {
+      padding-left: 40px; } }
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 100%;
+      display: block; } }
 
 .accordion {
   margin: 0;
@@ -95,7 +118,6 @@ footer.sticky {
   border-radius: 4rem;
   margin: 0 auto;
   width: 100%;
-  /* max-width:  1280px; */
   height: 100%;
   max-height: calc(100vh - 144px);
   min-height: 80vh;
@@ -103,9 +125,19 @@ footer.sticky {
   background-position: right bottom;
   background-repeat: no-repeat;
   background-color: #00CEF0; }
+  @media screen and (min-width: 1600px) {
+    .card {
+      min-height: 1200px; } }
+  @media screen and (max-width: 900px) {
+    .card {
+      margin-top: 16px;
+      padding: 16px 0; } }
+  @media screen and (max-width: 650px) {
+    .card h1 {
+      font-size: 24px; } }
 
 .circle {
-  border-radius: 100px;
+  border-radius: 80px;
   width: 3rem;
   height: 3rem;
   line-height: 3.25rem;
@@ -127,6 +159,9 @@ footer.sticky {
   top: 50vh;
   margin-top: -3rem;
   color: #7042E1; }
+  @media screen and (max-width: 650px) {
+    #page-nav {
+      display: none; } }
   #page-nav ul {
     list-style: none;
     padding: 0; }
@@ -149,23 +184,40 @@ footer.sticky {
 
 #wrapper {
   position: relative;
-  /* max-width: 1128px; */
-  max-width: 1368px;
+  max-width: 1440px;
   width: calc(100vw - 144px);
   margin: 0 auto;
   margin-top: 48px;
   display: flex;
   flex-flow: row wrap; }
+  @media screen and (max-width: 650px) {
+    #wrapper {
+      width: calc(100vw - 32px);
+      padding: 16px;
+      font-size: 14px; } }
 
+@media screen and (max-width: 900px) {
+  #hero {
+    padding-top: 0; } }
 #hero .card {
   background-image: url("./images/toy-robots-blue-hd.jpg");
   background-size: cover;
   background-position: bottom right;
   position: relative; }
-  @media screen and (max-width: 650px) {
+  @media screen and (min-aspect-ratio: 2 / 1) and (max-width: 1600px) {
     #hero .card {
       background-image: linear-gradient(#00CEF0 50%, transparent 94%, transparent), url("./images/toy-robots-blue-hd.jpg");
       background-size: 175%; } }
+  @media screen and (max-width: 900px) {
+    #hero .card {
+      background-image: linear-gradient(#00CEF0 50%, transparent 94%, transparent), url("./images/toy-robots-blue-hd.jpg");
+      background-size: 175%; } }
+  @media screen and (max-width: 650px) {
+    #hero .card {
+      min-height: 90vh;
+      width: 100vw;
+      border-radius: 0;
+      margin-left: -16px; } }
 #hero header {
   position: absolute;
   top: 50%;
@@ -177,17 +229,18 @@ footer.sticky {
       position: static;
       transform: none;
       margin-top: 2rem;
-      width: 100%; } }
+      width: 100%;
+      text-align: center; } }
   @media screen and (max-width: 650px) {
     #hero header {
-      text-align: center;
       padding: 8px;
       width: calc(100% - 8px); } }
 #hero .circle {
   margin-top: 48px; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 900px) {
     #hero .circle {
-      margin: 0 auto; } }
+      margin: 0 auto;
+      margin-top: 80px; } }
 
 [tooltip] {
   position: relative; }
@@ -223,6 +276,9 @@ footer.sticky {
 .gallery {
   display: flex;
   flex-flow: row wrap; }
+  @media screen and (max-width: 900px) {
+    .gallery {
+      justify-content: center; } }
   .gallery a {
     height: 216px; }
 
@@ -286,6 +342,10 @@ footer.sticky {
 #overlord {
   margin-left: 88px; }
 
+@media screen and (max-width: 650px) {
+  #robot,
+  #overlord {
+    display: none; } }
 #logo {
   position: fixed;
   transform: translate(-50%); }
@@ -294,6 +354,9 @@ footer.sticky {
     width: 48px; }
     #logo svg path {
       fill: #495572; }
+  @media screen and (max-width: 900px) {
+    #logo {
+      position: absolute; } }
 
 .wild {
   margin: 8px;
@@ -375,11 +438,15 @@ footer.sticky {
     width: 26px;
     height: 26px;
     text-align: center; }
-  .accordion input[type=checkbox] + label::after {
-    content: "+"; }
-  .accordion input[type=checkbox]:checked + label::after {
-    content: "–";
-    line-height: 1.2rem; }
+  @media screen and (max-width: 650px) {
+    .accordion {
+      text-align: center; } }
+  @media screen and (min-width: 650px) {
+    .accordion input[type=checkbox] + label::after {
+      content: "+"; }
+    .accordion input[type=checkbox]:checked + label::after {
+      content: "–";
+      line-height: 1.2rem; } }
 
 .label-inner {
   border-bottom: 2px solid #495572;
@@ -403,6 +470,11 @@ input:checked ~ .tab-content {
 .tab-content li {
   line-height: 3;
   border-bottom: 2px solid #7042E1; }
+  @media screen and (max-width: 900px) {
+    .tab-content li {
+      width: 100%;
+      line-height: 2;
+      padding: 16px 0; } }
 
 blockquote {
   opacity: 0.75;
