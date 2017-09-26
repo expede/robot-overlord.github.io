@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Hifi-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Hero" transform="translate(-201.000000, -588.000000)" fill="#7042E1">
+      <g id="ic_arrow_downward" transform="translate(197.000000, 584.000000)">
+        <polygon id="Icon" points="18.59 10.59 13 16.17 13 4 11 4 11 16.17 5.42 10.58 4 12 12 20 20 12"></polygon>
+      </g>
+    </g>
+  </g>
+</svg>

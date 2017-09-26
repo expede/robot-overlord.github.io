@@ -20,6 +20,10 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
 
+    <link href="https://fonts.googleapis.com/css?family=Exo:500,700,800i,900i|Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./static/style.css" media="screen" />
+
     <link rel="manifest" href="/manifest.json">
 
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -78,9 +82,284 @@
       content="http://www.robotoverlord.io/static/happybot.png"
     />
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="application/javascript" src="./static/dist/bundle.js"></script>
+    <header>
+      <h1 class="top-logo" id="robot">Robot</h1>
+      <h1 class="top-logo" id="overlord">Overlord</h1>
+
+      <figure id="logo" class="top-logo">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="612" height="370" viewBox="0, 0, 612, 370">
+          <g id="Layer_1">
+            <g>
+              <path d="M450.951,24.159 C528.161,24.159 590.754,96.226 590.754,185.124 C590.754,274.025 528.161,346.092 450.951,346.092 L161.048,346.092 C83.837,346.092 21.244,274.025 21.244,185.124 C21.244,96.226 83.837,24.159 161.048,24.159 L450.951,24.159 z M450.951,50.563 L161.048,50.563 C99.312,50.563 47.647,110.045 47.647,185.124 C47.647,260.204 99.312,319.688 161.048,319.688 L450.951,319.688 C512.689,319.688 564.351,260.204 564.351,185.124 C564.351,110.045 512.689,50.563 450.951,50.563 z" fill="#000000"/>
+              <path d="M450.951,0 L451.013,0.002 L451.087,0 L452.895,0.012 L456.901,0.125 L461.022,0.358 L465.115,0.708 L469.181,1.176 L473.223,1.759 L477.229,2.458 L481.206,3.267 L485.15,4.186 L489.058,5.218 L492.93,6.356 L496.765,7.604 L500.558,8.953 L504.312,10.408 L508.025,11.963 L511.693,13.622 L515.315,15.376 L518.891,17.232 L522.42,19.183 L525.9,21.226 L529.333,23.362 L532.71,25.592 L536.037,27.908 L539.309,30.318 L542.525,32.812 L545.689,35.388 L548.79,38.055 L551.833,40.798 L554.817,43.626 L557.741,46.533 L560.602,49.516 L563.4,52.577 L566.132,55.711 L568.796,58.923 L571.396,62.204 L573.928,65.557 L576.389,68.98 L578.779,72.473 L581.098,76.03 L583.342,79.654 L585.515,83.341 L587.61,87.093 L589.629,90.905 L591.571,94.776 L593.431,98.706 L595.209,102.69 L596.909,106.732 L598.524,110.83 L600.056,114.98 L601.501,119.178 L602.857,123.427 L604.127,127.726 L605.308,132.068 L606.397,136.458 L607.393,140.887 L608.296,145.363 L609.105,149.876 L609.818,154.427 L610.432,159.014 L610.951,163.637 L611.368,168.293 L611.683,172.979 L611.899,177.698 L612.009,182.443 L612.026,184.973 C612.028,185.076 612.028,185.175 612.026,185.276 L612.016,187.357 L611.918,191.951 L611.719,196.67 L611.414,201.358 L611.008,206.017 L610.504,210.642 L609.902,215.234 L609.203,219.79 L608.406,224.307 L607.516,228.784 L606.532,233.219 L605.454,237.614 L604.287,241.961 L603.027,246.265 L601.681,250.523 L600.248,254.729 L598.728,258.881 L597.125,262.986 L595.438,267.035 L593.666,271.029 L591.815,274.968 L589.886,278.845 L587.876,282.664 L585.793,286.425 L583.63,290.119 L581.396,293.751 L579.084,297.317 L576.703,300.817 L574.25,304.252 L571.73,307.612 L569.14,310.906 L566.482,314.122 L563.758,317.269 L560.969,320.339 L558.12,323.332 L555.206,326.248 L552.229,329.086 L549.193,331.841 L546.097,334.515 L542.945,337.103 L539.738,339.609 L536.471,342.028 L533.154,344.356 L529.784,346.596 L526.361,348.747 L522.888,350.801 L519.367,352.765 L515.797,354.632 L512.18,356.399 L508.517,358.069 L504.814,359.639 L501.064,361.108 L497.277,362.474 L493.446,363.732 L489.579,364.889 L485.676,365.93 L481.737,366.869 L477.764,367.692 L473.758,368.405 L469.723,369.005 L465.657,369.488 L461.565,369.855 L457.446,370.102 L453.303,370.232 L451.087,370.251 L160.913,370.251 L159.103,370.239 L155.097,370.126 L150.978,369.893 L146.886,369.543 L142.817,369.075 L138.778,368.492 L134.769,367.793 L130.794,366.984 L126.85,366.065 L122.943,365.033 L119.071,363.895 L115.235,362.647 L111.443,361.298 L107.686,359.843 L103.975,358.288 L100.308,356.629 L96.683,354.872 L93.109,353.017 L89.578,351.068 L86.098,349.025 L82.668,346.889 L79.288,344.659 L75.961,342.343 L72.69,339.933 L69.473,337.439 L66.312,334.861 L63.211,332.196 L60.167,329.453 L57.181,326.625 L54.26,323.719 L51.399,320.735 L48.6,317.675 L45.869,314.537 L43.204,311.328 L40.602,308.047 L38.072,304.694 L35.61,301.271 L33.219,297.778 L30.9,294.221 L28.656,290.597 L26.484,286.91 L24.388,283.158 L22.369,279.346 L20.43,275.475 L18.57,271.545 L16.789,267.561 L15.089,263.519 L13.476,259.421 L11.945,255.271 L10.5,251.073 L9.141,246.824 L7.872,242.525 L6.691,238.183 L5.603,233.793 L4.607,229.362 L3.702,224.888 L2.896,220.375 L2.183,215.824 L1.566,211.237 L1.05,206.614 L0.63,201.958 L0.315,197.272 L0.102,192.553 L-0.009,187.808 L-0.028,185.276 L-0.028,184.973 L-0.016,182.894 L0.083,178.298 L0.282,173.581 L0.587,168.893 L0.99,164.234 L1.494,159.609 L2.096,155.017 L2.797,150.461 L3.592,145.944 L4.485,141.467 L5.469,137.032 L6.544,132.637 L7.713,128.287 L8.973,123.986 L10.318,119.728 L11.75,115.522 L13.272,111.367 L14.876,107.265 L16.563,103.216 L18.332,99.222 L20.183,95.283 L22.113,91.406 L24.124,87.585 L26.208,83.826 L28.37,80.13 L30.605,76.5 L32.914,72.934 L35.295,69.434 L37.746,65.999 L40.269,62.639 L42.859,59.345 L45.518,56.129 L48.24,52.982 L51.029,49.912 L53.881,46.919 L56.795,44.003 L59.771,41.165 L62.805,38.41 L65.902,35.736 L69.053,33.148 L72.262,30.642 L75.527,28.223 L78.844,25.895 L82.217,23.655 L85.639,21.504 L89.11,19.45 L92.634,17.486 L96.203,15.619 L99.82,13.85 L103.481,12.182 L107.187,10.612 L110.936,9.143 L114.724,7.777 L118.553,6.519 L122.419,5.362 L126.325,4.321 L130.261,3.382 L134.236,2.559 L138.242,1.846 L142.277,1.246 L146.343,0.763 L150.433,0.396 L154.552,0.149 L158.695,0.019 L160.913,0 L450.951,0 z M161.048,342.467 L161.031,343.848 L161.048,343.848 L161.048,342.467 z M161.184,48.316 L159.788,48.326 L156.737,48.405 L153.705,48.573 L150.7,48.83 L147.714,49.17 L144.754,49.595 L141.816,50.104 L138.905,50.695 L136.02,51.369 L133.158,52.12 L130.324,52.951 L127.518,53.858 L124.741,54.847 L121.992,55.911 L119.275,57.048 L116.587,58.258 L113.932,59.545 L111.308,60.901 L108.718,62.331 L106.164,63.829 L103.642,65.399 L101.16,67.034 L98.714,68.738 L96.306,70.507 L93.935,72.341 L91.607,74.239 L89.319,76.2 L87.072,78.224 L84.871,80.307 L82.711,82.453 L80.596,84.654 L78.532,86.915 L76.511,89.229 L74.538,91.601 L72.615,94.028 L70.743,96.505 L68.924,99.035 L67.152,101.615 L65.436,104.248 L63.775,106.927 L62.169,109.651 L60.619,112.426 L59.123,115.244 L57.685,118.105 L56.308,121.012 L54.99,123.957 L53.734,126.945 L52.537,129.972 L51.404,133.037 L50.333,136.143 L49.33,139.283 L48.389,142.461 L47.515,145.67 L46.706,148.916 L45.969,152.194 L45.3,155.504 L44.697,158.846 L44.167,162.218 L43.711,165.619 L43.324,169.049 L43.015,172.508 L42.775,175.994 L42.614,179.508 L42.53,183.197 L42.52,185.146 L42.525,186.603 L42.595,190.143 L42.743,193.655 L42.967,197.143 L43.264,200.604 L43.636,204.036 L44.083,207.44 L44.601,210.817 L45.187,214.161 L45.845,217.476 L46.572,220.759 L47.369,224.012 L48.23,227.228 L49.159,230.409 L50.153,233.558 L51.212,236.666 L52.333,239.741 L53.518,242.775 L54.764,245.771 L56.072,248.725 L57.44,251.637 L58.864,254.505 L60.35,257.333 L61.891,260.115 L63.487,262.849 L65.141,265.535 L66.847,268.175 L68.607,270.765 L70.419,273.305 L72.284,275.791 L74.197,278.225 L76.161,280.606 L78.17,282.932 L80.229,285.201 L82.334,287.414 L84.485,289.567 L86.676,291.662 L88.916,293.693 L91.196,295.666 L93.517,297.574 L95.877,299.42 L98.277,301.201 L100.716,302.915 L103.19,304.564 L105.704,306.143 L108.253,307.653 L110.835,309.093 L113.452,310.462 L116.099,311.763 L118.781,312.987 L121.493,314.136 L124.236,315.214 L127.006,316.215 L129.808,317.137 L132.635,317.984 L135.492,318.752 L138.374,319.439 L141.281,320.044 L144.214,320.569 L147.174,321.009 L150.157,321.366 L153.163,321.637 L156.189,321.822 L159.379,321.918 L161.184,321.935 L161.048,321.93 L450.951,321.93 L450.814,321.935 L452.213,321.925 L455.264,321.846 L458.293,321.678 L461.301,321.421 L464.284,321.081 L467.246,320.656 L470.182,320.147 L473.093,319.556 L475.981,318.882 L478.842,318.131 L481.677,317.3 L484.481,316.39 L487.258,315.404 L490.006,314.34 L492.726,313.203 L495.412,311.993 L498.066,310.706 L500.69,309.35 L503.282,307.92 L505.836,306.422 L508.354,304.852 L510.841,303.217 L513.287,301.513 L515.694,299.742 L518.063,297.91 L520.394,296.009 L522.679,294.051 L524.926,292.027 L527.129,289.944 L529.287,287.798 L531.399,285.597 L533.469,283.336 L535.49,281.022 L537.46,278.648 L539.383,276.223 L541.255,273.746 L543.077,271.216 L544.846,268.634 L546.562,266.003 L548.226,263.324 L549.831,260.6 L551.382,257.825 L552.878,255.007 L554.313,252.146 L555.693,249.239 L557.008,246.294 L558.266,243.306 L559.462,240.279 L560.597,237.214 L561.665,234.108 L562.671,230.968 L563.609,227.79 L564.485,224.578 L565.292,221.335 L566.031,218.057 L566.701,214.747 L567.301,211.405 L567.831,208.033 L568.29,204.632 L568.676,201.199 L568.986,197.743 L569.224,194.258 L569.384,190.743 L569.468,187.054 L569.48,185.091 L569.476,183.648 L569.404,180.108 L569.257,176.596 L569.032,173.106 L568.734,169.647 L568.362,166.215 L567.915,162.811 L567.399,159.434 L566.811,156.088 L566.154,152.775 L565.426,149.492 L564.632,146.239 L563.77,143.023 L562.841,139.842 L561.847,136.693 L560.789,133.585 L559.666,130.51 L558.48,127.476 L557.234,124.48 L555.928,121.526 L554.56,118.614 L553.134,115.746 L551.651,112.918 L550.108,110.136 L548.511,107.402 L546.86,104.716 L545.151,102.076 L543.391,99.486 L541.579,96.946 L539.717,94.46 L537.804,92.023 L535.84,89.645 L533.829,87.319 L531.772,85.05 L529.666,82.837 L527.516,80.684 L525.322,78.589 L523.085,76.558 L520.805,74.585 L518.483,72.677 L516.121,70.831 L513.721,69.05 L511.285,67.336 L508.808,65.687 L506.295,64.108 L503.748,62.598 L501.165,61.158 L498.549,59.787 L495.899,58.488 L493.218,57.264 L490.505,56.112 L487.764,55.037 L484.992,54.036 L482.191,53.112 L479.363,52.267 L476.507,51.499 L473.626,50.812 L470.717,50.205 L467.784,49.682 L464.824,49.242 L461.843,48.885 L458.836,48.614 L455.809,48.429 L452.621,48.33 L450.97,48.318 L450.951,48.318 L161.048,48.318 L161.184,48.316 z" fill="#000000"/>
+            </g>
+            <g>
+              <path d="M165.757,159.038 C185.281,159.038 201.109,175.081 201.109,194.874 C201.258,201.238 199.518,205.534 197.151,211.213 C191.774,198.823 178.58,192.368 165.757,191.713 C153.136,192.076 139.454,198.991 134.361,211.213 C131.553,206.142 130.688,200.566 130.405,194.874 C130.405,175.081 146.233,159.038 165.757,159.038 z" fill="#000000"/>
+              <path d="M165.757,159.038 L166.669,159.047" fill="#000000"/>
+            </g>
+            <g>
+              <path d="M446.234,159.038 C465.756,159.038 481.583,175.081 481.583,194.874 C481.735,201.238 479.992,205.534 477.625,211.213 C472.251,198.823 459.054,192.368 446.234,191.713 C433.611,192.076 419.929,198.991 414.838,211.213 C412.029,206.142 411.165,200.566 410.882,194.874 C410.882,175.081 426.71,159.038 446.234,159.038 z" fill="#000000"/>
+              <path d="M446.234,159.038 L447.146,159.047" fill="#000000"/>
+            </g>
+          </g>
+        </svg>
+      </figure>
+    </header>
+
+    <nav id="page-nav">
+      <ul>
+        <li tooltip="Top"><a href="#hero"></a></li>
+        <li tooltip="Training"><a href="#training"></a></li>
+        <li tooltip="Open Source"><a href="#oss"></a></li>
+        <li tooltip="About"><a href="#about"></a></li>
+        <li tooltip="Contact"><a href="#contact"></a></li>
+      </ul>
+    </nav>
+
+    <div id="wrapper">
+      <section id="hero" class="page">
+        <section class="card" >
+          <header class="column">
+            <h1 class="brand">Vancouver's Top<br/>Functional Programming<br/>Studio and Instructors</h1>
+
+            <a href="#training">
+              <div class="circle">
+                <img src="./static/images/arrow.svg" />
+              </div>
+            </a>
+          </header>
+        </section>
+      </section>
+
+      <section id="training" class="page">
+        <header class="full">
+          <h2>On-site and Retreat Training</h2>
+        </header>
+
+        <div class="column">
+          <p>Classes, training, and mentorship for professional developers interested in levelling up their skill sets and hit the ground running on their next production application.</p>
+          <p>Training is offered both on-site, via corporate retreats, and in courses open to all. We're always updating our course catalog, and are more than happy to take requests!</p>
+          <p>Interested? <a href="#contact">Let's do this!</a></p>
+
+          <blockquote>
+            <p>The weekend Elixir course comfortably eased me into the language and she proved to be very knowledgeable with FP as she had a precise answer for all of my and my fellow classmates questions. I hope I have the opportunity to take her classes on other classes she offers!</p>
+            <p>- Steve Godin</p>
+          </blockquote>
+
+          <blockquote>
+            <p>I learned a lot! What matters most when a teacher is helping their students learn something new is meeting people where they were at skill-wise. It was very clear and a felt like a safe place to learn something new</p>
+            <p>- Stu Weir, STAT Search Analytics</p>
+          </blockquote>
+        </div>
+
+        <section class="accordion column">
+          <div class="tab">
+            <input id="tab-one" type="checkbox" name="tabs">
+            <label for="tab-one"><span class="label-inner">Functional Programming Essentials</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Functional Programming Concepts for Mere Mortals</li>
+                <li>Functional Techniques for Object Oriented Laguages</li>
+                <li>First Principles: The Untyped Lambda Calculus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-two" type="checkbox" name="tabs">
+            <label for="tab-two"><span class="label-inner">Elixir & Phoenix</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Up and Running with Elixir and Phoenix</li>
+                <li>Elixir from Scratch</li>
+                <li>Phoenix: Modern Monoliths Rising from the Ashes</li>
+                <li>Going Deeper with Elixir</li>
+                <li>Deep Dive Into DSLs, Macros, and Metaprogramming</li>
+                <li>Advanced Error Handling</li>
+                <li>Witchcraft for Principled Elixir Programming</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-three" type="checkbox" name="tabs">
+            <label for="tab-three"><span class="label-inner">Javascript</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Functional Programming Essentials with Lodash and Rambda</li>
+                <li>The Facebook Stack I: React + Flux + Immutable.js + Flow</li>
+                <li>The Facebook Stack II: GraphQL and Relay</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-four" type="checkbox" name="tabs">
+            <label for="tab-four"><span class="label-inner">Elm & PureScript</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Learn You an Elm for Great Good (Elm from Scratch)</li>
+                <li>Thoroughly Testing Elm Applications</li>
+                <li>Up the Abstraction Ladder with a Pux Front-End</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input id="tab-five" type="checkbox" name="tabs">
+            <label for="tab-five"><span class="label-inner">Coming Soon or On Request</span></label>
+            <div class="tab-content">
+              <ul id="essentials">
+                <li>Ethereum, Solidity, and Smart Contracts</li>
+                <li>Production-ready Haskell Apps and Microservices</li>
+                <li>Typesafe Systems Programming with Rust</li>
+                <li>TensorFlow / Machine Learning</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="oss" class="page">
+        <h2 class="full">Open Source & Community</h2>
+        <div class="column">
+          <p>We believe deeply in open source, and sponsor the development of several projects. We use open source langauges, libraries, and tools all the time, and we love to give back. It's even part of our founding story. <a href="mailto:beep@robotoverlord.io">Ask us about it</a> some time!</p>
+          <p>A common theme (especially in our Elixir libraries) is bringing classic functional programming idioms to the ecosystem in an approachable way. These are not just abstract curiosities, but come from our experience with other langauges and patterns that we've found helpful in production Elixir and Pheonix apps.</p>
+          <p>We are also very proud to have founded and continue to sponsor several meetups on Vancouver, including <a href="https://www.meetup.com/codecoffeeyvr/" target="_blank">Code & Coffee</a>, <a href="http://vanfp.org" target="_blank">Vancouver Functional Programmers</a>, and <a href="https://www.meetup.com/Vancouver-Erlang-Elixir-Meetup/" target="_blank">Vancouver Erlang/Elixir</a>.
+        </div>
+
+        <section class="column gallery">
+          <a href="https://hex.pm/packages/exceptional" target="_blank">
+            <figure id="exceptional" class="fader">
+              <figcaption>
+                <h3>Exceptional</h3>
+                <p>Error & exception handling helpers for Elixir</p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="https://hex.pm/packages/quark" target="_blank">
+            <figure id="quark" class="fader">
+              <figcaption>
+                <h3>Quark</h3>
+                <p>Common combinators for Elixir</p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="https://hex.pm/packages/algae" target="_blank">
+            <figure id="algae" class="fader">
+              <figcaption>
+                <h3>Algae</h3>
+                <p>Bootstrapped algebraic data types for Elixir</p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="https://hex.pm/packages/operator" target="_blank">
+            <figure id="operator" class="fader">
+              <figcaption>
+                <h3>Operator</h3>
+                <p>Helpers for defining operators for named functions</p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="https://hex.pm/packages/witchcraft" target="_blank">
+            <figure id="witchcraft" class="fader">
+              <figcaption>
+                <h3>Witchcraft</h3>
+                <p>Monads and other dark magic for Elixir</p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="https://hex.pm/packages/type_class" target="_blank">
+            <figure id="type_class" class="fader">
+              <figcaption>
+                <h3>TypeClass</h3>
+                <p>(Semi-)principled type classes for Elixir</p>
+              </figcaption>
+            </figure>
+          </a>
+        </section>
+      </section>
+
+      <section id="about" class="page">
+        <h2 class="full">About Robot Overlord</h2>
+        <div class="column">
+          <p>Robot Overlord Software is a functionally-focused web and mobile app agency based out of Vancouver, Canada. We're a full-stack development studio focused on scalable web and mobile applications, with an emphasis on maintainability, concurrency, and correctness.</p>
+        </div>
+
+        <div class="column">
+          <p>Initially founded in 2015 by <a href="https://ca.linkedin.com/in/brooklynzelenka" target="_blank">Brookly Zelenka</a> and <a href="https://ca.linkedin.com/in/jennifer-cooper-24a3b711" target="_blank">Jennifer Cooper</a>. The pair left careers at world-class agencies doing work for well-known international brands in order to persue their own agency and product studio with a focused vision.</p>
+          <p>The developers at Robot Overlord have long histories teaching and mentoring in grass roots settings and with non-profits such as Ladies Learning Code, covering languages such as Elixir, Clojure, Racket, Ruby, Javascript, and Haskell. Our staff also founded <a href="https://www.meetup.com/codecoffeeyvr/" target="_blank">Code & Coffee</a>, <a href="http://vanfp.org" target="_blank">Vancouver Functional Programmers</a>, and <a href="https://www.meetup.com/Vancouver-Erlang-Elixir-Meetup/" target="_blank">Vancouver Erlang/Elixir</a> meetups. Brooklyn is also the recipient of the <a href="https://twitter.com/expede/status/837666553999028225" target="_blank">Women in Leadership Mentorship Award</a> for her efforts bringing functional programming to the Vancouver tech community.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="page">
+        <header class="full">
+          <p>Looking for help with a product or training?</p>
+          <h2><a href="mailto:beep@robotoverlord.io">beep@robotoverlord.io</a></h2>
+        </header>
+
+        <section class="full">
+          <p>Robots in the wild</p>
+
+          <div id="brooke_9" class="wild"></div>
+          <div id="brooke_10" class="wild"></div>
+          <div id="brooke_5" class="wild"></div>
+          <div id="brooke_11" class="wild"></div>
+        </section>
+      </section>
+    </div>
+
+    <footer class="sticky">
+      <p>© 2017 Robot Overlord Software Inc.</p>
+    </footer>
+
+    <script>
+     (function() {
+       const navId = '#page-nav';
+       const activeClass = 'current-nav';
+
+       const navs  = Array.from(document.querySelectorAll(`${navId} a`));
+       const pages = Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
+
+       const currentPage = () => {
+         const newOffset = pages.find(page => page[1] >= window.pageYOffset - 100) || pages[-1][0];
+         return (newOffset && newOffset[0]);
+       }
+
+       let cachedPage = currentPage();
+
+       const updateNav = (id) => {
+         const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
+
+         if (newActive && newActive[0]) {
+           navs.forEach(nav => nav.classList.remove(activeClass));
+           cachedPage = id;
+
+           newActive[0].classList.add(activeClass);
+         }
+       }
+
+       updateNav(cachedPage);
+
+       window.onscroll = () => {
+         newPage = currentPage();
+
+         if (newPage !== cachedPage) {
+           updateNav(newPage);
+         }
+       };
+     })();
+    </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
