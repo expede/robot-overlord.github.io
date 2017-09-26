@@ -236,7 +236,6 @@ footer.sticky {
 }
 
 #hero {
-
   .card {
     background-image: url("./images/toy-robots-blue-hd.jpg");
     background-size: cover;
@@ -310,7 +309,6 @@ footer.sticky {
   color: $color-base;
   padding: 8px;
   font-size: 0.8rem;
-  /* min-width: 80px; */
   white-space: nowrap;
   border-radius: 8px;
   pointer-events: none;
@@ -320,13 +318,17 @@ footer.sticky {
 .gallery {
   display: flex;
   flex-flow: row wrap;
+
+  a {
+    height: 216px;
+  }
 }
 
 .fader {
   transition: all 1500ms ease;
   width: 192px;
   height: 192px;
-  margin: 0 0 16px 16px;
+  margin: 0 0 24px 24px;
   background-color: $color-lowlight;
   border: 2px solid $color-main;
   border-radius: 8px;
@@ -447,6 +449,16 @@ footer.sticky {
   background-image: url("./images/brooke_9.gif");
 }
 
+#brooke_10 {
+  background-image: url("./images/brooke_10.jpg");
+  background-position: bottom;
+}
+
+#brooke_11 {
+  background-image: url("./images/brooke_11.png");
+  background-position: bottom;
+}
+
 #exceptional {
   background-image: url("https://github.com/expede/exceptional/blob/master/branding/logo.png?raw=true");
 }
@@ -469,7 +481,8 @@ footer.sticky {
 }
 
 #type_class {
-  background-image: url("https://github.com/expede/type_class/blob/master/brand/logo.png?raw=true");
+  background-image: url("./images/type_class.png");
+  /* background-image: url("https://github.com/expede/type_class/blob/master/brand/logo.png?raw=true"); */
 }
 
 .accordion {
@@ -529,6 +542,9 @@ footer.sticky {
   max-height: 0;
   overflow: hidden;
   transition: all 800ms ease-out;
+  li {
+    display: inline-block;
+  }
 }
 
 input:checked ~ .tab-content {
@@ -543,4 +559,18 @@ input:checked ~ .tab-content {
 .tab-content li {
   line-height: 3;
   border-bottom: 2px solid $color-accent;
+}
+
+blockquote {
+  opacity: 0.75;
+  margin: 1.5em 16px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  display: inline;
+
+  p {
+    display: block;
+    font-style: italic;
+    text-align: center;
+  }
 }
