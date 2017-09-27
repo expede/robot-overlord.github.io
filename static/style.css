@@ -181,7 +181,7 @@ footer.sticky {
       margin-left: -1px;
       content: '◉'; }
 
-#windows #page-nav.current-nav::before, #windows #page-nav:hover::before, #windows #page-nav:focus::before {
+#windows #page-nav a.current-nav::before, #windows #page-nav a:hover::before, #windows #page-nav a:focus::before {
   font-size: 28px; }
 
 #wrapper {
