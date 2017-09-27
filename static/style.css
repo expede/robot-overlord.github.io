@@ -4,11 +4,7 @@ body {
   background-color: #F2FDFF;
   color: #495572;
   font-size: 20px;
-  font-weight: 400;
-  /* // WHY DO I HAVE TO DO THIS?! */
-  position: absolute;
-  top: 0;
-  width: 100vw; }
+  font-weight: 400; }
 
 a,
 a:link,
@@ -188,6 +184,8 @@ footer.sticky {
   position: relative;
   max-width: 1440px;
   width: calc(100vw - 144px);
+  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   margin-top: 48px;
   display: flex;
