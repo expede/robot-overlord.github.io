@@ -324,67 +324,73 @@
 
     <script>
 
-      (function() {
-        // Set up
+     (function() {
 
-        const navId       = '#page-nav';
-        const activeClass = 'current-nav';
+       // Is Windows?
+       if (window.navigator.platform.match(/win/i)) {
+         document.body.setAttribute("id", "windows");
+       }
 
-        let _navs;
-        let _pages;
-        let _cachedPage;
+       // Set up
 
-        // Functions
+       const navId       = '#page-nav';
+       const activeClass = 'current-nav';
 
-        const indexNav   = () => Array.from(document.querySelectorAll(`${navId} a`));
-        const indexPages = () => Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
+       let _navs;
+       let _pages;
+       let _cachedPage;
 
-        const currentPage = (pages) => {
-          const last = pages[-1];
-          const newOffset = (
-                 pages.find(page => page[1] >= window.pageYOffset - 100)
-              || (last && last[0])
-              || 0
-          );
+       // Functions
 
-          return (newOffset && newOffset[0]);
-        }
+       const indexNav   = () => Array.from(document.querySelectorAll(`${navId} a`));
+       const indexPages = () => Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
 
-        const updateNav = (id, navs) => {
-          const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
+       const currentPage = (pages) => {
+         const last = pages[-1];
+         const newOffset = (
+           pages.find(page => page[1] >= window.pageYOffset - 100)
+           || (last && last[0])
+           || 0
+         );
 
-          if (newActive && newActive[0]) {
-            navs.forEach(nav => nav.classList.remove(activeClass));
-            _cachedPage = id;
+         return (newOffset && newOffset[0]);
+       }
 
-            newActive[0].classList.add(activeClass);
-          }
-        }
+       const updateNav = (id, navs) => {
+         const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
 
-        const reIndex = () => {
-          pages = indexPages();
+         if (newActive && newActive[0]) {
+           navs.forEach(nav => nav.classList.remove(activeClass));
+           _cachedPage = id;
 
-          _navs  = indexNav();
-          _pages = pages;
-          _cachedPage = currentPage(pages);
-        }
+           newActive[0].classList.add(activeClass);
+         }
+       }
 
-        const renderNewNav = (cachedPage, navs, pages) => {
-          const newPage = currentPage(pages);
-          if (newPage !== cachedPage) updateNav(newPage, navs, pages);
-        }
+       const reIndex = () => {
+         pages = indexPages();
 
-        // First run
+         _navs  = indexNav();
+         _pages = pages;
+         _cachedPage = currentPage(pages);
+       }
 
-        reIndex();
-        updateNav(_cachedPage, _navs);
-        renderNewNav(_cachedPage, _navs, _pages);
+       const renderNewNav = (cachedPage, navs, pages) => {
+         const newPage = currentPage(pages);
+         if (newPage !== cachedPage) updateNav(newPage, navs, pages);
+       }
 
-        // Events
+       // First run
 
-        window.addEventListener('resize', reIndex);
-        window.onscroll = () => renderNewNav(_cachedPage, _navs, _pages);
-      })();
+       reIndex();
+       updateNav(_cachedPage, _navs);
+       renderNewNav(_cachedPage, _navs, _pages);
+
+       // Events
+
+       window.addEventListener('resize', reIndex);
+       window.onscroll = () => renderNewNav(_cachedPage, _navs, _pages);
+     })();
     </script>
 
     <script src="./static/dist/smooth-scroll.min.js"></script>

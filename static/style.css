@@ -176,9 +176,13 @@ footer.sticky {
     #page-nav a::before {
       content: '◯'; }
     #page-nav a.current-nav::before, #page-nav a:hover::before, #page-nav a:focus::before {
+      font-family: "Open Sans", sans-serif;
       font-size: 22px;
       margin-left: -1px;
       content: '◉'; }
+
+#windows #page-nav.current-nav::before, #windows #page-nav:hover::before, #windows #page-nav:focus::before {
+  font-size: 28px; }
 
 #wrapper {
   position: relative;

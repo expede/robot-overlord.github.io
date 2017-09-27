@@ -263,6 +263,7 @@ footer.sticky {
     &:hover,
     &:focus {
       &::before {
+        font-family: $font-main;
         font-size: 22px;
         margin-left: -1px;
         content: '◉';
@@ -270,6 +271,19 @@ footer.sticky {
     }
   }
 }
+
+#windows {
+  #page-nav {
+    &.current-nav,
+    &:hover,
+    &:focus {
+      &::before {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
 
 #wrapper {
   position: relative;
