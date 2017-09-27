@@ -240,8 +240,6 @@ footer.sticky {
   }
 
   li:hover {
-    cursor: pointer;
-
     &[tooltip]::before,
     &[tooltip]::after {
       display: inline-block;
@@ -249,6 +247,8 @@ footer.sticky {
   }
 
   a {
+    cursor: pointer;
+
     max-height: 22px;
     line-height: 22px;
     overflow-y: hidden;

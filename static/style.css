@@ -163,11 +163,10 @@ footer.sticky {
   #page-nav ul {
     list-style: none;
     padding: 0; }
-  #page-nav li:hover {
-    cursor: pointer; }
-    #page-nav li:hover[tooltip]::before, #page-nav li:hover[tooltip]::after {
-      display: inline-block; }
+  #page-nav li:hover[tooltip]::before, #page-nav li:hover[tooltip]::after {
+    display: inline-block; }
   #page-nav a {
+    cursor: pointer;
     max-height: 22px;
     line-height: 22px;
     overflow-y: hidden;
