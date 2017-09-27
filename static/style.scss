@@ -25,7 +25,7 @@ body {
 
   font-weight: 400;
 
-  // WHY DO I HAVE TO DO THIS?!
+  /* // WHY DO I HAVE TO DO THIS?! */
   position: absolute;
   top: 0;
   width: 100vw;
@@ -338,13 +338,12 @@ footer.sticky {
       position: static;
       transform: none;
       margin-top: 2rem;
-      width: 100%;
+      width: calc(100% - 24px);
       text-align: center;
     }
 
     @media screen and (max-width: $screen-tiny) {
       padding: 8px;
-      width: calc(100% - 8px);
     }
   }
 

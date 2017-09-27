@@ -5,20 +5,20 @@
     <meta name="viewport" content="initial-scale=1">
     <meta name="robots" content="INDEX, FOLLOW">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./static/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./static/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./static/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./static/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./static/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./static/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./static/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./static/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/apple-icon-180x180.png">
 
-    <link rel="icon" type="image/png" sizes="192x192"  href="/static/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./static/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./static/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/images/favicon-16x16.png">
 
     <link href="https://fonts.googleapis.com/css?family=Exo:500,700,800i,900i|Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="screen" />
@@ -112,11 +112,11 @@
 
     <nav id="page-nav">
       <ul>
-        <li tooltip="Top"><a href="#hero"></a></li>
-        <li tooltip="Training"><a href="#training"></a></li>
-        <li tooltip="Open Source"><a href="#oss"></a></li>
-        <li tooltip="About"><a href="#about"></a></li>
-        <li tooltip="Contact"><a href="#contact"></a></li>
+        <li tooltip="Top"><a data-scroll href="#hero"></a></li>
+        <li tooltip="Training"><a data-scroll href="#training"></a></li>
+        <li tooltip="Open Source"><a data-scroll href="#oss"></a></li>
+        <li tooltip="About"><a data-scroll href="#about"></a></li>
+        <li tooltip="Contact"><a data-scroll href="#contact"></a></li>
       </ul>
     </nav>
 
@@ -323,42 +323,72 @@
     </footer>
 
     <script>
-     (function() {
-       const navId = '#page-nav';
-       const activeClass = 'current-nav';
 
-       const navs  = Array.from(document.querySelectorAll(`${navId} a`));
-       const pages = Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
+      (function() {
+        // Set up
 
-       const currentPage = () => {
-         const newOffset = pages.find(page => page[1] >= window.pageYOffset - 100) || pages[-1][0];
-         return (newOffset && newOffset[0]);
-       }
+        const navId       = '#page-nav';
+        const activeClass = 'current-nav';
 
-       let cachedPage = currentPage();
+        let _navs;
+        let _pages;
+        let _cachedPage;
 
-       const updateNav = (id) => {
-         const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
+        // Functions
 
-         if (newActive && newActive[0]) {
-           navs.forEach(nav => nav.classList.remove(activeClass));
-           cachedPage = id;
+        const indexNav   = () => Array.from(document.querySelectorAll(`${navId} a`));
+        const indexPages = () => Array.from(document.getElementsByClassName('page')).map(page => [page.id, page.offsetTop]);
 
-           newActive[0].classList.add(activeClass);
-         }
-       }
+        const currentPage = (pages) => {
+          const last = pages[-1];
+          const newOffset = (
+                 pages.find(page => page[1] >= window.pageYOffset - 100)
+              || (last && last[0])
+              || 0
+          );
 
-       updateNav(cachedPage);
+          return (newOffset && newOffset[0]);
+        }
 
-       window.onscroll = () => {
-         newPage = currentPage();
+        const updateNav = (id, navs) => {
+          const newActive = document.querySelectorAll(`${navId} a[href='#${id}']`);
 
-         if (newPage !== cachedPage) {
-           updateNav(newPage);
-         }
-       };
-     })();
+          if (newActive && newActive[0]) {
+            navs.forEach(nav => nav.classList.remove(activeClass));
+            _cachedPage = id;
+
+            newActive[0].classList.add(activeClass);
+          }
+        }
+
+        const reIndex = () => {
+          pages = indexPages();
+
+          _navs  = indexNav();
+          _pages = pages;
+          _cachedPage = currentPage(pages);
+        }
+
+        const renderNewNav = (cachedPage, navs, pages) => {
+          const newPage = currentPage(pages);
+          if (newPage !== cachedPage) updateNav(newPage, navs, pages);
+        }
+
+        // First run
+
+        reIndex();
+        updateNav(_cachedPage, _navs);
+        renderNewNav(_cachedPage, _navs, _pages);
+
+        // Events
+
+        window.addEventListener('resize', reIndex);
+        window.onscroll = () => renderNewNav(_cachedPage, _navs, _pages);
+      })();
     </script>
+
+    <script src="./static/dist/smooth-scroll.min.js"></script>
+    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
